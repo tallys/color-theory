@@ -2,22 +2,22 @@
 
 @import "bourbon";
 @import "neat";
+@import "variables";
 @import "base-layout";
+@import "color-blocks";
 
 $background: #efefef;
 
 body {
-  background: $background;
+  background: $white;
   text-align: center;
   font-family: sans-serif; }
 
 h1 {
-  color: rgba(0, 0, 0, .3);
-  font-weight: bold;
-  font-size: 32px;
+  color: $complementary-neutral-dark;
+  font-size: 2em;
   letter-spacing: -1px;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  text-shadow: 0 1px 0 $complementary-neutral-light;
   margin: 0; }
 
 .doc {

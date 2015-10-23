@@ -1,0 +1,37 @@
+//Pick a color 
+
+$first-color: hsla(5, 100%, 50%, 1);
+
+// Find the complement
+
+$second-color: complement($first-color);
+
+// Establish a relationship between your two colors.
+
+$primary-color: mix($second-color, $first-color, 10%);
+$complementary-color: mix($first-color, $second-color, 27%);
+
+// Complementary Neutrals, highlight, midtone, shadow
+
+$complementary-neutral-light: lighten($complementary-color, 27%);
+$complementary-neutral-medium: desaturate($complementary-color, 60%);
+$complementary-neutral-dark: darken($complementary-color, 27%);
+
+// Primary neutrals, highlight, midtone, shadow
+$primary-neutral-light: lighten($primary-color, 27%);
+$primary-neutral-medium: desaturate($primary-color, 60%);
+$primary-neutral-dark: darken($primary-color, 27%);
+
+// Pure neutrals, highlight, midtone, shadow 
+
+$white: lighten($primary-neutral-light, 21%);
+$neutral-gray: grayscale($primary-neutral-medium);
+$primary-gray: mix($primary-color, $complementary-color, 30%);
+$complimentary-gray: mix($complementary-color, $primary-color, 63%);
+$black: grayscale($complementary-neutral-dark);
+
+// Analogous Colors 
+
+$analogous-color: adjust-hue($complementary-color, -40);
+$complementary-analogous: mix($analogous-color, $complementary-color, 60%);
+

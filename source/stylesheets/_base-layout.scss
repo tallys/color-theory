@@ -1,8 +1,86 @@
-$first-color: hsla(15, 100%, 50%, 1);
-$second-color: complement($first-color);
+.mini-layout {
+	@include span-columns(12);
+	.mini-header {
+		@include span-columns(12);
+		background: $primary-color;
+	}
+
+	.mini-aside {
+		@include span-columns(4 of 12);
+		background: $primary-neutral-light;
+		ul {
+			list-style: none;
+			padding: 10px;
+			li {
+				margin-bottom: 3px;
+				background: $black;
+				color: $white;
+			}
+		}
+	}
+	.mini-main {
+		@include span-columns(8 of 12);
+		@include omega();
+		background: $white;
+	}
+
+	.mini-footer {
+		@include span-columns(12);
+		background: $complementary-neutral-dark;
+	}
+}
+
+
+header {
+	background: $complementary-neutral-dark;
+	height: 233px;
+	border-bottom: 7px solid $complementary-neutral-light;
+
+	h1 {
+		color: $white;
+		padding: 2.5em 2em;
+		position: relative;
+
+		&:after {
+			content: '!';
+			line-height: 1.5;
+			color: $white;
+			text-shadow: none;
+			background: $primary-color;
+			box-shadow: 0px 1px 1px 1px $primary-neutral-dark;
+			height: 50px;
+			width: 50px;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			border-radius: 100%;
+		}
+	}
+}
+
+main {
+	background: $white;
+}
 
 section {
 	display: block;
+	@include span-columns(12);
+
+	.example {
+		padding: 30px;
+		@media screen and (min-width: 780px) {
+			@include span-columns(6 of 12);
+		}
+	}
+
+		.explanation {
+			padding: 30px;
+		@media screen and (min-width: 780px) {
+			@include span-columns(6 of 12);
+		}
+	}
+
+
 }
 
 .test {
@@ -12,161 +90,6 @@ section {
 	display: inline-block;
 }
 
-.first {
-	background: $first-color;
+.container {
+	@include outer-container;
 }
-
-.second {
-	background: $second-color;
-}
-
-// Establish a relationship between your two colors.
-
-$primary-color: mix($second-color, $first-color, 10%);
-$complementary-color: mix($first-color, $second-color, 27%);
-
-// Complementary Neutrals, highlight, midtone, shadow
-
-$complementary-neutral-light: lighten($complementary-color, 27%);
-$complementary-neutral-medium: desaturate($complementary-color, 60%);
-$complementary-neutral-dark: darken($complementary-color, 27%);
-
-// Primary neutrals, highlight, midtone, shadow
-$primary-neutral-light: lighten($primary-color, 27%);
-$primary-neutral-medium: desaturate($primary-color, 60%);
-$primary-neutral-dark: darken($primary-color, 27%);
-
-// Pure neutrals, highlight, midtone, shadow 
-
-$white: lighten($primary-neutral-light, 21%);
-$neutral-gray: grayscale($primary-neutral-medium);
-$primary-gray: mix($primary-color, $complementary-color, 30%);
-$complimentary-gray: mix($complementary-color, $primary-color, 63%);
-$black: grayscale($complementary-neutral-dark);
-
-
-// Analogous Colors 
-
-$analogous-color: adjust-hue($complementary-color, -40);
-$complementary-analogous: mix($analogous-color, $complementary-color, 60%);
-
-.primary{
-	background: $primary-color;
-}
-
-.complement {
-	background: $complementary-color;
-}
-
-//establish neutrals
-
-
-.complementary-neutral-1 {
-	background: $complementary-neutral-light;
-}
-
-.complementary-neutral-2 {
-	background: $complementary-neutral-medium;
-}
-
-.complementary-neutral-3 {
-	background: $complementary-neutral-dark;
-}
-
-//
-
-// Primary - neutrals
-
-.primary-neutral-1 {
-	background: $primary-neutral-light;
-}
-
-.primary-neutral-2 {
-	background: $primary-neutral-medium;
-}
-
-.primary-neutral-3 {
-	background: $primary-neutral-dark;
-}
-
-// other color variations
-
-.mix-1 {
-	background: mix($primary-color, $complementary-color, 13%);
-}
-.mix-2 {
-	background: mix($complementary-color, $primary-color, 13%);
-}
-
-//add another color to the mix!
-
-.mix-3 {
-	background: mix($primary-neutral-light, $primary-color, 45%);
-}
-
-.mix-4 {
-	background: mix($primary-neutral-light, $complementary-color, 35%);
-}
-.mix-5 {
-	background: mix($primary-neutral-dark, $complementary-color, 35%);
-}
-.mix-6 {
-	background: mix($primary-neutral-dark, $primary-color, 35%);
-}
-
-.mix-7 {
-	background: mix($complementary-neutral-dark, $complementary-color, 35%);
-}
-.mix-8 {
-	background: mix($complementary-neutral-dark, $primary-color, 35%);
-}
-
-
-.complementary-analogous {
-	background: $complementary-analogous;
-}
-
-.analogous {
-	background: $analogous-color;
-}
-
-.complementary-analogous-mix-1 {
-	background: mix($complementary-analogous, $complementary-color, 10%);
-}
-.complementary-analogous-mix-2 {
-	background: mix($complementary-analogous, $primary-color, 10%);
-}
-
-
-
-// Grayscale-neutrals
-
-.primary-gray {
-	background: $primary-gray;
-}
-
-.complimentary-gray {
-	background: $complimentary-gray;
-}
-
-.neutral-gray {
-	background: $neutral-gray;
-}
-
-.white {
-	background: $white;
-}
-
-.black {
-	background: $black;
-}
-
-.primary-grayscale-1 {
-	background: grayscale($primary-color);
-}
-
-.complementary-grayscale-1 {
-	background: darken(grayscale($complementary-color), 11);
-}
-
-
