@@ -5,8 +5,13 @@
 @import "variables";
 @import "base-layout";
 @import "color-blocks";
+@import "cat";
 
 $background: #efefef;
+
+* {
+	box-model: border-box;
+}
 
 body {
   background: $white;

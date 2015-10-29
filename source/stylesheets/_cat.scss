@@ -1,0 +1,59 @@
+.cat {
+margin-top: 30px;
+	.cat-head {
+		position: relative;
+		display: inline-block;
+		background: $complementary-color;
+		height: 80px;
+		width: 130px;
+		border-radius: 40%;
+
+		&:before {
+			position: absolute;
+			content: '';
+			border: 30px solid transparent;
+			height: 0px;
+			width: 0px;
+			border-bottom: 43px solid $complementary-color;
+			top: -53%;
+			right: -18.5%;
+			transform: rotate(32deg);
+		}
+
+		&:after {
+			position: absolute;
+			content: '';
+			border: 30px solid transparent;
+			height: 0px;
+			width: 0px;
+			border-bottom: 43px solid $complementary-color;
+			top: -53%;
+			left: -18.3%;
+			transform: rotate(-32deg);
+		}
+
+		.cat-face {
+			position: absolute;
+			content: '';
+			height: 9px;
+			width: 12px;
+			border-radius: 50%;
+			background: $primary-neutral-light;
+			z-index: 3;
+			left: 45%;
+			top: 50%;
+			border: 1px solid $white;
+		}
+	}
+}
+
+// @function adjust-contrast ($color1, $color2) {
+
+// 	@if (lightness($color) < 50) {
+// 		@return lighten($color, 23%);
+// 	} @else if (lightness($color) > 50){
+// 		@return darken($color, 23%);
+// 	} @else {
+// 		@return $color;
+// 	}
+// }

@@ -2,8 +2,16 @@
 	background: $first-color;
 }
 
+.first-adjusted {
+	background: $first-adjusted;
+}
+
 .second {
 	background: $second-color;
+}
+
+.second-adjusted {
+	background: $second-adjusted;
 }
 
 .primary{
@@ -22,7 +30,7 @@
 }
 
 .complementary-neutral-2 {
-	background: $complementary-neutral-medium;
+	background: $complementary-neutral;
 }
 
 .complementary-neutral-3 {
@@ -38,7 +46,7 @@
 }
 
 .primary-neutral-2 {
-	background: $primary-neutral-medium;
+	background: $primary-neutral;
 }
 
 .primary-neutral-3 {
@@ -76,6 +84,40 @@
 .mix-8 {
 	background: mix($complementary-neutral-dark, $primary-color, 35%);
 }
+
+
+//yellow mix {
+
+.contrast-mix-1 {
+	background: increase-contrast(mix($primary-color, $complementary-color, 13%), 20);
+}
+.contrast-mix-2 {
+	background: increase-contrast(mix($complementary-color, $primary-color, 13%), 20);
+}
+
+//add another color to the mix!
+
+.contrast-mix-3 {
+	background: increase-contrast(mix($primary-neutral-light, $primary-color, 45%), 20);
+}
+
+.contrast-mix-4 {
+	background: increase-contrast(mix($primary-neutral-light, $complementary-color, 35%), 20);
+}
+.contrast-mix-5 {
+	background: increase-contrast(mix($primary-neutral-dark, $complementary-color, 35%), 20);
+}
+.contrast-mix-6 {
+	background: increase-contrast(mix($primary-neutral-dark, $primary-color, 35%), 20);
+}
+
+.contrast-mix-7 {
+	background: increase-contrast(mix($complementary-neutral-dark, $complementary-color, 35%), 20);
+}
+.contrast-mix-8 {
+	background: increase-contrast(mix($complementary-neutral-dark, $primary-color, 35%), 20);
+}
+
 
 
 .complementary-analogous {

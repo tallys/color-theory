@@ -1,37 +1,79 @@
+// comparative function 
+
+@function increase-contrast($color, $percent) {
+
+	@if (lightness($color) > 50) {
+		@return lighten($color, $percent);
+	} @else {
+		@return darken($color, $percent);
+	}
+}
+
+
 //Pick a color 
 
-$first-color: hsla(5, 100%, 50%, 1);
+$first-color: hsla(230, 100%, 50%, 1);
 
 // Find the complement
 
 $second-color: complement($first-color);
 
-// Establish a relationship between your two colors.
 
-$primary-color: mix($second-color, $first-color, 10%);
-$complementary-color: mix($first-color, $second-color, 27%);
+// Establish a relationship between your two colors.????
+
+@function establish-relationship($first-color, $second-color) {
+	@if (saturation($first-color) > saturation($second-color)) {
+		@return mix($first-color, $second-color, 9%);
+	}
+	@else {
+		@return mix($second-color, $first-color, 9%);
+	}
+}
+
+// take away decision
+// $primary-color: mix($second-color, $first-color, 10%);
+// $complementary-color: mix($first-color, $second-color, 33%);
+
+$primary-color: establish-relationship($first-color, $second-color);
+$complementary-color: establish-relationship($second-color, $first-color);
+
+$first-adjusted: increase-contrast($primary-color, 20%);
+$second-adjusted: increase-contrast($complementary-color, 20%);
+
 
 // Complementary Neutrals, highlight, midtone, shadow
 
-$complementary-neutral-light: lighten($complementary-color, 27%);
-$complementary-neutral-medium: desaturate($complementary-color, 60%);
-$complementary-neutral-dark: darken($complementary-color, 27%);
+$complementary-neutral: desaturate($complementary-color, 33);
+$complementary-neutral-light: lighten($complementary-neutral, 33);
+$complementary-neutral-dark: darken($complementary-neutral, 33);
 
-// Primary neutrals, highlight, midtone, shadow
-$primary-neutral-light: lighten($primary-color, 27%);
-$primary-neutral-medium: desaturate($primary-color, 60%);
-$primary-neutral-dark: darken($primary-color, 27%);
+// Primary neutrals, highlight, midtone, shadow`
+$primary-neutral: desaturate($primary-color, 33);
+$primary-neutral-light: lighten($primary-neutral, 33);
+$primary-neutral-dark: darken($primary-neutral, 33);
 
 // Pure neutrals, highlight, midtone, shadow 
 
-$white: lighten($primary-neutral-light, 21%);
-$neutral-gray: grayscale($primary-neutral-medium);
-$primary-gray: mix($primary-color, $complementary-color, 30%);
-$complimentary-gray: mix($complementary-color, $primary-color, 63%);
+$white: lighten($primary-neutral-light, 21);
+$neutral-gray: grayscale($primary-neutral);
+$primary-gray: mix($primary-color, $complementary-color, 30);
+$complimentary-gray: mix($complementary-color, $primary-color, 63);
 $black: grayscale($complementary-neutral-dark);
 
 // Analogous Colors 
 
 $analogous-color: adjust-hue($complementary-color, -40);
-$complementary-analogous: mix($analogous-color, $complementary-color, 60%);
+$complementary-analogous: mix($analogous-color, $complementary-color, 66);
 
+
+
+.find-complement {
+	background: increase-contrast($primary-color, 20%);
+	color: $primary-color;
+}
+
+
+.find-complement-2 {
+	background: increase-contrast($complementary-neutral-dark, 15%);
+	color: increase-contrast($complementary-neutral-dark, 15%);
+}

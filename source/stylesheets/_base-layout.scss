@@ -1,35 +1,107 @@
 .mini-layout {
 	@include span-columns(12);
+	.mini-nav {
+		@include span-columns(12);
+		height: 25px;
+		position: relative;
+		&:after {
+			content: '';
+			height: 10px;
+			width: 10px;
+			position: absolute;
+			border-radius: 50%;
+			right: 7px;
+			top: 7px;
+		}
+	}
 	.mini-header {
 		@include span-columns(12);
-		background: $primary-color;
+		height: 60px;
+		h1 {
+			font-weight: light;
+			margin-bottom: 0px;
+			padding-top: 7px;
+		}
 	}
 
 	.mini-aside {
-		@include span-columns(4 of 12);
-		background: $primary-neutral-light;
+		@include span-columns(3 of 12);
 		ul {
 			list-style: none;
-			padding: 10px;
+			padding: 0px;
 			li {
 				margin-bottom: 3px;
-				background: $black;
-				color: $white;
+				height: 10px;
 			}
 		}
 	}
 	.mini-main {
-		@include span-columns(8 of 12);
+		@include span-columns(9 of 12);
 		@include omega();
-		background: $white;
+
+		p:first-of-type {
+			font-size: 6px;
+		}
+		p {
+			font-size: 4px;
+			@include span-columns (7 of 9);
+			@include shift(1);
+			text-align: left;
+			padding-top: 10px;
+			margin-bottom: 0px;
+		}
+		.cta {
+			text-align: right;
+			height: 7px;
+			border-radius: 1px;
+			display: inline-block;
+			color: transparent;
+		}
 	}
 
 	.mini-footer {
 		@include span-columns(12);
-		background: $complementary-neutral-dark;
+		height: 30px;
+		font-size: 4px;
 	}
 }
 
+section.primary-only {
+.mini-layout { background: $white;
+	.mini-nav {
+		background: $complementary-neutral-dark;
+		&:after {
+			background: $primary-color;
+		}
+	}
+	.mini-header {
+		background: $complementary-neutral-light;
+		color: $complementary-neutral-dark;
+	 }
+
+	.mini-aside {
+		ul {
+			li {
+				background: $complementary-neutral-light;
+			}
+		}
+	}
+
+	.mini-main {
+			p {
+				color: $complementary-neutral-dark;
+			}
+			.cta {
+			background: $primary-color;
+			}
+	}
+
+	.mini-footer {
+		background: $complementary-neutral-dark;
+		color: $white;
+	}
+}
+}
 
 header {
 	background: $complementary-neutral-dark;
@@ -65,6 +137,10 @@ main {
 section {
 	display: block;
 	@include span-columns(12);
+	@media screen and (min-width: 780px) {
+		@include span-columns(8);
+		@include shift(2);
+	}
 
 	.example {
 		padding: 30px;
