@@ -37,7 +37,7 @@
 	background: $complementary-neutral-dark;
 }
 
-//
+// 
 
 // Primary - neutrals
 
@@ -53,6 +53,15 @@
 	background: $primary-neutral-dark;
 }
 
+// Primary light and dark
+
+.primary-light {
+	background: $primary-light;
+}
+.primary-dark {
+	background: $primary-dark;
+}
+
 // other color variations
 
 .mix-1 {
@@ -64,7 +73,7 @@
 
 //add another color to the mix!
 
-.mix-3 {
+.primary-light {
 	background: mix($primary-neutral-light, $primary-color, 45%);
 }
 

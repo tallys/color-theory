@@ -1,87 +1,103 @@
 ---
 title: Practical Color Theory for People Who Code
 ---
-<header>
-	<div class="container">
-		<h1>Practical Color Theory for People Who Code</h1></header>
-</header>
 
-	<section>
-		<div class="cat">
-			<div class="cat-head">
-				<div class="cat-face"></div>
-			</div>
+<section>
+		<h1>The Color Wheel</h1>
+		<p><a href="http://www.w3.org/TR/css3-color/#hsl-color">A rainbow represented in a circle</a></p>
+
+		<h3> HSL Four Parameters </h3>
+
+	<p>Hue is an angle (0-360 degrees)</p>
+	<p>Saturation is a percentage (0-100%)<p>
+	<p>Lightness is a percentage (0-100%)</p>
+	<p> "The advantage of HSL over RGB is that it is far more intuitive: you can guess at the colors you want, and then tweak. It is also easier to create sets of matching colors (by keeping the hue the same and varying the lightness/darkness, and saturation). Plus, it is trivial to convert HSL to RGB."</p>
+	
+</section>
+
+
+	<section> 
+		<h2> HSLA </h2>
+		<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#hsla-instance_method">Documentation!</a>
+	</section>
+
+	<section class="first-only">
+		<h2>Pick a color</h2>
+		<div class="explanation">
+			<div class="test first"></div>
+		</div>
+		<div class="example">
+
+	<%= partial "partials/mini_layout" %>
+
 		</div>
 	</section>
 
-	<section>
-		<h1>The Color Wheel</h1>
 
-		<p>Lorem Ipsum This is the documentation for Sass and color wheel.</p>
+	<section class="second-added">
+		<h2>Complementary Color</h2>
+		<div class="explanation">
+			<div class="test second"></div>
+		</div>
+		<div class="example">
+		<%= partial "partials/mini_layout" %>
+		</div>
 	</section>
 
-	<main>
+	<section class="primary-complementary">
+	<h2>Color Relationship Established by Mixing</h2>
+		<div class="explanation">
+			<div class="test primary"></div>
+			<div class="test complement"></div>
+		</div>
+		<div class="example">
+			<%= partial "partials/mini_layout" %>
+		</div>
+	</section>
 
-	<section class="primary-only">
-	<div class="explanation">
-	<h2>Pick a color</h2>
-		<div class="test first"></div>
+	<section class="complementary-neutrals-added">
+		<h2>Complementary Neutrals</h2>
+		<div class="explanation">
+			<div class="test complementary-neutral-1"></div>
+			<div class="test complementary-neutral-2"></div>
+			<div class="test complementary-neutral-3"></div>
+		</div>
+		<div class="example">
+			<%= partial "partials/mini_layout" %>
+		</div>
+		</section>
+
+	<section class="primary-neutrals-added">
+<h2>Primary Neutrals</h2>
+		<div class="explanation">
+			<div class="test primary-neutral-1"></div>
+			<div class="test primary-neutral-2"></div>
+			<div class="test primary-neutral-3"></div>
 	</div>
 	<div class="example">
-		THIS IS THE LAYOUT EXAMPLE
+		<%= partial "partials/mini_layout" %>
+	</div>
+	</section>
 
-<div class="mini-layout">
-<div class="mini-nav"></div>
-	<div class="mini-header">
-	<h1> Hello, World</h1>
+	<section class="black-and-white-added">
+	<h2>Black and White</h2>
+	<div class="explanation">
+		<div class="test white"></div>
+		<div class="test black"></div>
 	</div>
-	<div class="mini-aside">
-		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</div>
-	<div class="mini-main">
-		<p> tiny lorem ipsum tiny lorem ipsum tin rem ipsum ?</p>
-	<p> tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tiny lorem ipsum tinyny lorem ipsum </p>
-	<a href="javascript:void" class="cta">cta</a>
-	</div>
-	<div class="mini-footer">
-		<p>Made with love</p>
-		<p>Natalya Shelburne</p>
-		<p>@atalyathree</p>
-	</div>
-</div>
+	<div class="example">
+		<%= partial "partials/mini_layout" %>
 	</div>
 	</section>
+
+
 	<section>
-	<h2>Complementary Color</h2>
-		<div class="test second"></div>
-	</section>
-	<section>
-	<h2>Color Relationship Established by Mixing</h2>
+		<h2>Primary Light, primary, and Dark</h2>
+		<div class="test primary-light"></div>
 		<div class="test primary"></div>
-		<div class="test complement"></div>
-	</section>
-	<section>
-
-	<section>
-
-<h2>Primary Neutrals</h2>
-	<div class="test primary-neutral-1"></div>
-	<div class="test primary-neutral-2"></div>
-	<div class="test primary-neutral-3"></div>
-
-	<section>
-	<h2>Complementary Neutrals</h2>
-		<div class="test complementary-neutral-1"></div>
-		<div class="test complementary-neutral-2"></div>
-		<div class="test complementary-neutral-3"></div>
-
+		<div class="test primary-dark"></div>
+</section>
+<section>
 	<h2>More Mixes</h2>
 		<div class="test mix-1"></div>
 		<div class="test mix-2"></div>
@@ -93,6 +109,7 @@ title: Practical Color Theory for People Who Code
 		<div class="test mix-8"></div>
 	</section>
 
+<section>
 		<h2>Increase Contrast Mixes</h2>
 		<div class="test contrast-mix-1"></div>
 		<div class="test contrast-mix-2"></div>
@@ -125,6 +142,8 @@ title: Practical Color Theory for People Who Code
 	</section>
 
 
+
+
 	<section>
 	<h2>Neutrals</h2>
 		<div class="test primary-gray"></div>
@@ -135,5 +154,12 @@ title: Practical Color Theory for People Who Code
 	</section>
 
 </div>
+
+	<section>
+		<div class="cat">
+			<div class="cat-head">
+				<div class="cat-face"></div>
+			</div>
 		</div>
-		</main>
+	</section>
+		</div>

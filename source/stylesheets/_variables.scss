@@ -12,7 +12,7 @@
 
 //Pick a color 
 
-$first-color: hsla(230, 100%, 50%, 1);
+$first-color: hsl(17, 100%, 50%);
 
 // Find the complement
 
@@ -49,12 +49,17 @@ $complementary-neutral-dark: darken($complementary-neutral, 33);
 
 // Primary neutrals, highlight, midtone, shadow`
 $primary-neutral: desaturate($primary-color, 33);
+
 $primary-neutral-light: lighten($primary-neutral, 33);
 $primary-neutral-dark: darken($primary-neutral, 33);
 
+$primary-light: mix($primary-neutral-light, $primary-color, 45%);
+$primary-dark: mix($primary-neutral-dark, $primary-color, 45%);
+
+
 // Pure neutrals, highlight, midtone, shadow 
 
-$white: lighten($primary-neutral-light, 21);
+$white: lighten($primary-neutral-light, 15);
 $neutral-gray: grayscale($primary-neutral);
 $primary-gray: mix($primary-color, $complementary-color, 30);
 $complimentary-gray: mix($complementary-color, $primary-color, 63);

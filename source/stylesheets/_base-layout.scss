@@ -21,6 +21,7 @@
 			font-weight: light;
 			margin-bottom: 0px;
 			padding-top: 7px;
+			text-shadow: none;
 		}
 	}
 
@@ -41,14 +42,16 @@
 
 		p:first-of-type {
 			font-size: 6px;
+			margin-bottom: 0px;
 		}
 		p {
 			font-size: 4px;
-			@include span-columns (7 of 9);
-			@include shift(1);
+			@include span-columns (9 of 9);
+			padding-left: 30px;
+			padding-right: 30px;
 			text-align: left;
 			padding-top: 10px;
-			margin-bottom: 0px;
+			margin-bottom: 10px;
 		}
 		.cta {
 			text-align: right;
@@ -63,54 +66,23 @@
 		@include span-columns(12);
 		height: 30px;
 		font-size: 4px;
-	}
-}
-
-section.primary-only {
-.mini-layout { background: $white;
-	.mini-nav {
-		background: $complementary-neutral-dark;
-		&:after {
-			background: $primary-color;
+		p {
+			@include span-columns(4);
+			@include omega(3n);
+			padding-top: 15px;
 		}
 	}
-	.mini-header {
-		background: $complementary-neutral-light;
-		color: $complementary-neutral-dark;
-	 }
-
-	.mini-aside {
-		ul {
-			li {
-				background: $complementary-neutral-light;
-			}
-		}
-	}
-
-	.mini-main {
-			p {
-				color: $complementary-neutral-dark;
-			}
-			.cta {
-			background: $primary-color;
-			}
-	}
-
-	.mini-footer {
-		background: $complementary-neutral-dark;
-		color: $white;
-	}
-}
 }
 
 header {
 	background: $complementary-neutral-dark;
-	height: 233px;
+	height: 103px;
 	border-bottom: 7px solid $complementary-neutral-light;
+	margin-bottom: 20px;
 
 	h1 {
 		color: $white;
-		padding: 2.5em 2em;
+		padding: 1em 2em;
 		position: relative;
 
 		&:after {
@@ -131,7 +103,7 @@ header {
 }
 
 main {
-	background: $white;
+	background: white;
 }
 
 section {
@@ -140,6 +112,7 @@ section {
 	@media screen and (min-width: 780px) {
 		@include span-columns(8);
 		@include shift(2);
+		@include pad(2);
 	}
 
 	.example {
@@ -155,8 +128,6 @@ section {
 			@include span-columns(6 of 12);
 		}
 	}
-
-
 }
 
 .test {
