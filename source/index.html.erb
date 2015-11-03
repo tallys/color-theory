@@ -2,22 +2,8 @@
 title: Practical Color Theory for People Who Code
 ---
 
-<section>
-		<h1>The Color Wheel</h1>
-		<p><a href="http://www.w3.org/TR/css3-color/#hsl-color">A rainbow represented in a circle</a></p>
-
-		<h3> HSL Four Parameters </h3>
-
-	<p>Hue is an angle (0-360 degrees)</p>
-	<p>Saturation is a percentage (0-100%)<p>
-	<p>Lightness is a percentage (0-100%)</p>
-	<p> "The advantage of HSL over RGB is that it is far more intuitive: you can guess at the colors you want, and then tweak. It is also easier to create sets of matching colors (by keeping the hue the same and varying the lightness/darkness, and saturation). Plus, it is trivial to convert HSL to RGB."</p>
-	
-</section>
-
-
 	<section> 
-		<h2> HSLA </h2>
+		<h2> HSLA (A stands for Alpha) </h2>
 		<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#hsla-instance_method">Documentation!</a>
 	</section>
 
@@ -80,7 +66,7 @@ title: Practical Color Theory for People Who Code
 	</section>
 
 	<section class="black-and-white-added">
-	<h2>Black and White</h2>
+	<h2>Mix a "White" and "Black"</h2>
 	<div class="explanation">
 		<div class="test white"></div>
 		<div class="test black"></div>
@@ -91,12 +77,20 @@ title: Practical Color Theory for People Who Code
 	</section>
 
 
-	<section>
-		<h2>Primary Light, primary, and Dark</h2>
-		<div class="test primary-light"></div>
-		<div class="test primary"></div>
-		<div class="test primary-dark"></div>
+<section class="final-colors">
+		<h2>Make it pop! Primary Light, primary, and Dark</h2>
+		<div class="explanation">	
+			<div class="test primary-light"></div>
+			<div class="test primary"></div>
+			<div class="test primary-dark"></div>
+		</div>
+		<div class="example">
+			<%= partial "partials/mini_layout" %>
+		</div>
+
 </section>
+
+
 <section>
 	<h2>More Mixes</h2>
 		<div class="test mix-1"></div>
@@ -121,8 +115,6 @@ title: Practical Color Theory for People Who Code
 		<div class="test contrast-mix-8"></div>
 	</section>
 
-
-
 		<section>
 		<h2>Complementary/analogous Adjusted Hue</h2>
 			<div class="test analogous"></div>
@@ -140,8 +132,6 @@ title: Practical Color Theory for People Who Code
 		<div class="test primary-grayscale-1"></div>
 		<div class="test complementary-grayscale-1"></div>
 	</section>
-
-
 
 
 	<section>

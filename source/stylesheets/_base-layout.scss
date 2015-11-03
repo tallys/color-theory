@@ -75,27 +75,32 @@
 }
 
 header {
-	background: $complementary-neutral-dark;
-	height: 103px;
-	border-bottom: 7px solid $complementary-neutral-light;
-	margin-bottom: 20px;
+	background: $complementary-neutral-light;
+	height: 13em;
+	border-top: 40px solid $complementary-neutral-dark;
 
 	h1 {
-		color: $white;
+		color: $complementary-neutral-dark;
 		padding: 1em 2em;
 		position: relative;
 
+		@media screen and (min-width: 960px) {
+			font-size: 3.5em;
+			padding: .3em 2.5em;
+		}
+
 		&:after {
-			content: '!';
+			content: '';
 			line-height: 1.5;
+			font-size: 25px;
 			color: $white;
 			text-shadow: none;
-			background: $primary-color;
-			box-shadow: 0px 1px 1px 1px $primary-neutral-dark;
-			height: 50px;
-			width: 50px;
+			background: $primary-light;
+			box-shadow: 0px 1px 1px 1px $primary-dark;
+			height: 30px;
+			width: 30px;
 			position: absolute;
-			top: 10px;
+			top: -35px;
 			right: 10px;
 			border-radius: 100%;
 		}
@@ -107,6 +112,8 @@ main {
 }
 
 section {
+	@extend .box-container;
+	margin-bottom:45px;
 	display: block;
 	@include span-columns(12);
 	@media screen and (min-width: 780px) {
@@ -139,4 +146,11 @@ section {
 
 .container {
 	@include outer-container;
+}
+
+.half {
+	padding: 30px;
+	@media screen and (min-width: 780px) {
+		@include span-columns(6 of 12);
+	}
 }

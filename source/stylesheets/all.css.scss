@@ -7,6 +7,7 @@
 @import "color-blocks";
 @import "cat";
 @import "mini-layout-colors";
+@import "components";
 
 $background: #efefef;
 
@@ -15,9 +16,11 @@ $background: #efefef;
 }
 
 body {
-  background: $white;
+  background-color: $white;
   text-align: center;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  @include texture(180deg, $white, $white, 38, 0)
+	}
 
 h1 {
   color: $complementary-neutral-dark;
