@@ -3,31 +3,13 @@
 @import "bourbon";
 @import "neat";
 @import "variables";
+@import "components";
 @import "base-layout";
 @import "color-blocks";
 @import "cat";
+@import "mini-layout";
 @import "mini-layout-colors";
-@import "components";
 
-$background: #efefef;
-
-* {
-	box-model: border-box;
-}
-
-body {
-  background-color: $white;
-  text-align: center;
-  font-family: sans-serif;
-  @include texture(180deg, $white, $white, 38, 0)
-	}
-
-h1 {
-  color: $complementary-neutral-dark;
-  font-size: 2em;
-  letter-spacing: -1px;
-  text-shadow: 0 1px 0 $complementary-neutral-light;
-  margin: 0; }
 
 .doc {
   font-size: 14px;
