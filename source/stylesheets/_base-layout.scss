@@ -5,10 +5,10 @@ $background: #efefef;
 }
 
 body {
-  background-color: $white;
+  background: $white;
   text-align: center;
   font-family: 'Roboto Slab', sans-serif;
-  @include texture(180deg, $white, $white, 38, 0)
+  @include texture(190deg, $white, increase-contrast(mix($primary-neutral-light, $primary-color, 45%), 30), 1)
 	}
 
 h1 {
@@ -49,9 +49,25 @@ header {
 			width: 20px;
 			position: absolute;
 			bottom: -75px;
-			left: 49%;
+			left: 48.5%;
 			border-radius: 100%;
-			animation: welcome 1s .4s;
+			animation: welcome 1s .5s;
+		}
+	}
+
+	h3 {
+		color: $white;
+		text-shadow: none;
+		font-weight: 100;
+		margin-top: 20vh;
+		animation: welcome 1s;
+		a {
+			text-decoration: none;
+			color: white;
+
+			&:hover, &:active, &:focus {
+				animation: hover 1s;
+			}
 		}
 	}
 }
@@ -72,20 +88,37 @@ section {
 
 	h2 {
 		margin-top: 0px;
-		background: darken(grayscale($complementary-color), 11);
-		color: $white;
+		background: $complementary-neutral-light;
+		@include linear-gradient($complementary-neutral-light, lighten($complementary-neutral-light, 7));
+		color: $complementary-neutral-dark;
+		padding: 7px 20px;
 		font-weight: 400;
-	}
+		position: relative;
+		text-align: left;
 
-	.example {
-		padding: 30px;
-		@media screen and (min-width: 780px) {
-			@include span-columns(6 of 12);
+		span {
+			border-radius: 3px;
+			font-size: .65em;
+			padding: 5px;
+			float: right;
 		}
 	}
 
-		.explanation {
-			padding: 30px;
+	.example {
+		padding: 30px 15px;
+		@media screen and (min-width: 780px) {
+			@include span-columns(6 of 12);
+			@include omega();
+		}
+
+	}
+
+	.explanation {
+		padding: 30px 15px;
+		p {
+			text-align: left;
+			color: $complementary-neutral-dark;
+		}
 		@media screen and (min-width: 780px) {
 			@include span-columns(6 of 12);
 		}

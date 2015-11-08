@@ -49,3 +49,20 @@
     -webkit-transform: scale(1);
   }
 }
+
+@-webkit-keyframes hover {
+  from {
+    -webkit-transform: scale(1);
+  
+  }
+  20% {
+   -webkit-transform: scale(1.04);
+  }
+  62.5% {
+    -webkit-transform: scale(.97);
+    -webkit-animation-timing-function: ease-out;
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}

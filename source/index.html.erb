@@ -4,28 +4,50 @@ title: Practical Color Theory for People Who Code
 
 	<section> 
 		<h2>Let's build a simple Complementary Color Scheme!</h2>
+		<img src="/images/color-circle.png" alt="color-wheel">
 	</section>
 
 	<section class="first-only">
-		<h2>Pick a color</h2>
+		<h2>Pick a color <span> hsl($hue, $saturation, $lightness)</span></h2>
 		<div class="explanation">
 			<div class="test first"></div>
+			<p>$first-color: hsl($hue, 100%, 50%);</p>
+			<p>Pick any color by selecting its hue (0-360) on the color wheel at full saturation (100%) and at half lightness (50%) - this way you start with the 'most colorful color' you can get.</p>
 		</div>
 		<div class="example">
 
 	<%= partial "partials/mini_layout" %>
 
 		</div>
+		<div class="kitty-switch">
+	    <input type="checkbox" id="toggle">
+	    <div class="kitty"></div>
+	    <label for="toggle" class="well"></label>
+			<div class="visible">
+	        <p>Why pick a fully saturated color, but only half lightness?</p>
+	        <p>When you mix colors, the saturation only goes down, so you want to start with the most saturated colors so you can still have a full range of mixes</p>
+			</div>
+		</div>
 	</section>
 
 
 	<section class="second-added">
-		<h2>Complementary Color</h2>
+		<h2>Complementary Color<span>complement($color);</h2>
 		<div class="explanation">
 			<div class="test second"></div>
+			<p>$second-color: complement($first-color);</p>
 		</div>
 		<div class="example">
 		<%= partial "partials/mini_layout" %>
+		</div>
+		<div class="kitty-switch">
+	    <input type="checkbox" id="toggle">
+	    <div class="kitty"></div>
+	    <label for="toggle" class="well"></label>
+			<div class="visible">
+	        <p>Mix your second color</p>
+	        <p></p>
+			</div>
 		</div>
 	</section>
 
