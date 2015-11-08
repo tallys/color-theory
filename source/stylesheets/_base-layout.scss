@@ -7,7 +7,7 @@ $background: #efefef;
 body {
   background-color: $white;
   text-align: center;
-  font-family: sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   @include texture(180deg, $white, $white, 38, 0)
 	}
 
