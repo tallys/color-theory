@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+@import "normalize";
 @import "bourbon";
 @import "neat";
 @import "variables";
@@ -39,8 +40,8 @@
    -webkit-transform: scale(0);
    opacity: 0;
   }
-  82.5% {
-    -webkit-transform: scale(1.03);
+  92.5% {
+    -webkit-transform: scale(1.04);
     -webkit-animation-timing-function: ease-out;
     opacity: 1;
   }
