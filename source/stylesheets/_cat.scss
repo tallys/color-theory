@@ -158,7 +158,7 @@ $shadow: darken($background, 11%);
 
     ~label {
         &:before {
-          content: "less";
+          content: "ok";
           position: absolute;
           color: $complementary-color;
           left: -50px;
@@ -167,7 +167,7 @@ $shadow: darken($background, 11%);
         }
 
         &:after {
-          content: "more";
+          content: "why?";
           position: absolute;
           color: $muted;
           left: 65px;

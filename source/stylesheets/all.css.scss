@@ -55,11 +55,11 @@
     -webkit-transform: scale(1);
   
   }
-  20% {
-   -webkit-transform: scale(1.04);
+  15% {
+   -webkit-transform: scale(.97);
   }
-  62.5% {
-    -webkit-transform: scale(.97);
+  72.5% {
+    -webkit-transform: scale(1.04);
     -webkit-animation-timing-function: ease-out;
   }
   to {
