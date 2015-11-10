@@ -1,4 +1,42 @@
-// comparative function 
+//Pick a color 
+
+$first-color: hsl(277, 100%, 50%);
+
+// Find the complement
+
+$second-color: complement($first-color);
+
+
+//Check if you have a cool color on your hands.s Cool colors will overpower warm colors when mixing.
+
+@function is-cool-color($color) {
+	@return hue($color) < 300 and hue($color) > 120;
+}
+
+//Establish a relationship (similar lighting conditions) between colors.
+
+@function harmonious-mix($mix, $base) {
+	@if (is-cool-color($mix)){
+		@return mix($mix, $base, 9%);
+
+	}
+	@else {
+		@return mix($mix, $base, 35%);
+	}
+}
+
+// Figure out the right amount to desaturate the color 
+@function create-neutral($color) {
+	@if (saturation($color) < 50){
+		@return desaturate($color, 15);
+
+	}
+	@else {
+		@return desaturate($color, 33%);
+	}
+}
+
+// Increase lightness and darkness based on what you have
 
 @function increase-contrast($color, $percent) {
 
@@ -10,32 +48,24 @@
 }
 
 
-//Pick a color 
-
-$first-color: hsl(14, 100%, 50%);
-
-// Find the complement
-
-$second-color: complement($first-color);
-
-
-// Establish a relationship between your two colors.????
-
-@function establish-relationship($first-color, $second-color) {
-	@if (saturation($first-color) > saturation($second-color)) {
-		@return mix($first-color, $second-color, 9%);
-	}
-	@else {
-		@return mix($second-color, $first-color, 9%);
-	}
-}
+// @function harmonious-mix($first-color, $second-color) {
+// 	@if (saturation($first-color) > saturation($second-color)) {
+// 		@return mix($first-color, $second-color, 9%);
+// 	}
+// 	@else {
+// 		@return mix($second-color, $first-color, 9%);
+// 	}
+// }
 
 // take away decision
 // $primary-color: mix($second-color, $first-color, 10%);
 // $complementary-color: mix($first-color, $second-color, 33%);
 
-$primary-color: establish-relationship($first-color, $second-color);
-$complementary-color: establish-relationship($second-color, $first-color);
+// $primary-color: harmonious-mix($first-color, $second-color);
+// $complementary-color: harmonious-mix($second-color, $first-color);
+
+$complementary-color: harmonious-mix($first-color, $second-color);
+$primary-color: harmonious-mix($second-color, $first-color);
 
 $first-adjusted: increase-contrast($primary-color, 20%);
 $second-adjusted: increase-contrast($complementary-color, 20%);
@@ -43,13 +73,12 @@ $second-adjusted: increase-contrast($complementary-color, 20%);
 
 // Complementary Neutrals, highlight, midtone, shadow
 
-$complementary-neutral: desaturate($complementary-color, 33);
+$complementary-neutral: create-neutral($complementary-color);
 $complementary-neutral-light: lighten($complementary-neutral, 33);
 $complementary-neutral-dark: darken($complementary-neutral, 33);
 
 // Primary neutrals, highlight, midtone, shadow`
-$primary-neutral: desaturate($primary-color, 33);
-
+$primary-neutral: create-neutral($primary-color);
 $primary-neutral-light: lighten($primary-neutral, 33);
 $primary-neutral-dark: darken($primary-neutral, 33);
 

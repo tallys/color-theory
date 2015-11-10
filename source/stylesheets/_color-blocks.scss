@@ -71,6 +71,10 @@
 	background: mix($complementary-color, $primary-color, 13%);
 }
 
+.mix-3{
+	background: mix($primary-neutral-light, $primary-color, 45%);
+}
+
 //add another color to the mix!
 
 .primary-light {

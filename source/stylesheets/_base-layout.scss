@@ -72,6 +72,15 @@ header {
 	}
 }
 
+  code {
+    background: $complementary-neutral-light;
+    border-radius: 2px;
+    font-size: 0.8em;
+    font-style: normal;
+    padding: 3px 0.7em;
+    margin-right: 9px;
+  }
+
 section {
 	@extend .box-container;
 	margin-bottom:45px;
@@ -115,8 +124,8 @@ section {
 
 	.explanation {
 		padding: 30px 15px;
+		text-align: left;
 		p {
-			text-align: left;
 			color: $complementary-neutral-dark;
 		}
 		@media screen and (min-width: 780px) {

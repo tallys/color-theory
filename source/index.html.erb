@@ -5,6 +5,7 @@ title: Practical Color Theory for People Who Code
 	<section> 
 		<h2>Let's build a simple Complementary Color Scheme!</h2>
 		<img src="/images/color-circle.png" alt="color-wheel">
+		<p>We know this works because of science (wavelengths!)</p>
 	</section>
 
 	<section class="first-only">
@@ -25,7 +26,7 @@ title: Practical Color Theory for People Who Code
 	    <label for="toggle" class="well"></label>
 			<div class="visible">
 	        <p>Why pick a fully saturated color, but only half lightness?</p>
-	        <p>When you mix colors, the saturation only goes down, so you want to start with the most saturated colors so you can still have a full range of mixes</p>
+	        <p>When you mix colors, the saturation only goes down, so you want to start with the most saturated colors so you can still have a full range of mixing opportunities.</p>
 			</div>
 		</div>
 	</section>
@@ -35,7 +36,7 @@ title: Practical Color Theory for People Who Code
 		<h2>Complementary Color<span>complement($color);</h2>
 		<div class="explanation">
 			<div class="test second"></div>
-			<p>$second-color: complement($first-color);</p>
+			<p><code>$second-color: complement($first-color);</code></p>
 		</div>
 		<div class="example">
 		<%= partial "partials/mini_layout" %>
@@ -52,10 +53,13 @@ title: Practical Color Theory for People Who Code
 	</section>
 
 	<section class="primary-complementary">
-	<h2>Color Relationship Established by Mixing</h2>
+	<h2>Color Relationship Established by Mixing<span>mix($color1, $color2)</h2>
 		<div class="explanation">
 			<div class="test primary"></div>
 			<div class="test complement"></div>
+			<p>Create similar lighting conditions</p>
+			<code>$complementary-color: harmonious-mix($first-color, $second-color);<br><br>
+$primary-color: harmonious-mix($second-color, $first-color);</code>
 		</div>
 		<div class="example">
 			<%= partial "partials/mini_layout" %>
@@ -65,8 +69,21 @@ title: Practical Color Theory for People Who Code
 	    <div class="kitty"></div>
 	    <label for="toggle" class="well"></label>
 			<div class="visible">
-	        <p>Mix your second color</p>
-	        <p></p>
+	        <p>Sure, there's a relationship already because these colors are complementary to each other...</p>
+	        <p>But, when you're painting, you want to simulate similar lighting conditions, and that means mixing a bit of one color into the other. Mixing different ratios of the same colors will usually generate a matching color palette.</p>
+					<p>How do I decide what to do? Thanks to art school and science, I know that cool colors are "darker" than warm colors, and will dominate in mixes. For example, a touch of blue will really affect yellow, whereas you can add a lot of yellow to blue before it is very affected. So, here is this thinking in function form. Check if it's a cool color (and will dominate the mix) and then mix the appropriate amount of one color into the other using the handy mix function Sass provides.</p>
+					<pre><code>@function is-cool-color($color) {
+	@return hue($color) < 300 and hue($color) > 120;
+}</code>
+							
+							<pre><code>@function harmonious-mix($mix, $base) {
+	@if (is-cool-color($mix)){
+		@return mix($mix, $base, 9%);
+	}
+	@else {
+		@return mix($mix, $base, 35%);
+	}
+}</code></pre>
 			</div>
 		</div>
 	</section>
@@ -77,6 +94,12 @@ title: Practical Color Theory for People Who Code
 			<div class="test complementary-neutral-1"></div>
 			<div class="test complementary-neutral-2"></div>
 			<div class="test complementary-neutral-3"></div>
+			<p>Let your chosen color pop by surrounding it with neturals. Desaturate the complementary color to get a neutral. Then, give that neutral some lightness to create a light neutral, and do the same with darkness for a dark neutral.</p>
+			<pre><code>$complementary-neutral: create-neutral($complementary-color);
+
+$complementary-neutral-light: lighten($complementary-neutral, 33);
+
+$complementary-neutral-dark: darken($complementary-neutral, 33);</code></pre>
 		</div>
 		<div class="example">
 			<%= partial "partials/mini_layout" %>
@@ -86,8 +109,18 @@ title: Practical Color Theory for People Who Code
 	    <div class="kitty"></div>
 	    <label for="toggle" class="well"></label>
 			<div class="visible">
-	        <p>Mix your second color</p>
-	        <p></p>
+	        <p>The colors are way too intense at their full saturation for our eyes to handle. If all the colors are bright, none of the colors are bright.</p>
+	        <p>I picked my starting color for a reason-  I want that to the heart of my design! That means the complementary color should support the chosen color. This means mixing neutrals. Our eyes don't really handle saturated colors very well next to other saturated colors. We have eye cells and they get confused. This is how we get optical illusions. Just give your eyes a break between super strong saturated colors with neutrals so they don't stress out about that much visual information. At the very minimum your viewport should have 30% neutral space (white, desaturated, or black colors) so your poor eyes can have a break and process the information right. Otherwise you get eye strain!</p>
+	        <p>Here, I decide how much to desaturate- if the color we mixed is already a little more on the 'neutral' side, I don't want it to turn completely grayscale and so I don't desaturate it as much.</p>
+	        <pre><code>@function create-neutral($color) {
+	@if (saturation($color) < 50){
+		@return desaturate($color, 15);
+
+	}
+	@else {
+		@return desaturate($color, 33%);
+	}
+}</code>
 			</div>
 		</div>
 		</section>
@@ -98,6 +131,12 @@ title: Practical Color Theory for People Who Code
 			<div class="test primary-neutral-1"></div>
 			<div class="test primary-neutral-2"></div>
 			<div class="test primary-neutral-3"></div>
+			<p>This seems logical, we can do the same for our primary color too. More to work with. Sadly, doesn't seem to make our layout much better. What we need now is CONTRAST!</p>
+			<pre><code>$primary-neutral: create-neutral($primary-color);
+
+$primary-neutral-light: lighten($primary-neutral, 33);
+
+$primary-neutral-dark: darken($primary-neutral, 33);</code></pre>
 	</div>
 	<div class="example">
 		<%= partial "partials/mini_layout" %>
@@ -107,8 +146,7 @@ title: Practical Color Theory for People Who Code
 	    <div class="kitty"></div>
 	    <label for="toggle" class="well"></label>
 			<div class="visible">
-	        <p>Mix your second color</p>
-	        <p></p>
+	        <p>Not everyone sees color the same. Accessibility is important, and it's good for everyone. Increasing contrast one of the ways you can immediately improve your design on all levels. Your layout should work when you take out ALL of the color information (desaturate it all, take out all of the hue information, and leave only lightness and darkness to differentiate between areas). Just about every famous master painting still looks amazing if you desaturate the whole thing. </p>
 			</div>
 		</div>
 	</section>
@@ -118,6 +156,9 @@ title: Practical Color Theory for People Who Code
 	<div class="explanation">
 		<div class="test white"></div>
 		<div class="test black"></div>
+		<p>Finally, some contrast! Make sure you don't use pure black or white - this is just like mixing neutrals, just mix them really bright and really dark.</p>
+		<pre><code>$white: lighten($primary-neutral-light, 15);</code></pre>
+		<pre><code>$black: grayscale($complementary-neutral-dark);</code></pre>
 	</div>
 	<div class="example">
 		<%= partial "partials/mini_layout" %>
@@ -127,7 +168,7 @@ title: Practical Color Theory for People Who Code
 	    <div class="kitty"></div>
 	    <label for="toggle" class="well"></label>
 			<div class="visible">
-	        <p>Mix your second color</p>
+	        <p>Yes, people will notice. #000000 and #ffffff will irritate your eyes. Mix up a matching white and a matching gray from your ever expanding palette and you will ensure that it will always match the rest of your design.</p>
 	        <p></p>
 			</div>
 		</div>
@@ -135,11 +176,16 @@ title: Practical Color Theory for People Who Code
 
 
 <section class="final-colors">
-		<h2>Make it pop! Primary Light, primary, and Dark</h2>
+		<h2>Make it pop! Primary Light, primary, and Dark<span>mix($color1, $color2);</h2>
 		<div class="explanation">	
 			<div class="test primary-light"></div>
 			<div class="test primary"></div>
 			<div class="test primary-dark"></div>
+			<p>This is the color you wanted in the first place, make sure you're using it. But, remember that it's about context - make sure you're using the right amount of contrast! The header on our little layout has a lighter version of our primary color.</p>
+			<pre><code>$primary-light: mix($primary-neutral-light, $primary-color, 45%); <br>
+$primary-dark: mix($primary-neutral-dark, $primary-color, 45%);
+</code></pre>
+<p>That's right, you can use what you've already got to mix it up (keep building those color relationships)! You can also adjust lightness and darkness. Up to you!</p>
 		</div>
 		<div class="example">
 			<%= partial "partials/mini_layout" %>
@@ -150,7 +196,7 @@ title: Practical Color Theory for People Who Code
 	    <div class="kitty"></div>
 	    <label for="toggle" class="well"></label>
 			<div class="visible">
-	        <p>Mix your second color</p>
+	        <p>A lighter and darker version of your primary color is useful for things like hover states, too. </p>
 	        <p></p>
 			</div>
 		</div>
@@ -167,6 +213,14 @@ title: Practical Color Theory for People Who Code
 		<div class="test mix-6"></div>
 		<div class="test mix-7"></div>
 		<div class="test mix-8"></div>
+		<div class="test contrast-mix-1"></div>
+		<div class="test contrast-mix-2"></div>
+		<div class="test contrast-mix-3"></div>
+		<div class="test contrast-mix-4"></div>
+		<div class="test contrast-mix-5"></div>
+		<div class="test contrast-mix-6"></div>
+		<div class="test contrast-mix-7"></div>
+		<div class="test contrast-mix-8"></div>
 	<div class="kitty-switch">
 	    <input type="checkbox" id="toggle">
 	    <div class="kitty"></div>
@@ -180,14 +234,6 @@ title: Practical Color Theory for People Who Code
 
 <section>
 		<h2>Increase Contrast Mixes</h2>
-		<div class="test contrast-mix-1"></div>
-		<div class="test contrast-mix-2"></div>
-		<div class="test contrast-mix-3"></div>
-		<div class="test contrast-mix-4"></div>
-		<div class="test contrast-mix-5"></div>
-		<div class="test contrast-mix-6"></div>
-		<div class="test contrast-mix-7"></div>
-		<div class="test contrast-mix-8"></div>
 	<div class="kitty-switch">
 	    <input type="checkbox" id="toggle">
 	    <div class="kitty"></div>
