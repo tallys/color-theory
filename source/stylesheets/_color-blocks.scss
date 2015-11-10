@@ -58,6 +58,7 @@
 .primary-light {
 	background: $primary-light;
 }
+
 .primary-dark {
 	background: $primary-dark;
 }
@@ -67,6 +68,7 @@
 .mix-1 {
 	background: $mix-1;
 }
+
 .mix-2 {
 	background: $mix-2;
 }
@@ -78,9 +80,11 @@
 .mix-4 {
 	background: $mix-4;
 }
+
 .mix-5 {
 	background: $mix-5;
 }
+
 .mix-6 {
 	background: $mix-6;
 }
@@ -88,6 +92,7 @@
 .mix-7 {
 	background: $mix-7;
 }
+
 .mix-8 {
 	background: $mix-8;
 }
@@ -111,9 +116,11 @@
 .contrast-mix-4 {
 	background: $contrast-to-mix-4;
 }
+
 .contrast-mix-5 {
 	background: $contrast-to-mix-5;
 }
+
 .contrast-mix-6 {
 	background: $contrast-to-mix-6;
 }
@@ -121,6 +128,7 @@
 .contrast-mix-7 {
 	background: $contrast-to-mix-7;
 }
+
 .contrast-mix-8 {
 	background: $contrast-to-mix-8;
 }
@@ -138,6 +146,7 @@
 .complementary-analogous-mix-1 {
 	background: $complementary-analogous-mix-1;
 }
+
 .complementary-analogous-mix-2 {
 	background: $complementary-analogous-mix-2;
 }
@@ -173,5 +182,3 @@
 .complementary-grayscale-1 {
 	background: darken(grayscale($complementary-color), 11);
 }
-
-
