@@ -72,14 +72,14 @@ header {
 	}
 }
 
-  code {
-    background: $complementary-neutral-light;
-    border-radius: 2px;
-    font-size: 0.8em;
-    font-style: normal;
-    padding: 3px 0.7em;
-    margin-right: 9px;
-  }
+code {
+  background: $white;
+  border-radius: 2px;
+  font-size: 0.8em;
+  font-style: normal;
+  padding: 3px 0.7em;
+  margin-right: 9px;
+}
 
 section {
 	@extend .box-container;
@@ -87,6 +87,11 @@ section {
 	display: block;
 	padding: 0px;
 	padding-bottom: 20px;
+
+	pre {
+		text-align: left;
+		padding: 5px 20px;
+	}
 
 	@include span-columns(12);
 	@media screen and (min-width: 780px) {

@@ -1,5 +1,6 @@
 .mini-layout {
 	@include span-columns(12);
+	max-width: 425px;
 	.mini-nav {
 		@include span-columns(12);
 		height: 25px;

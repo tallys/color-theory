@@ -1,6 +1,6 @@
 //Pick a color 
 
-$first-color: hsl(277, 100%, 50%);
+$first-color: hsl(288, 100%, 50%);
 
 // Find the complement
 
@@ -94,20 +94,36 @@ $primary-gray: mix($primary-color, $complementary-color, 30);
 $complimentary-gray: mix($complementary-color, $primary-color, 63);
 $black: grayscale($complementary-neutral-dark);
 
+
+// More mixes you can make!
+
+$mix-1: mix($primary-color, $complementary-color, 13%);
+$mix-2: mix($complementary-color, $primary-color, 13%);
+$mix-3: mix($primary-neutral-light, $primary-color, 45%);
+$mix-4: mix($primary-neutral-light, $complementary-color, 35%);
+$mix-5: mix($primary-neutral-dark, $complementary-color, 35%);
+$mix-6: mix($primary-neutral-dark, $primary-color, 35%);
+$mix-7: mix($complementary-neutral-dark, $complementary-color, 35%);
+$mix-8: mix($complementary-neutral-dark, $primary-color, 35%);
+
+// Increased contrast! VERY important to have
+
+$contrast-to-mix-1: increase-contrast($mix-1, 20);
+$contrast-to-mix-2: increase-contrast($mix-2, 20);
+$contrast-to-mix-3: increase-contrast($mix-3, 20);
+$contrast-to-mix-4: increase-contrast($mix-4, 20);
+$contrast-to-mix-5: increase-contrast($mix-5, 20);
+$contrast-to-mix-6: increase-contrast($mix-6, 20);
+$contrast-to-mix-7: increase-contrast($mix-7, 20);
+$contrast-to-mix-8: increase-contrast($mix-8, 20);
+
+
 // Analogous Colors 
 
 $analogous-color: adjust-hue($complementary-color, -40);
 $complementary-analogous: mix($analogous-color, $complementary-color, 66);
 
 
-
-.find-complement {
-	background: increase-contrast($primary-color, 20%);
-	color: $primary-color;
-}
-
-
-.find-complement-2 {
-	background: increase-contrast($complementary-neutral-dark, 15%);
-	color: increase-contrast($complementary-neutral-dark, 15%);
-}
+// Even more mixes
+$complementary-analogous-mix-1: mix($complementary-analogous, $complementary-color, 10%);
+$complementary-analogous-mix-2: mix($complementary-analogous, $primary-color, 10%);
