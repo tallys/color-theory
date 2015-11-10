@@ -313,6 +313,10 @@ section.final-colors {
 				}
 				.cta {
 				background: $primary-color;
+				transition: all ease-in .25s;
+					&:hover {
+						background: $primary-dark;
+					}
 				}
 		}
 
