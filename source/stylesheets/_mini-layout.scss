@@ -1,0 +1,76 @@
+.mini-layout {
+	@include span-columns(12);
+	max-width: 425px;
+	.mini-nav {
+		@include span-columns(12);
+		height: 25px;
+		position: relative;
+		&:after {
+			content: '';
+			height: 10px;
+			width: 10px;
+			position: absolute;
+			border-radius: 50%;
+			right: 7px;
+			top: 7px;
+		}
+	}
+	.mini-header {
+		@include span-columns(12);
+		height: 60px;
+		h1 {
+			font-weight: light;
+			margin-bottom: 0px;
+			padding-top: 7px;
+			text-shadow: none;
+		}
+	}
+
+	.mini-aside {
+		@include span-columns(3 of 12);
+		ul {
+			list-style: none;
+			padding: 0px;
+			li {
+				margin-bottom: 3px;
+				height: 10px;
+			}
+		}
+	}
+	.mini-main {
+		@include span-columns(9 of 12);
+		@include omega();
+
+		p:first-of-type {
+			font-size: 6px;
+			margin-bottom: 0px;
+		}
+		p {
+			font-size: 4px;
+			@include span-columns (9 of 9);
+			padding-left: 30px;
+			padding-right: 30px;
+			text-align: left;
+			padding-top: 10px;
+			margin-bottom: 10px;
+		}
+		.cta {
+			text-align: right;
+			height: 7px;
+			border-radius: 1px;
+			display: inline-block;
+			color: transparent;
+		}
+	}
+
+	.mini-footer {
+		@include span-columns(12);
+		height: 30px;
+		font-size: 4px;
+		p {
+			@include span-columns(4);
+			@include omega(3n);
+			padding-top: 15px;
+		}
+	}
+}
