@@ -2,9 +2,9 @@
 title: Practical Color Theory for People Who Code
 ---
 <a href="#" name="start"></a>
-	<section> 
+	<section>
 		<h2>Let's build a simple Complementary Color Scheme!</h2>
-		<img src="/images/color-circle.png" alt="color-wheel">
+		<img src="images/color-circle.png" alt="color-wheel">
 		<p>We know this works because of science (wavelengths!)</p>
 	</section>
 
@@ -78,7 +78,7 @@ $primary-color: harmonious-mix($second-color, $first-color);</code></pre>
 @function is-cool-color($color) {
 	@return hue($color) < 300 and hue($color) > 120;
 }</code></pre>
-							
+
 							<pre><code>@function harmonious-mix($mix, $base) {
 	@if (is-cool-color($mix)){
 		@return mix($mix, $base, 9%);
@@ -183,7 +183,7 @@ $primary-neutral-dark: darken($primary-neutral, 33);</code></pre>
 
 <section class="final-colors">
 		<h2>Make it pop! Primary Light, primary, and Dark<span>mix( ); lighten( ); darken( );</h2>
-		<div class="explanation">	
+		<div class="explanation">
 			<div class="test primary-light"></div>
 			<div class="test primary"></div>
 			<div class="test primary-dark"></div>
