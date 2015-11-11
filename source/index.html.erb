@@ -26,7 +26,7 @@ title: Practical Color Theory for People Who Code
 	    <label for="toggle" class="well"></label>
 			<div class="visible">
 	        <p>Why pick a fully saturated color, but only half lightness?</p>
-	        <p>When you mix colors, the saturation only goes down, so you want to start with the most saturated colors so you can still have a full range of mixing opportunities. You use 50% lightness beacause you want the color, not the tint(high lightness) or the shade(low lightness).</p>
+	        <p>When you mix colors, the saturation only goes down, so you want to start with the most saturated colors so you can still have a full range of mixing opportunities. You use 50% lightness because you want the color, not the tint(high lightness) or the shade(low lightness).</p>
 			</div>
 		</div>
 	</section>
@@ -71,7 +71,7 @@ $primary-color: harmonious-mix($second-color, $first-color);</code></pre>
 	    <label for="toggle" class="well"></label>
 			<div class="visible">
 	        <p>Sure, there's a relationship already because these colors are complementary to each other...</p>
-					<p>But, this is another way we get closer to nature. It's a bit more complicated than this, but this is my favorite way of explaining it - everything outisde has some "yellow" mixed in from the sunshine during the day, and it looks warm and inviting. Same thing happens when everyone and everything looks bad in photos taken under the glow of green flouescent lights - there is green added to all of the colors you're looking at, including adding a green glow to your skin if you're standing under the flouresecent light yourself. Whether it looks good or bad, this color (light) mixing creates a visual harmony. We don't really notice it when it's there, but we really notice its absence.</p>
+					<p>But, this is another way we get closer to nature. It's a bit more complicated than this, but this is my favorite way of explaining it - everything outside has some "yellow" mixed in from the sunshine during the day, and it looks warm and inviting. Same thing happens when everyone and everything looks bad in photos taken under the glow of green flourescent lights - there is green added to all of the colors you're looking at, including adding a green glow to your skin if you're standing under the flourescent light yourself. Whether it looks good or bad, this color (light) mixing creates a visual harmony. We don't really notice it when it's there, but we really notice its absence.</p>
 	        <p>When you're painting, you want to simulate similar lighting conditions for a scene, and that means mixing a bit of one color into the other. Mixing different ratios of the same colors will usually generate a matching color palette.</p>
 					<p>How do I decide what to do? Thanks to art school and science, I know that cool colors are "darker" than warm colors, and will dominate in mixes. For example, a touch of blue will really affect yellow, whereas you can add a lot of yellow to blue before it is very affected. So, here is this thinking in function form. Check if it's a cool color (and will dominate the mix) and then mix the appropriate amount of one color into the other using the handy mix function Sass provides.</p>
 					<pre><code>
@@ -114,8 +114,8 @@ $complementary-neutral-dark: darken($complementary-neutral, 33);</code></pre>
 	    <label for="toggle" class="well"></label>
 			<div class="visible">
 	        <p>The colors are way too intense at their full saturation for our eyes to handle. If all the colors are bright, none of the colors are bright.</p>
-	        <p>I picked my starting color for a reason-  I want that to the heart of my design! That means the complementary color should support the chosen color. This means mixing neutrals. Our eyes don't really handle saturated colors very well next to other saturated colors. We have eye cells and they get confused. This is how we get optical illusions. Just give your eyes a break between super strong saturated colors with neutrals so they don't stress out about that much visual information. At the very minimum your viewport should have 30% neutral space (white, desaturated, or black colors) so your poor eyes can have a break and process the information right. Otherwise you get eye strain!</p>
-	        <p>Here, I decide how much to desaturate- if the color we mixed is already a little more on the 'neutral' side, I don't want it to turn completely grayscale and so I don't desaturate it as much.</p>
+	        <p>I picked my starting color for a reason -  I want that to be the heart of my design! That means the complementary color should support the chosen color. This means mixing neutrals. Our eyes don't really handle saturated colors very well next to other saturated colors. We have eye cells and they get confused. This is how we get optical illusions. Just give your eyes a break between super strong saturated colors with neutrals so they don't stress out about that much visual information. At the very minimum your viewport should have 30% neutral space (white, desaturated, or black colors) so your poor eyes can have a break and process the information right. Otherwise you get eye strain!</p>
+	        <p>Here, I decide how much to desaturate - if the color we mixed is already a little more on the 'neutral' side, I don't want it to turn completely grayscale and so I don't desaturate it as much.</p>
 	        <pre><code>
 @function create-neutral($color) {
 	@if (saturation($color) < 50){
@@ -174,7 +174,7 @@ $primary-neutral-dark: darken($primary-neutral, 33);</code></pre>
 	    <div class="kitty"></div>
 	    <label for="toggle" class="well"></label>
 			<div class="visible">
-				  <p>Not everyone sees color the same. Accessibility is important, and it's good for everyone. Increasing contrast one of the ways you can immediately improve your design on all levels. Your layout should work when you take out ALL of the color information (desaturate it all, take out all of the hue information, and leave only lightness and darkness to differentiate between areas). Just about every famous master painting still looks amazing if you desaturate the whole thing. </p>
+				  <p>Not everyone sees color the same. Accessibility is important, and it's good for everyone. Increasing contrast is one of the ways you can immediately improve your design on all levels. Your layout should work when you take out ALL of the color information (desaturate it all, take out all of the hue information, and leave only lightness and darkness to differentiate between areas). Just about every famous master painting still looks amazing if you desaturate the whole thing. </p>
 	        <p>Yes, people will notice. #000000 and #ffffff will irritate your eyes. Mix up a matching white and a matching gray from your ever expanding palette and you will ensure that it will always match the rest of your design.</p>
 			</div>
 		</div>

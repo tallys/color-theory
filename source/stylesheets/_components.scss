@@ -1,11 +1,11 @@
 @mixin texture($gradient-angle, $bg-color-1, $bg-color-2, $inverted) {
-  
+
   @if ($inverted == 1) {
-    @include background(url("/images/worn_dots.png"), linear-gradient($gradient-angle, $bg-color-1, $bg-color-2), center no-repeat $bg-color-1 scroll);
+    @include background(url("images/worn_dots.png"), linear-gradient($gradient-angle, $bg-color-1, $bg-color-2), center no-repeat $bg-color-1 scroll);
   }
 
   @else {
-    @include background(url("/images/worn_dots.png"), linear-gradient($gradient-angle, $bg-color-1, $bg-color-2), center no-repeat $bg-color-1 scroll);
+    @include background(url("images/worn_dots.png"), linear-gradient($gradient-angle, $bg-color-1, $bg-color-2), center no-repeat $bg-color-1 scroll);
   }
 }
 
