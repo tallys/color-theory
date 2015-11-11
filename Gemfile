@@ -16,3 +16,6 @@ gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 # Sass Libraries
 gem 'bourbon'
 gem 'neat'
+
+gem 'rake'
+gem 'middleman-gh-pages'
