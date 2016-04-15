@@ -9,18 +9,27 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <%= stylesheet_link_tag "all" %>
     <%= javascript_include_tag  "all" %>
   </head>
-  
 <header>
 	<div class="container">
-		<h1>Practical Color Theory for People Who Code</h1>
+		<h1>Practical Color Theory<br> for People Who Code</h1>	
+		<div class="color-swatches">
+			<div class= "swatch red" id="red"></div>
+			<div class= "swatch orange" id="orange"></div>
+			<div class= "swatch yellow" id="yellow"></div>
+			<div class= "swatch green" id="green"></div>
+			<div class= "swatch blue" id="blue"></div>
+			<div class= "swatch violet" id="violet"></div>
 		</div>
+	</div>
 		<h3>Natalya Shelburne
 		<br>
 		<a href="https://twitter.com/natalyathree">@natalyathree</a></h3>
 </header>
+
 <div class="hero">
 	<div class="container">
 	<div class="half">

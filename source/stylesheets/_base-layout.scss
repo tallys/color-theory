@@ -24,36 +24,32 @@ header {
 	background: $complementary-neutral-light;
 	@include linear-gradient (180deg, $complementary-neutral-dark, $complementary-neutral);
 	height: 100vh;
+	@include display(flex);
+	@include justify-content(center);
+	@include align-items(stretch);
+	@include flex-wrap(no-wrap);
+	@include flex-direction(column);
+
+	.container {
+		background-color: rgba(0,0,0 ,.2);
+		padding: 20px;
+		@media screen and (min-width: 700px) {
+			padding: 40px 70px;
+		}
+	}
 
 	h1 {
+		@include flex(1 1 100%);
 		color: $white;
 		text-shadow: 0 1px 0 $complementary-neutral-dark;
 		font-weight: 400;
-		padding-top: 30vh;
-		padding-left: 20vw;
-		padding-right: 20vw;
+		margin-bottom: 50px;
 		position: relative;
 		animation: welcome 1s;
+		font-size: 3.2em;
 
-		@media screen and (min-width: 960px) {
-			font-size: 3.5em;
-		}
-
-		&:after {
-			content: '';
-			line-height: 1.5;
-			font-size: 25px;
-			color: $white;
-			text-shadow: none;
-			background: $primary-color;
-			box-shadow: 0px 0px 0px 3px $white;
-			height: 20px;
-			width: 20px;
-			position: absolute;
-			bottom: -75px;
-			left: 48.5%;
-			border-radius: 100%;
-			animation: welcome 1s .5s;
+		@media screen and (max-width: 700px) {
+			font-size: 2.5em;
 		}
 	}
 
@@ -155,5 +151,56 @@ section {
 	padding: 30px;
 	@media screen and (min-width: 780px) {
 		@include span-columns(6 of 12);
+	}
+}
+
+@include keyframes(bounce) {
+  0% {
+    @include transform(translateY(-10px));
+  }
+  100% {
+    @include transform(translateY(3px));
+  }
+}
+
+.color-swatches {
+	display: block;
+	margin: auto;
+	.swatch {
+		display: inline-block;
+		flex:0 1 20px;
+		margin: 10px;
+		line-height: 1.5;
+		font-size: 25px;
+		color: $white;
+		text-shadow: none;
+		background: $primary-color;
+		box-shadow: 0px 0px 0px 3px $white;
+		height: 20px;
+		width: 20px;
+		border-radius: 100%;
+		animation: welcome 1s .5s;
+		cursor: pointer;
+
+
+		&.red {
+			background-color: hsl(0, 100%, 50%);
+		}
+		&.orange {
+			background-color: hsl(17, 100%, 50%);
+		}
+		&.yellow {
+			background-color: hsl(60, 100%, 50%);
+		}
+		&.green {
+			background-color: hsl(120, 100%, 50%);
+		}
+		&.blue {
+			background-color: hsl(240, 100%, 50%);
+		}
+		&.violet {
+			background-color: hsl(300, 100%, 50%);
+		}
+
 	}
 }

@@ -16,10 +16,10 @@ $second-color: complement($first-color);
 
 @function harmonious-mix($mix, $base) {
 	@if (is-cool-color($mix)){
-		@return mix($mix, $base, 9%);
+		@return mix($mix, $base, 10%);
 	}
 	@else {
-		@return mix($mix, $base, 35%);
+		@return mix($mix, $base, 25%);
 	}
 }
 
@@ -51,8 +51,11 @@ $second-color: complement($first-color);
 // $primary-color: harmonious-mix($first-color, $second-color);
 // $complementary-color: harmonious-mix($second-color, $first-color);
 
-$complementary-color: harmonious-mix($first-color, $second-color);
 $primary-color: harmonious-mix($second-color, $first-color);
+$complementary-color: harmonious-mix($first-color, $second-color);
+
+$analogous-color: adjust-hue($complementary-color, -40);
+$complementary-analogous: mix($analogous-color, $complementary-color, 66);
 
 $first-adjusted: increase-contrast($primary-color, 20%);
 $second-adjusted: increase-contrast($complementary-color, 20%);
