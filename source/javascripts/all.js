@@ -31,6 +31,13 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  $('.color-swatches #cyan').click(function () {
+    console.log('cyan');
+     $('head').append('<link rel="stylesheet" href="stylesheets/theme/cyan.css" type="text/css" />');
+	});
+});
+
+$(document).ready(function () {
   $('.color-swatches #blue').click(function () {
     console.log('blue');
     $('head').append('<link rel="stylesheet" href="stylesheets/theme/blue.css" type="text/css" />');
@@ -42,4 +49,22 @@ $(document).ready(function () {
     console.log('violet');
     $('head').append('<link rel="stylesheet" href="stylesheets/theme/violet.css" type="text/css" />');
 	});
+});
+
+
+// Smooth Scroll
+
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
 });

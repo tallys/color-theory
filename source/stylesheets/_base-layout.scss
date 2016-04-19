@@ -1,5 +1,6 @@
 @import url("http://fonts.googleapis.com/css?family=Roboto+Slab");
 
+
 $background: #efefef;
 
 * {
@@ -35,6 +36,7 @@ header {
 		background-color: rgba(0,0,0 ,.2);
 		padding: 20px;
 		@media screen and (min-width: 700px) {
+
 			padding: 40px 70px;
 		}
 	}
@@ -62,7 +64,6 @@ header {
 		color: pick-font-color($complementary-neutral-dark);
 		text-shadow: none;
 		font-weight: 100;
-		margin-top: 20vh;
 		animation: welcome 1s;
 		a {
 			text-decoration: none;
@@ -189,16 +190,19 @@ section {
 
 
 		&.red {
-			background-color: hsl(0, 100%, 50%);
+			background-color: hsl(355, 100%, 50%);
 		}
 		&.orange {
-			background-color: hsl(17, 100%, 50%);
+			background-color: hsl(20, 100%, 50%);
 		}
 		&.yellow {
 			background-color: hsl(60, 100%, 50%);
 		}
 		&.green {
 			background-color: hsl(120, 100%, 50%);
+		}
+		&.cyan {
+			background-color: hsl(180, 100%, 50%);
 		}
 		&.blue {
 			background-color: hsl(240, 100%, 50%);
