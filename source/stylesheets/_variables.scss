@@ -1,6 +1,6 @@
 //Pick a color
 
-$first-color: hsl(17, 100%, 50%);
+$first-color: hsl(300, 100%, 50%);
 
 // Find the complement
 
@@ -12,14 +12,28 @@ $second-color: complement($first-color);
 	@return hue($color) < 300 and hue($color) > 120;
 }
 
+@function is-high-key-value($color) {
+	@return hue($color) > 30 and hue($color) < 140;
+}
+
 //Establish a relationship (similar lighting conditions) between colors.
 
 @function harmonious-mix($mix, $base) {
 	@if (is-cool-color($mix)){
-		@return mix($mix, $base, 10%);
+		@if is-high-key-value($base) {
+			@return mix($mix, $base, 11%);
+		}
+		@else {
+			@return mix($mix, $base, 16%);
+		}
 	}
 	@else {
-		@return mix($mix, $base, 25%);
+		@if is-high-key-value($base) {
+			@return mix($mix, $base, 13%);
+		}
+		@else {
+			@return mix($mix, $base, 23%);
+		}
 	}
 }
 
@@ -41,6 +55,30 @@ $second-color: complement($first-color);
 		@return lighten($color, $percent);
 	} @else {
 		@return darken($color, $percent);
+	}
+}
+
+@function pick-font-color($background-color) {
+		@if is-high-key-value($background-color){
+			@if lightness($background-color) < 30% {
+				@return lighten(complement($background-color), 86);
+			}
+			@else if lightness($background-color) > 70% {
+				@return darken(complement($background-color), 68);
+			}
+			@else {
+				@return darken(complement($background-color), 53);
+			}
+	} @else {
+		@if lightness($background-color) < 30% {
+				@return lighten(complement($background-color), 86);
+			}
+			@else if lightness($background-color) > 70% {
+				@return darken(complement($background-color), 68);
+			}
+			@else {
+				@return lighten(complement($background-color), 53);
+			}
 	}
 }
 
