@@ -426,8 +426,8 @@ body {
   background: #f9f9fb;
   text-align: center;
   font-family: 'Roboto Slab', sans-serif;
-  background: url("images/worn_dots.png"), -webkit-linear-gradient(-460deg, #f9f9fb, #ececf8), center no-repeat #f9f9fb scroll;
-  background: url("images/worn_dots.png"), linear-gradient(190deg, #f9f9fb, #ececf8), center no-repeat #f9f9fb scroll; }
+  background: url("/images/worn_dots.png"), -webkit-linear-gradient(-460deg, #f9f9fb, #ececf8), center no-repeat #f9f9fb scroll;
+  background: url("/images/worn_dots.png"), linear-gradient(190deg, #f9f9fb, #ececf8), center no-repeat #f9f9fb scroll; }
 
 /* line 16, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
 h1 {

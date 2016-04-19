@@ -5,10 +5,11 @@
 }
 
 body {
-  background: $white;
+  background: $complementary-neutral;
   text-align: center;
   font-family: 'Roboto Slab', sans-serif;
-  @include texture(190deg, $white, increase-contrast(mix($primary-neutral-light, $primary-color, 45%), 30), 1)
+  // @include texture(190deg, $white, increase-contrast(mix($primary-neutral-light, $primary-color, 45%), 30), 1)
+  @include linear-gradient(200deg, $complementary-neutral, mix($complementary-neutral, $black, 17));
 }
 
 h1 {
@@ -16,6 +17,11 @@ h1 {
   font-size: 2em;
   letter-spacing: -1px;
   margin: 0;
+}
+
+p {
+	font-weight: 300;
+	line-height: 1.6;
 }
 
 header {
