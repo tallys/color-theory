@@ -1,7 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Roboto+Slab");
-
-
-$background: #efefef;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,300");
 
 * {
 	box-model: border-box;
@@ -58,6 +55,7 @@ header {
 
 	h2 {
 		color: pick-font-color($complementary-neutral-dark);
+		font-weight: 300;
 	}
 
 	h3 {
@@ -187,6 +185,14 @@ section {
 		border-radius: 100%;
 		animation: welcome 1s .5s;
 		cursor: pointer;
+		outline: none;
+		border: none;
+		transition: all .4s ease;
+
+		&:active, &:focus {
+			outline:none;
+			box-shadow: 0px 0px 0px 6px $white;
+		}
 
 
 		&.red {
