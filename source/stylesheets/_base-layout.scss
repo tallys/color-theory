@@ -26,18 +26,19 @@ p {
 header {
 	background: $complementary-neutral-light;
 	@include linear-gradient (180deg, $primary-neutral-dark, $complementary-neutral);
-	min-height: 700px;
 	height: 100vh;
+	min-height: 900px;
 	@include display(flex);
-	@include justify-content(center);
+	@include justify-content(space-around);
 	@include align-items(stretch);
 	@include flex-wrap(no-wrap);
 	@include flex-direction(column);
 
 	.container {
+		margin-top: 50px;
 		background-color: rgba(0,0,0 ,.2);
 		padding: 20px;
-		@media screen and (min-width: 700px) {
+		@media screen and (min-width: 600px) {
 
 			padding: 40px 70px;
 		}
@@ -67,7 +68,8 @@ header {
 		color: pick-font-color($complementary-neutral-dark);
 		text-shadow: none;
 		font-weight: 100;
-		animation: welcome 1s;
+		margin-top: 0;
+		@include animation(welcome 1s);
 		a {
 			text-decoration: none;
 			color: pick-font-color($complementary-neutral-dark);
@@ -241,7 +243,7 @@ section {
 			background-color: hsl(355, 100%, 50%);
 		}
 		&[data-color="orange"] {
-			background-color: hsl(20, 100%, 50%);
+			background-color: hsl(25, 100%, 50%);
 		}
 		&[data-color="yellow"]{
 			background-color: hsl(60, 100%, 50%);
