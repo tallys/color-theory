@@ -1,6 +1,6 @@
 //Pick a color
 
-$first-color: hsl(10, 100%, 50%);
+$first-color: hsl(50, 100%, 50%);
 
 // Find the complement
 
@@ -9,11 +9,15 @@ $second-color: complement($first-color);
 //Check if you have a cool color on your hands. Cool colors will overpower warm colors when mixing.
 
 @function is-cool-color($color) {
-	@return hue($color) < 300 and hue($color) > 120;
+	@return hue($color) < 310 and hue($color) > 140;
 }
 
 @function is-high-key-value($color) {
-	@return hue($color) > 30 and hue($color) < 140;
+	@return hue($color) > 20 and hue($color) < 190;
+}
+
+@function is-highest-key-value($color) {
+	@return hue($color) > 30 and hue($color) <90;
 }
 
 //Establish a relationship (similar lighting conditions) between colors.
@@ -39,14 +43,52 @@ $second-color: complement($first-color);
 
 // Figure out the right amount to desaturate the color
 
+// @function create-neutral($color) {
+// 	@if (saturation($color) < 50){
+// 		@return desaturate($color, 15);
+// 	}
+// 	@else {
+// 		@return desaturate($color, 33%);
+// 	}
+// }
+
 @function create-neutral($color) {
 	@if (saturation($color) < 50){
-		@return desaturate($color, 15);
+		@return desaturate($color, 11%);
 	}
 	@else {
-		@return desaturate($color, 33%);
+		@if (is-highest-key-value($color)) {
+			@if is-high-key-value(complement($color)) {
+				@return mix(complement($color), $color, 19%);
+			}
+			@else {
+				@return mix(complement($color), $color, 13%);
+			}
+		}
+		@else if (is-high-key-value($color)) {
+			@if is-high-key-value(complement($color)) {
+				@return mix(complement($color), $color, 35%);
+			}
+			@else {
+				@return mix(complement($color), $color, 23%);
+			}
+		}
+		@else {
+			@if is-highest-key-value(complement($color)) {
+				@return mix(complement($color), $color, 34%);
+			}
+			@if is-high-key-value(complement($color)) {
+				@return mix(complement($color), $color, 28%);
+			}
+			@else {
+				@return mix(complement($color), $color, 25%);
+			}
+		}
 	}
 }
+
+
+
 
 // Increase lightness and darkness based on what you have
 

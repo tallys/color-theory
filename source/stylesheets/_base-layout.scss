@@ -201,25 +201,25 @@ section {
 		}
 
 
-		&.red {
+		&[data-color="red"] {
 			background-color: hsl(355, 100%, 50%);
 		}
-		&.orange {
+		&[data-color="orange"] {
 			background-color: hsl(20, 100%, 50%);
 		}
-		&.yellow {
+		&[data-color="yellow"]{
 			background-color: hsl(60, 100%, 50%);
 		}
-		&.green {
+		&[data-color="green"] {
 			background-color: hsl(120, 100%, 50%);
 		}
-		&.cyan {
+		&[data-color="cyan"] {
 			background-color: hsl(180, 100%, 50%);
 		}
-		&.blue {
+		&[data-color="blue"] {
 			background-color: hsl(240, 100%, 50%);
 		}
-		&.violet {
+		&[data-color="violet"] {
 			background-color: hsl(300, 100%, 50%);
 		}
 
