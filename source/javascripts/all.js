@@ -4,7 +4,8 @@
 $(document).ready(function () {
   $('.color-swatches .swatch').click(function () {
   	var color = $(this).data('color');
-    $('head').append('<link rel="stylesheet" href="stylesheets/theme/'+color+'.css" type="text/css" />');
+  	$('#themed').remove();
+    $('head').append('<link rel="stylesheet" href="stylesheets/theme/'+color+'.css" type="text/css" id="themed" />');
 	});
 });
 
