@@ -5,18 +5,17 @@
 }
 
 body {
-  background: $complementary-neutral;
-  text-align: center;
-  font-family: 'Roboto Slab', sans-serif;
-  // @include texture(190deg, $white, increase-contrast(mix($primary-neutral-light, $primary-color, 45%), 30), 1)
-  @include linear-gradient(200deg, $complementary-neutral, mix($complementary-neutral, $black, 17));
+	background: $complementary-neutral;
+	text-align: center;
+	font-family: 'Roboto Slab', sans-serif;
+	@include linear-gradient(200deg, $complementary-neutral, mix($complementary-neutral, $black, 17));
 }
 
 h1 {
-  color: $complementary-neutral-dark;
-  font-size: 2em;
-  letter-spacing: -1px;
-  margin: 0;
+	color: $complementary-neutral-dark;
+	font-size: 2em;
+	letter-spacing: -1px;
+	margin: 0;
 }
 
 p {
@@ -80,6 +79,17 @@ header {
 	}
 }
 
+.profile-picture {
+	border-radius: 100%;
+	float: left;
+	shape-outside: circle();
+	width: 111px;
+	margin-top:10px;
+	border: 2px solid $complementary-neutral-light;
+	margin: 7px;
+	padding: 4px;
+}
+
 code {
   border-radius: 2px;
   font-size: 0.8em;
@@ -94,6 +104,10 @@ section {
 	display: block;
 	padding: 0px;
 	padding-bottom: 20px;
+
+	>p {
+		padding: 20px;
+	}
 
 	pre {
 		text-align: left;
@@ -131,6 +145,7 @@ section {
 			@include span-columns(6 of 12);
 			@include omega();
 		}
+		@include clearfix;
 
 	}
 
@@ -164,12 +179,34 @@ section {
 	}
 }
 
-@include keyframes(bounce) {
+
+@include keyframes(welcome) {
   0% {
-    @include transform(translateY(-10px));
+   @include transform(scale(0));
+    opacity: 0;
+  }
+  50% {
+   @include transform(scale(0));
+   opacity: 0;
+  }
+  83% {
+     @include transform(scale(1.03));
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
   }
   100% {
-    @include transform(translateY(3px));
+    @include transform(scale(1));
+  }
+}
+
+@include keyframes(bounce) {
+  0% {
+    @include transform(translateY(0px));
+  }
+
+  100% {
+    @include transform(translateY(-4px));
   }
 }
 
@@ -189,17 +226,16 @@ section {
 		height: 20px;
 		width: 20px;
 		border-radius: 100%;
-		animation: welcome 1s .5s;
+		@include animation(welcome 1s .5s);
 		cursor: pointer;
 		outline: none;
 		border: none;
 		transition: all .4s ease;
 
-		&:active, &:focus {
+		&:active, &:focus, &:hover {
 			outline:none;
-			box-shadow: 0px 0px 0px 6px $white;
+			box-shadow: 0px 0px 0px 5px $white;
 		}
-
 
 		&[data-color="red"] {
 			background-color: hsl(355, 100%, 50%);
@@ -222,6 +258,10 @@ section {
 		&[data-color="violet"] {
 			background-color: hsl(300, 100%, 50%);
 		}
-
+		&[data-color="grayscale"] {
+			background-color: grayscale($primary-color);
+			@include animation(bounce .4s ease infinite alternate);
+			box-shadow: 0px 0px 0px 6px $complementary-color;
+		}
 	}
 }
