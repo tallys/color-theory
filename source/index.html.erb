@@ -26,7 +26,7 @@ title: Practical Color Theory for People Who Code
 		<label for="toggle" class="well"></label>
 		<div class="visible">
 			<p>Why pick a fully saturated color, but only half lightness?</p>
-			<p>Ever mix up a bunch of colors only to end up with a gray blob? In the real world, you can't mix a color to be more saturated - you only "lose" color information as you mix. So, The practice is to start with the most saturated colors at their most chromatic so you can still have a full range of mixing opportunities.</p>
+			<p>Ever mix up a bunch of colors only to end up with a gray blob? In the real world, you can't mix a color to be more saturated - you only "lose" color information as you mix. So, the practice is to start with the most saturated colors at their most chromatic so you can still have a full range of mixing opportunities.</p>
 		</div>
 		<script src="https://gist.github.com/tallys/df6c4b811f412b3f8da280185f640211.js"></script>
 	</div>
@@ -54,11 +54,11 @@ title: Practical Color Theory for People Who Code
 </section>
 
 <section class="primary-complementary">
-	<h2>Color Relationship Established by Mixing<span>mix( );</h2>
+	<h2>Color Relationship Established by Mixing<span>harmonious-mix( );</h2>
 	<div class="explanation">
 		<div class="test primary"></div>
 		<div class="test complementary"></div>
-		<p>Establish a color relationship by mixing them together. As an added bonus, mixing colors desaturates them, further making them look more like something you'd find in nature.</p>
+		<p>Establish a color relationship by mixing them together. This makes the colors look like they're under similar lighting conditions.</p>
 		</div>
 		<div class="example">
 			<%= partial "partials/mini_layout" %>
@@ -68,10 +68,10 @@ title: Practical Color Theory for People Who Code
 			<div class="kitty"></div>
 			<label for="toggle" class="well"></label>
 			<div class="visible">
-				<p>Sure, there's a relationship already because these colors are complementary to each other...</p>
-				<p>But, this is another way we get closer to nature. It's a bit more complicated than this, but this is my favorite way of explaining it - everything outside has some "yellow" mixed in from the sunshine during the day, and it looks warm and inviting. Same thing happens when everyone and everything looks bad in photos taken under the glow of green flourescent lights - there is green added to all of the colors you're looking at, including adding a green glow to your skin if you're standing under the flourescent light yourself. Whether it looks good or bad, this color (light) mixing creates a visual harmony. We don't really notice it when it's there, but we really notice its absence.</p>
+				<p>Our eyes are really good at spotting things when they look like they don't belong.</p>
+				<p>This mixing method is another way we can simulate lighting and color found in nature. It's a bit more complicated, but my favorite way of explaining it is this: Everything outside has some "yellow" mixed in from the sunshine during the day. Same thing happens when everyone and everything looks bad in photos taken under the glow of green flourescent lights - there is green added to all of the colors you're looking at, including adding a green glow to your skin if you're standing under the flourescent light yourself. Whether it looks good or bad, this color (light) mixing creates a visual harmony. We don't really notice it when it's there, but we really notice its absence.</p>
 				<p>When you're painting, you want to simulate similar lighting conditions for a scene, and that means mixing a bit of one color into the other. Mixing different ratios of the same colors will usually generate a matching color palette.</p>
-				<p>How do I decide what to do? Thanks to art school and science, I know that cool colors are "darker" than warm colors, and will dominate in mixes. For example, a touch of blue will really affect yellow, whereas you can add a lot of yellow to blue before it is very affected. So, here is this thinking in function form. Check if it's a cool color (and will dominate the mix) and then mix the appropriate amount of one color into the other using the handy mix function Sass provides.</p>
+				<p>How do I decide what to do? Thanks to art school and science, I know that cool colors have lower lightness than warm colors, and will dominate in mixes, with yellow being the lightest color. For example, a touch of blue will really affect yellow, whereas you can add a lot of yellow to blue before it is affected. So, here is this decision making in function form.</p>
 	</div>
 		<script src="https://gist.github.com/tallys/78a1d8750fac28b9d73de2a030ae9496.js"></script>
 		<script src="https://gist.github.com/tallys/40ce2c774f2736cdcef226567ecc0f1a.js"></script>
@@ -85,7 +85,7 @@ title: Practical Color Theory for People Who Code
 		<div class="test complementary-neutral-light"></div>
 		<div class="test complementary-neutral"></div>
 		<div class="test complementary-neutral-dark"></div>
-		<p>Let your chosen color pop (in other words, don't exhaust your eyes by making them process non-stop intense chromatic colors!) by surrounding it with neturals. Desaturate the natural way: by mixing complementary colors! Then, vary that neutral's lightness to create a highlight and a shadow.</p>
+		<p>Let your chosen color pop (in other words, don't exhaust your eyes by making them process non-stop intense chromatic colors!) by surrounding it with neutrals. Desaturate the painter way: by mixing complementary colors! Then, vary that neutral's lightness to create a highlight and a shadow.</p>
 	</div>
 	<div class="example example1">
 		<%= partial "partials/mini_layout" %>
@@ -105,7 +105,7 @@ title: Practical Color Theory for People Who Code
 		<label for="toggle" class="well"></label>
 		<div class="visible">
 			<p>The colors are way too intense at their full saturation for our eyes to handle. If all the colors are bright, none of the colors are bright.</p>
-			<p>I picked my starting color for a reason -  I want that to be the heart of my design! That means the complementary color should support the chosen color. This means mixing neutrals. Our eyes don't really handle saturated colors very well next to other saturated colors. Our eyes get confused, and we end up seeing optical illusions. Just give your eyes a break between super strong saturated colors with neutrals so they don't stress out about that much visual information. At the very minimum your viewport should have 30% neutral space (white, desaturated, or black colors) so your poor eyes can have a break and process the information right. Otherwise you get eye strain!</p>
+			<p>I picked my starting color for a reason -  I want that to be the heart of my design! That means the complementary color should support the chosen color, and we do that by mixing neutrals. Our eyes don't really handle saturated colors very well next to other saturated colors. Our eyes get confused, and we end up seeing optical illusions. Just give your eyes a break between super strong saturated colors with neutrals so they don't stress out about that much visual information. At the very minimum your viewport should have 30% neutral space (white, desaturated, or black colors) so your poor eyes can have a break and process the information right. Otherwise you get eye strain!</p>
 		</div>
 		<script src="https://gist.github.com/tallys/daf7a377062e555c93ab438b540df97e.js"></script>
 	</div>
@@ -181,7 +181,6 @@ title: Practical Color Theory for People Who Code
 				<p>That's right, the pattern you may be noticing is that you can use what you've already got to mix up more colors and keep building those color relationships. These colors can be achieved just by adjusting lightness and darkness. Up to you!</p>
 				<p>A lighter and darker version of your primary color is useful for things like hover states.</p>
 			</div>
-			<script src="https://gist.github.com/tallys/ec113270af32fee7f2877e9538d3b4f4.js"></script>
 		</div>
 	</section>
 
@@ -201,6 +200,7 @@ title: Practical Color Theory for People Who Code
 				<div class="visible">
 					<p>When you mix colors, you should create relationships. Remember, color theory is a design pattern - logical and predictable! Learn the patterns, and play with Sass functions - they're a great tool!<br> I used this function to pair font colors with their backgrounds.</p>
 				</div>
+				<script src="https://gist.github.com/tallys/ec113270af32fee7f2877e9538d3b4f4.js"></script>
 			</div>
 		</section>
 
