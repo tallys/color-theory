@@ -71,7 +71,7 @@ $second-color: complement($first-color);
 	}
 }
 
-@function pick-contrast($color) {
+@function pick-contrast-of($color) {
 	@if is-high-key-value($color){
 		@if lightness($color) < 30% {
 			@return lighten(complement($color), 86);
