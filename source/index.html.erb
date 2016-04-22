@@ -105,8 +105,7 @@ title: Practical Color Theory for People Who Code
 		<label for="toggle" class="well"></label>
 		<div class="visible">
 			<p>The colors are way too intense at their full saturation for our eyes to handle. If all the colors are bright, none of the colors are bright.</p>
-			<p>I picked my starting color for a reason -  I want that to be the heart of my design! That means the complementary color should support the chosen color. This means mixing neutrals. Our eyes don't really handle saturated colors very well next to other saturated colors. We have eye cells and they get confused. This is how we get optical illusions. Just give your eyes a break between super strong saturated colors with neutrals so they don't stress out about that much visual information. At the very minimum your viewport should have 30% neutral space (white, desaturated, or black colors) so your poor eyes can have a break and process the information right. Otherwise you get eye strain!</p>
-			<p>Here, I decide how much to desaturate - if the color we mixed is already a little more on the 'neutral' side, I don't want it to turn completely grayscale and so I don't desaturate it as much.</p>
+			<p>I picked my starting color for a reason -  I want that to be the heart of my design! That means the complementary color should support the chosen color. This means mixing neutrals. Our eyes don't really handle saturated colors very well next to other saturated colors. Our eyes get confused, and we end up seeing optical illusions. Just give your eyes a break between super strong saturated colors with neutrals so they don't stress out about that much visual information. At the very minimum your viewport should have 30% neutral space (white, desaturated, or black colors) so your poor eyes can have a break and process the information right. Otherwise you get eye strain!</p>
 		</div>
 		<script src="https://gist.github.com/tallys/daf7a377062e555c93ab438b540df97e.js"></script>
 	</div>
@@ -167,8 +166,8 @@ title: Practical Color Theory for People Who Code
 			<div class="test primary-light"></div>
 			<div class="test primary"></div>
 			<div class="test primary-dark"></div>
-			<p>This is the color you wanted in the first place, make sure you're using it. But, remember that it's about context - make sure you're using the right amount of contrast! The header on our little layout has a lighter version of our primary color.</p>
-			<p>Overall, this is a pretty simple setup - but it's an example of what you can do with just one color, some design knowhow, and some Sass functions.</p>
+			<p>This is the color you wanted in the first place, so make sure you're using it. But, remember that it's about context - make sure you're using the right amount of contrast! The header on our little layout has a lighter version of our primary color.</p>
+			<p>Overall, this is a pretty simple setup - but it's an example of what you can build from just one color.</p>
 		</div>
 		<div class="example">
 			<%= partial "partials/mini_layout" %>
@@ -180,7 +179,7 @@ title: Practical Color Theory for People Who Code
 			<label for="toggle" class="well"></label>
 			<div class="visible">
 				<p>That's right, the pattern you may be noticing is that you can use what you've already got to mix up more colors and keep building those color relationships. These colors can be achieved just by adjusting lightness and darkness. Up to you!</p>
-				<p>A lighter and darker version of your primary color is useful for things like hover states. </p>
+				<p>A lighter and darker version of your primary color is useful for things like hover states.</p>
 			</div>
 		</div>
 	</section>
@@ -192,14 +191,21 @@ title: Practical Color Theory for People Who Code
 			<h3>Turn off the colors, and see what's left!</h3>
 				<button class= "swatch" data-color="grayscale"></button>
 		</div>
+
 		<p>There is so much more to color than just "hue"! Value - the visible lightness or darkness of a color is incredibly important to consider when creating a color palette. Color is light.
 			<div class="kitty-switch">
 				<input type="checkbox" id="toggle">
 				<div class="kitty"></div>
 				<label for="toggle" class="well"></label>
 				<div class="visible">
-					<p>Remember: When you mix colors, you should create relationships. Remember, color theory is a design pattern - logical and predictable! Learn the patterns, and play with Sass functions - they're a great tool!!</p>
+					<p>When you mix colors, you should create relationships. Remember, color theory is a design pattern - logical and predictable! Learn the patterns, and play with Sass functions - they're a great tool!<br> I used this function to pair font colors with their backgrounds.</p>
 				</div>
+				<script src="https://gist.github.com/tallys/ec113270af32fee7f2877e9538d3b4f4.js"></script>
 			</div>
+		</section>
+
+	<section>
+		<h2>Future plans<span></span></h2>
+			<p>While there are many parallels, working on the web is different from working in an art studio. There are so many unique concerns that fine artists don't have to worry about, like user device, accessibility, user experience, etc. This is a simplified learning tool that is meant to represent how I would make and explain my color decisions. However, keep an eye out for a proper library in the future!</p>
 		</section>
 	</div>
