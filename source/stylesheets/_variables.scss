@@ -1,6 +1,6 @@
 //Pick a color
 
-$first-color: hsl(17, 100%, 50%);
+$first-color: hsl(5, 100%, 50%);
 
 // Find the complement
 
@@ -9,65 +9,111 @@ $second-color: complement($first-color);
 //Check if you have a cool color on your hands. Cool colors will overpower warm colors when mixing.
 
 @function is-cool-color($color) {
-	@return hue($color) < 300 and hue($color) > 120;
+	@return hue($color) < 310 and hue($color) > 140;
+}
+
+@function is-high-key-value($color) {
+	@return hue($color) > 20 and hue($color) < 190;
+}
+
+@function is-highest-key-value($color) {
+	@return hue($color) > 30 and hue($color) <90;
 }
 
 //Establish a relationship (similar lighting conditions) between colors.
 
 @function harmonious-mix($mix, $base) {
 	@if (is-cool-color($mix)){
-		@return mix($mix, $base, 9%);
+		@if is-high-key-value($base) {
+			@return mix($mix, $base, 11%);
+		}
+		@else {
+			@return mix($mix, $base, 16%);
+		}
 	}
 	@else {
-		@return mix($mix, $base, 35%);
+		@if is-high-key-value($base) {
+			@return mix($mix, $base, 13%);
+		}
+		@else {
+			@return mix($mix, $base, 23%);
+		}
 	}
 }
 
-// Figure out the right amount to desaturate the color
-
-@function create-neutral($color) {
-	@if (saturation($color) < 50){
-		@return desaturate($color, 15);
+@function mix-neutral($color) {
+	@if (is-highest-key-value($color)) {
+		@if is-high-key-value(complement($color)) {
+			@return mix(complement($color), $color, 19%);
+		}
+		@else {
+			@return mix(complement($color), $color, 13%);
+		}
+	}
+	@else if (is-high-key-value($color)) {
+		@if is-high-key-value(complement($color)) {
+			@return mix(complement($color), $color, 31%);
+		}
+		@else {
+			@return mix(complement($color), $color, 23%);
+		}
 	}
 	@else {
-		@return desaturate($color, 33%);
+		@if is-highest-key-value(complement($color)) {
+			@return mix(complement($color), $color, 31%);
+		}
+		@if is-high-key-value(complement($color)) {
+			@return mix(complement($color), $color, 26%);
+		}
+		@else {
+			@return mix(complement($color), $color, 23%);
+		}
 	}
 }
 
-// Increase lightness and darkness based on what you have
-
-@function increase-contrast($color, $percent) {
-	@if (lightness($color) > 50) {
-		@return lighten($color, $percent);
-	} @else {
-		@return darken($color, $percent);
+@function pick-contrast-of($color) {
+	@if is-high-key-value($color){
+		@if lightness($color) < 30% {
+			@return lighten(complement($color), 86);
+		}
+		@else if lightness($color) > 70% {
+			@return darken(complement($color), 68);
+		}
+		@else {
+			@return darken(complement($color), 53);
+		}
+} @else {
+	@if lightness($color) < 30% {
+			@return lighten(complement($color), 86);
+		}
+		@else if lightness($color) > 70% {
+			@return darken(complement($color), 68);
+		}
+		@else {
+			@return lighten(complement($color), 53);
+		}
 	}
 }
 
-// take away decision
-// $primary-color: mix($second-color, $first-color, 10%);
-// $complementary-color: mix($first-color, $second-color, 33%);
-
-// $primary-color: harmonious-mix($first-color, $second-color);
-// $complementary-color: harmonious-mix($second-color, $first-color);
-
-$complementary-color: harmonious-mix($first-color, $second-color);
 $primary-color: harmonious-mix($second-color, $first-color);
+$complementary-color: harmonious-mix($first-color, $second-color);
 
-$first-adjusted: increase-contrast($primary-color, 20%);
-$second-adjusted: increase-contrast($complementary-color, 20%);
+$analogous-color: adjust-hue($complementary-color, -40);
+$complementary-analogous: mix($analogous-color, $complementary-color, 66);
 
 // Complementary Neutrals, highlight, midtone, shadow
 
-$complementary-neutral: create-neutral($complementary-color);
+$complementary-neutral: mix-neutral($complementary-color);
 $complementary-neutral-light: lighten($complementary-neutral, 33);
 $complementary-neutral-dark: darken($complementary-neutral, 33);
 
 // Primary neutrals, highlight, midtone, shadow`
 
-$primary-neutral: create-neutral($primary-color);
+$primary-neutral: mix-neutral($primary-color);
 $primary-neutral-light: lighten($primary-neutral, 33);
 $primary-neutral-dark: darken($primary-neutral, 33);
+
+// Primary tint and shade
 
 $primary-light: mix($primary-neutral-light, $primary-color, 45%);
 $primary-dark: mix($primary-neutral-dark, $primary-color, 45%);
@@ -77,36 +123,10 @@ $primary-dark: mix($primary-neutral-dark, $primary-color, 45%);
 $white: lighten($primary-neutral-light, 15);
 $neutral-gray: grayscale($primary-neutral);
 $primary-gray: mix($primary-color, $complementary-color, 30);
-$complimentary-gray: mix($complementary-color, $primary-color, 63);
+$complementary-gray: mix($complementary-color, $primary-color, 63);
 $black: grayscale($complementary-neutral-dark);
-
-// More mixes you can make!
-
-$mix-1: mix($primary-color, $complementary-color, 13%);
-$mix-2: mix($complementary-color, $primary-color, 13%);
-$mix-3: mix($primary-neutral-light, $primary-color, 45%);
-$mix-4: mix($primary-neutral-light, $complementary-color, 35%);
-$mix-5: mix($primary-neutral-dark, $complementary-color, 35%);
-$mix-6: mix($primary-neutral-dark, $primary-color, 35%);
-$mix-7: mix($complementary-neutral-dark, $complementary-color, 35%);
-$mix-8: mix($complementary-neutral-dark, $primary-color, 35%);
-
-// Increased contrast! VERY important to have
-
-$contrast-to-mix-1: increase-contrast($mix-1, 20);
-$contrast-to-mix-2: increase-contrast($mix-2, 20);
-$contrast-to-mix-3: increase-contrast($mix-3, 20);
-$contrast-to-mix-4: increase-contrast($mix-4, 20);
-$contrast-to-mix-5: increase-contrast($mix-5, 20);
-$contrast-to-mix-6: increase-contrast($mix-6, 20);
-$contrast-to-mix-7: increase-contrast($mix-7, 20);
-$contrast-to-mix-8: increase-contrast($mix-8, 20);
 
 // Analogous Colors
 
 $analogous-color: adjust-hue($complementary-color, -40);
 $complementary-analogous: mix($analogous-color, $complementary-color, 66);
-
-// Even more mixes
-$complementary-analogous-mix-1: mix($complementary-analogous, $complementary-color, 10%);
-$complementary-analogous-mix-2: mix($complementary-analogous, $primary-color, 10%);

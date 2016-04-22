@@ -40,7 +40,7 @@ $shadow: darken($background, 11%);
     top: 7px;
     border-radius: 10px;
     box-shadow: inset 0 2px 1px rgba(0,0,0,.2);
-    border: 1px solid $complementary-neutral;
+    border: 1px solid $complementary-neutral-light;
     cursor: pointer;
   }
 
@@ -73,7 +73,7 @@ $shadow: darken($background, 11%);
     }
     
     ~div.kitty:before {
-      content: "\01F431";
+      content: "\01F3A8";
       position: absolute;
       right: 93px;
       top: -6px;

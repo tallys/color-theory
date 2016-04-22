@@ -1,39 +1,34 @@
+// mixing colors
+
 .first {
 	background: $first-color;
-}
-
-.first-adjusted {
-	background: $first-adjusted;
 }
 
 .second {
 	background: $second-color;
 }
 
-.second-adjusted {
-	background: $second-adjusted;
-}
+// main complementary palette
 
 .primary{
 	background: $primary-color;
 }
 
-.complement {
+.complementary {
 	background: $complementary-color;
 }
 
-//establish neutrals
+// Complementary - neutrals
 
-
-.complementary-neutral-1 {
+.complementary-neutral-light {
 	background: $complementary-neutral-light;
 }
 
-.complementary-neutral-2 {
+.complementary-neutral {
 	background: $complementary-neutral;
 }
 
-.complementary-neutral-3 {
+.complementary-neutral-dark {
 	background: $complementary-neutral-dark;
 }
 
@@ -41,19 +36,19 @@
 
 // Primary - neutrals
 
-.primary-neutral-1 {
+.primary-neutral-light {
 	background: $primary-neutral-light;
 }
 
-.primary-neutral-2 {
+.primary-neutral {
 	background: $primary-neutral;
 }
 
-.primary-neutral-3 {
+.primary-neutral-dark {
 	background: $primary-neutral-dark;
 }
 
-// Primary light and dark
+// Primary Tint and Shade
 
 .primary-light {
 	background: $primary-light;
@@ -63,77 +58,7 @@
 	background: $primary-dark;
 }
 
-// other color variations
-
-.mix-1 {
-	background: $mix-1;
-}
-
-.mix-2 {
-	background: $mix-2;
-}
-
-.mix-3{
-	background: $mix-3;
-}
-
-.mix-4 {
-	background: $mix-4;
-}
-
-.mix-5 {
-	background: $mix-5;
-}
-
-.mix-6 {
-	background: $mix-6;
-}
-
-.mix-7 {
-	background: $mix-7;
-}
-
-.mix-8 {
-	background: $mix-8;
-}
-
-
-//yellow mix {
-
-.contrast-mix-1 {
-	background: $contrast-to-mix-1;
-}
-.contrast-mix-2 {
-	background: $contrast-to-mix-2;
-}
-
-//add another color to the mix!
-
-.contrast-mix-3 {
-	background: $contrast-to-mix-3;
-}
-
-.contrast-mix-4 {
-	background: $contrast-to-mix-4;
-}
-
-.contrast-mix-5 {
-	background: $contrast-to-mix-5;
-}
-
-.contrast-mix-6 {
-	background: $contrast-to-mix-6;
-}
-
-.contrast-mix-7 {
-	background: $contrast-to-mix-7;
-}
-
-.contrast-mix-8 {
-	background: $contrast-to-mix-8;
-}
-
-
+// Analogous colors
 
 .complementary-analogous {
 	background: $complementary-analogous;
@@ -143,23 +68,14 @@
 	background: $analogous-color;
 }
 
-.complementary-analogous-mix-1 {
-	background: $complementary-analogous-mix-1;
-}
-
-.complementary-analogous-mix-2 {
-	background: $complementary-analogous-mix-2;
-}
-
-
-// Grayscale-neutrals
+// Grayscale - true neutrals
 
 .primary-gray {
 	background: $primary-gray;
 }
 
-.complimentary-gray {
-	background: $complimentary-gray;
+.complementary-gray {
+	background: $complementary-gray;
 }
 
 .neutral-gray {
@@ -175,10 +91,44 @@
 	background: $black;
 }
 
-.primary-grayscale-1 {
-	background: grayscale($primary-color);
+
+@function desaturate-neutral($color) {
+	@if (is-highest-key-value($color)) {
+		@if is-high-key-value(complement($color)) {
+			@return desaturate($color, 19%);
+		}
+		@else {
+			@return desaturate($color, 13%);
+		}
+	}
+	@else if (is-high-key-value($color)) {
+		@if is-high-key-value(complement($color)) {
+			@return desaturate($color, 31%);
+		}
+		@else {
+			@return desaturate($color, 23%);
+		}
+	}
+	@else {
+		@if is-highest-key-value(complement($color)) {
+			@return desaturate($color, 31%);
+		}
+		@if is-high-key-value(complement($color)) {
+			@return desaturate($color, 26%);
+		}
+		@else {
+			@return desaturate($color, 23%);
+		}
+	}
 }
 
-.complementary-grayscale-1 {
-	background: darken(grayscale($complementary-color), 11);
+// desaturated color neutrals
+
+.desaturated-primary-neutral {
+	background: desaturate-neutral($primary-color);
+}
+
+
+.desaturated-complementary-neutral {
+	background: desaturate-neutral($complementary-color);
 }

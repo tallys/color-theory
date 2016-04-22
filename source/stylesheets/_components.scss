@@ -1,14 +1,3 @@
-@mixin texture($gradient-angle, $bg-color-1, $bg-color-2, $inverted) {
-
-  @if ($inverted == 1) {
-    @include background(url("images/worn_dots.png"), linear-gradient($gradient-angle, $bg-color-1, $bg-color-2), center no-repeat $bg-color-1 scroll);
-  }
-
-  @else {
-    @include background(url("images/worn_dots.png"), linear-gradient($gradient-angle, $bg-color-1, $bg-color-2), center no-repeat $bg-color-1 scroll);
-  }
-}
-
 .hero {
 	background: lighten($white, 1);
 	padding-top: 30px;
@@ -21,7 +10,7 @@
 .box-container {
 	padding: 9px;
 	background: lighten($white, 1);
-	box-shadow: 0px 1px 2px 0 #ddd;
+	box-shadow: 0px 1px 2px 0 rgba(0,0,0, .3);
 }
 
 .text-list-item-box {
@@ -39,7 +28,7 @@
 			margin: 3px;
 			background: darken($complementary-neutral-light, 4);
 			text-decoration: none;
-			color: $complementary-neutral-dark;
+			color: pick-contrast-of($complementary-neutral-light);
 			box-shadow: 0px 1px 2px 0 #ddd;
 
 			&:hover, &:active, &:focus {
@@ -59,14 +48,14 @@
 	background: $primary-color;
 	border-radius: 3px;
 	padding: 9px;
-	color: $white;
+	color: pick-contrast-of($primary-color);
 	margin-bottom: 5px;
 	text-decoration: none;
-	box-shadow: 0px 1px 2px 0 #ddd;
+	box-shadow: 0px 1px 2px rgba(0,0,0, .2);
 	text-align: center;
 	transition: all ease-in .25s;
 				&:hover, &:active, &:focus {
 				background: darken($primary-color, 5);
-				box-shadow: 0px 1px 2px 0 #aaa;
+				box-shadow: 0px 1px 2px 0 rgba(0,0,0, .4);
 			}
 }

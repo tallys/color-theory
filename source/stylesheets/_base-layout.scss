@@ -1,77 +1,95 @@
-@import url("http://fonts.googleapis.com/css?family=Roboto+Slab");
-
-$background: #efefef;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,300");
 
 * {
 	box-model: border-box;
 }
 
 body {
-  background: $white;
-  text-align: center;
-  font-family: 'Roboto Slab', sans-serif;
-  @include texture(190deg, $white, increase-contrast(mix($primary-neutral-light, $primary-color, 45%), 30), 1)
+	background: $complementary-neutral;
+	text-align: center;
+	font-family: 'Roboto Slab', sans-serif;
+	@include linear-gradient(200deg, $complementary-neutral, mix($complementary-neutral, $black, 17));
 }
 
 h1 {
-  color: $complementary-neutral-dark;
-  font-size: 2em;
-  letter-spacing: -1px;
-  margin: 0;
+	color: $complementary-neutral-dark;
+	font-size: 2em;
+	letter-spacing: -1px;
+	margin: 0;
+}
+
+p {
+	font-weight: 300;
+	line-height: 1.6;
 }
 
 header {
 	background: $complementary-neutral-light;
-	@include linear-gradient (180deg, $complementary-neutral-dark, $complementary-neutral);
+	@include linear-gradient (180deg, $primary-neutral-dark, $complementary-neutral);
 	height: 100vh;
+	min-height: 900px;
+	@include display(flex);
+	@include justify-content(space-around);
+	@include align-items(stretch);
+	@include flex-wrap(no-wrap);
+	@include flex-direction(column);
 
-	h1 {
-		color: $white;
-		text-shadow: 0 1px 0 $complementary-neutral-dark;
-		font-weight: 400;
-		padding-top: 30vh;
-		padding-left: 20vw;
-		padding-right: 20vw;
-		position: relative;
-		animation: welcome 1s;
+	.container {
+		margin-top: 50px;
+		background-color: rgba(0,0,0 ,.2);
+		padding: 20px;
+		@media screen and (min-width: 600px) {
 
-		@media screen and (min-width: 960px) {
-			font-size: 3.5em;
-		}
-
-		&:after {
-			content: '';
-			line-height: 1.5;
-			font-size: 25px;
-			color: $white;
-			text-shadow: none;
-			background: $primary-color;
-			box-shadow: 0px 0px 0px 3px $white;
-			height: 20px;
-			width: 20px;
-			position: absolute;
-			bottom: -75px;
-			left: 48.5%;
-			border-radius: 100%;
-			animation: welcome 1s .5s;
+			padding: 40px 70px;
 		}
 	}
 
+	h1 {
+		@include flex(1 1 100%);
+		color: pick-contrast-of($complementary-neutral-dark);
+		text-shadow: 0 1px 0 $primary-neutral-dark;
+		font-weight: 400;
+		margin-bottom: 50px;
+		position: relative;
+		animation: welcome 1s;
+		font-size: 3.2em;
+
+		@media screen and (max-width: 700px) {
+			font-size: 2.5em;
+		}
+	}
+
+	h2 {
+		color: pick-contrast-of($complementary-neutral-dark);
+		font-weight: 300;
+	}
+
 	h3 {
-		color: $white;
+		color: pick-contrast-of($complementary-neutral-dark);
 		text-shadow: none;
 		font-weight: 100;
-		margin-top: 20vh;
-		animation: welcome 1s;
+		margin-top: 0;
+		@include animation(welcome 1s);
 		a {
 			text-decoration: none;
-			color: white;
+			color: pick-contrast-of($complementary-neutral-dark);
 
 			&:hover, &:active, &:focus {
 				animation: hover .8s;
 			}
 		}
 	}
+}
+
+.profile-picture {
+	border-radius: 100%;
+	float: left;
+	shape-outside: circle();
+	width: 111px;
+	margin-top:10px;
+	border: 2px solid $complementary-neutral-light;
+	margin: 7px;
+	padding: 4px;
 }
 
 code {
@@ -89,6 +107,10 @@ section {
 	padding: 0px;
 	padding-bottom: 20px;
 
+	>p {
+		padding: 20px;
+	}
+
 	pre {
 		text-align: left;
 		padding: 5px 20px;
@@ -104,8 +126,8 @@ section {
 	h2 {
 		margin-top: 0px;
 		background: $complementary-neutral-light;
+		color: pick-contrast-of($complementary-neutral-light);
 		@include linear-gradient($complementary-neutral-light, lighten($complementary-neutral-light, 7));
-		color: $complementary-neutral-dark;
 		padding: 7px 20px;
 		font-weight: 400;
 		position: relative;
@@ -125,6 +147,7 @@ section {
 			@include span-columns(6 of 12);
 			@include omega();
 		}
+		@include clearfix;
 
 	}
 
@@ -155,5 +178,92 @@ section {
 	padding: 30px;
 	@media screen and (min-width: 780px) {
 		@include span-columns(6 of 12);
+	}
+}
+
+
+@include keyframes(welcome) {
+  0% {
+   @include transform(scale(0));
+    opacity: 0;
+  }
+  50% {
+   @include transform(scale(0));
+   opacity: 0;
+  }
+  83% {
+     @include transform(scale(1.03));
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  100% {
+    @include transform(scale(1));
+  }
+}
+
+@include keyframes(bounce) {
+  0% {
+    @include transform(translateY(0px));
+  }
+
+  100% {
+    @include transform(translateY(-4px));
+  }
+}
+
+.color-swatches {
+	display: block;
+	margin: auto;
+	.swatch {
+		display: inline-block;
+		flex:0 1 20px;
+		margin: 10px;
+		line-height: 1.5;
+		font-size: 25px;
+		color: pick-contrast-of($primary-color);
+		text-shadow: none;
+		background: $primary-color;
+		box-shadow: 0px 0px 0px 3px $white;
+		height: 20px;
+		width: 20px;
+		border-radius: 100%;
+		@include animation(welcome 1s .5s);
+		cursor: pointer;
+		outline: none;
+		border: none;
+		transition: all .4s ease;
+
+		&:active, &:focus, &:hover {
+			outline:none;
+			box-shadow: 0px 0px 0px 5px $white;
+		}
+
+		&[data-color="red"] {
+			background-color: hsl(355, 100%, 50%);
+		}
+		&[data-color="orange"] {
+			background-color: hsl(25, 100%, 50%);
+		}
+		&[data-color="yellow"]{
+			background-color: hsl(60, 100%, 50%);
+		}
+		&[data-color="green"] {
+			background-color: hsl(120, 100%, 50%);
+		}
+		&[data-color="cyan"] {
+			background-color: hsl(180, 100%, 50%);
+		}
+		&[data-color="blue"] {
+			background-color: hsl(240, 100%, 50%);
+		}
+		&[data-color="violet"] {
+			background-color: hsl(300, 100%, 50%);
+		}
+		&[data-color="grayscale"] {
+			background-color: grayscale($primary-color);
+			@include animation(bounce .4s ease infinite alternate);
+			box-shadow: 0px 0px 0px 6px $complementary-color;
+		}
 	}
 }
