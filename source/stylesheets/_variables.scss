@@ -1,6 +1,6 @@
 //Pick a color
 
-$first-color: hsl(5, 100%, 50%);
+$first-color: hsl(12, 100%, 50%);
 
 // Find the complement
 
@@ -117,6 +117,8 @@ $primary-neutral-dark: darken($primary-neutral, 33);
 
 $primary-light: mix($primary-neutral-light, $primary-color, 45%);
 $primary-dark: mix($primary-neutral-dark, $primary-color, 45%);
+
+$complementary-light: mix($complementary-neutral-light, $complementary-color, 45%);
 
 // Pure neutrals, highlight, midtone, shadow
 
