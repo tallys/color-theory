@@ -448,8 +448,7 @@ header {
   background-color: #444412;
   background-image: -webkit-linear-gradient(-450deg, #444412, #65659a);
   background-image: linear-gradient(180deg,#444412, #65659a);
-  height: 100vh;
-  min-height: 900px;
+  min-height: 100vh;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -492,16 +491,16 @@ header {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column; }
-  /* line 37, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+  /* line 36, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
   header .container {
-    margin-top: 50px;
     background-color: rgba(0, 0, 0, 0.2);
-    padding: 20px; }
+    padding: 1em; }
     @media screen and (min-width: 900px) {
-      /* line 37, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+      /* line 36, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
       header .container {
+        margin-top: 50px;
         padding: 3em 5em; } }
-  /* line 46, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+  /* line 45, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
   header h1 {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -518,14 +517,14 @@ header {
     animation: welcome 1s;
     font-size: 3.2em; }
     @media screen and (max-width: 900px) {
-      /* line 46, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+      /* line 45, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
       header h1 {
-        font-size: 2.5em; } }
-  /* line 61, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+        font-size: 2.1em; } }
+  /* line 60, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
   header h2 {
     color: white;
     font-weight: 300; }
-  /* line 66, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+  /* line 65, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
   header h3 {
     color: white;
     text-shadow: none;
@@ -534,15 +533,15 @@ header {
     -webkit-animation: welcome 1s;
     -moz-animation: welcome 1s;
     animation: welcome 1s; }
-    /* line 72, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 71, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
     header h3 a {
       text-decoration: none;
       color: white; }
-      /* line 76, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+      /* line 75, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
       header h3 a:hover, header h3 a:active, header h3 a:focus {
         animation: hover .8s; }
 
-/* line 83, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+/* line 82, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
 .profile-picture {
   border-radius: 100%;
   float: left;
@@ -553,15 +552,7 @@ header {
   margin: 7px;
   padding: 4px; }
 
-/* line 94, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
-code {
-  border-radius: 2px;
-  font-size: 0.8em;
-  font-style: normal;
-  padding: 3px 0.7em;
-  margin-right: 9px; }
-
-/* line 102, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+/* line 93, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
 section {
   margin-bottom: 45px;
   display: block;
@@ -570,11 +561,13 @@ section {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%; }
-  /* line 109, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+  width: 91.4702%;
+  margin-left: 4.2649%;
+  padding: 0.5; }
+  /* line 100, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
   section > p {
     padding: 20px; }
-  /* line 113, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+  /* line 104, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
   section pre {
     text-align: left;
     padding: 5px 20px; }
@@ -582,7 +575,7 @@ section {
   section:last-child {
     margin-right: 0; }
   @media screen and (min-width: 900px) {
-    /* line 102, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 93, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
     section {
       float: left;
       display: block;
@@ -593,7 +586,7 @@ section {
       /* line 89, /Users/tallys/Projects/color-theory/vendor/ruby/2.0.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       section:last-child {
         margin-right: 0; } }
-  /* line 125, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+  /* line 118, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
   section h2 {
     margin-top: 0px;
     background: #cbcbdd;
@@ -605,17 +598,22 @@ section {
     font-weight: 400;
     position: relative;
     text-align: left; }
-    /* line 135, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 128, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
     section h2 span {
       border-radius: 3px;
       font-size: .65em;
       padding: 5px;
       float: right; }
-  /* line 143, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+      /* line 20, /Users/tallys/Projects/color-theory/vendor/ruby/2.0.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+      section h2 span::after {
+        clear: both;
+        content: "";
+        display: table; }
+  /* line 137, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
   section .example {
     padding: 30px 15px; }
     @media screen and (min-width: 900px) {
-      /* line 143, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+      /* line 137, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
       section .example {
         float: left;
         display: block;
@@ -630,16 +628,21 @@ section {
       clear: both;
       content: "";
       display: table; }
-  /* line 153, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 145, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    section .example p {
+      text-align: left; }
+  /* line 150, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
   section .explanation {
     padding: 30px 15px;
+    border-bottom: 7px solid #cbcbdd;
     text-align: left; }
-    /* line 156, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 154, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
     section .explanation p {
       color: #222234; }
     @media screen and (min-width: 900px) {
-      /* line 153, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+      /* line 150, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
       section .explanation {
+        border-bottom: none;
         float: left;
         display: block;
         margin-right: 2.35765%;
@@ -648,14 +651,14 @@ section {
         section .explanation:last-child {
           margin-right: 0; } }
 
-/* line 165, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+/* line 164, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
 .test {
   height: 100px;
   width: 100px;
   border-radius: 7% 2%;
   display: inline-block; }
 
-/* line 172, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+/* line 171, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
 .container {
   max-width: 68em;
   margin-left: auto;
@@ -666,11 +669,11 @@ section {
     content: "";
     display: table; }
 
-/* line 176, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+/* line 175, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
 .half {
   padding: 30px; }
   @media screen and (min-width: 900px) {
-    /* line 176, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 175, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
     .half {
       float: left;
       display: block;
@@ -761,11 +764,11 @@ section {
     -ms-transform: translateY(-4px);
     -o-transform: translateY(-4px);
     transform: translateY(-4px); } }
-/* line 214, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+/* line 213, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
 .color-swatches {
   display: block;
   margin: auto; }
-  /* line 217, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+  /* line 216, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
   .color-swatches .swatch {
     display: inline-block;
     flex: 0 1 20px;
@@ -786,32 +789,32 @@ section {
     outline: none;
     border: none;
     transition: all .4s ease; }
-    /* line 236, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 235, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
     .color-swatches .swatch:active, .color-swatches .swatch:focus, .color-swatches .swatch:hover {
       outline: none;
       box-shadow: 0px 0px 0px 5px #fdfdf7; }
-    /* line 241, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 240, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
     .color-swatches .swatch[data-color="red"] {
       background-color: #ff0015; }
-    /* line 244, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 243, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
     .color-swatches .swatch[data-color="orange"] {
       background-color: #ff6a00; }
-    /* line 247, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 246, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
     .color-swatches .swatch[data-color="yellow"] {
       background-color: yellow; }
-    /* line 250, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 249, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
     .color-swatches .swatch[data-color="green"] {
       background-color: lime; }
-    /* line 253, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 252, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
     .color-swatches .swatch[data-color="cyan"] {
       background-color: cyan; }
-    /* line 256, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 255, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
     .color-swatches .swatch[data-color="blue"] {
       background-color: blue; }
-    /* line 259, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 258, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
     .color-swatches .swatch[data-color="violet"] {
       background-color: magenta; }
-    /* line 262, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
+    /* line 261, /Users/tallys/Projects/color-theory/source/stylesheets/_base-layout.scss */
     .color-swatches .swatch[data-color="grayscale"] {
       background-color: gray;
       -webkit-animation: bounce 0.4s ease infinite alternate;
@@ -1388,113 +1391,120 @@ section.final-colors .mini-layout {
     background: #222234;
     color: #fdfdf7; }
 
-/* line 332, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
-section.final-example .mini-layout {
-  background: #fdfdf7;
-  float: none;
-  display: block;
-  margin: 30px auto; }
-  /* line 20, /Users/tallys/Projects/color-theory/vendor/ruby/2.0.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
-  section.final-example .mini-layout::after {
-    clear: both;
-    content: "";
-    display: table; }
-  /* line 338, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
-  section.final-example .mini-layout .mini-nav {
-    background: #222234; }
-    /* line 340, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
-    section.final-example .mini-layout .mini-nav:after {
-      background: #e8e864; }
-  /* line 344, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
-  section.final-example .mini-layout .mini-header {
-    background: #cbcbdd;
-    color: #222234; }
-  /* line 351, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
-  section.final-example .mini-layout .mini-aside ul li {
-    background: #cbcbdd; }
-  /* line 358, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
-  section.final-example .mini-layout .mini-main p {
-    color: #222234; }
-  /* line 361, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
-  section.final-example .mini-layout .mini-main .cta {
-    background: #e3e31c;
-    transition: all ease-in .25s; }
-    /* line 364, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
-    section.final-example .mini-layout .mini-main .cta:hover {
-      background: #9b9b18; }
-  /* line 370, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
-  section.final-example .mini-layout .mini-footer {
-    background: #222234;
-    color: #fdfdf7; }
+/* line 331, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
+section.final-example {
+  padding: 1em; }
+  /* line 333, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
+  section.final-example .mini-layout {
+    background: #fdfdf7;
+    float: none;
+    display: block;
+    margin: 30px auto; }
+    /* line 20, /Users/tallys/Projects/color-theory/vendor/ruby/2.0.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+    section.final-example .mini-layout::after {
+      clear: both;
+      content: "";
+      display: table; }
+    /* line 339, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
+    section.final-example .mini-layout .mini-nav {
+      background: #222234; }
+      /* line 341, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
+      section.final-example .mini-layout .mini-nav:after {
+        background: #e8e864; }
+    /* line 345, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
+    section.final-example .mini-layout .mini-header {
+      background: #cbcbdd;
+      color: #222234; }
+    /* line 352, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
+    section.final-example .mini-layout .mini-aside ul li {
+      background: #cbcbdd; }
+    /* line 359, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
+    section.final-example .mini-layout .mini-main p {
+      color: #222234; }
+    /* line 362, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
+    section.final-example .mini-layout .mini-main .cta {
+      background: #e3e31c;
+      transition: all ease-in .25s; }
+      /* line 365, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
+      section.final-example .mini-layout .mini-main .cta:hover {
+        background: #9b9b18; }
+    /* line 371, /Users/tallys/Projects/color-theory/source/stylesheets/_mini-layout-colors.scss */
+    section.final-example .mini-layout .mini-footer {
+      background: #222234;
+      color: #fdfdf7; }
 
-/* line 1, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
-.color-map {
-  padding: 0 1.5em; }
-
-/* line 7, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 2, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .st1 {
   fill: #2b2b2b; }
 
-/* line 13, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 8, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .first {
   fill: yellow; }
 
-/* line 17, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 12, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .second {
   fill: blue; }
 
-/* line 23, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 18, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .primary-color {
   fill: #e3e31c; }
 
-/* line 27, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 22, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .primary-neutral {
   fill: #c9c936; }
 
-/* line 31, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 26, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .primary-neutral-dark {
   fill: #444412; }
 
-/* line 35, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 30, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .primary-neutral-light {
   fill: #ededbb; }
 
-/* line 39, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 34, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .primary-light {
   fill: #e8e864; }
 
-/* line 45, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 40, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .white {
   fill: white;
   stroke: #aaa; }
 
-/* line 50, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 45, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .black {
   fill: black; }
 
-/* line 56, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 51, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .complementary-color {
   fill: #3b3bc4; }
 
-/* line 60, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 55, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .complementary-color {
   fill: #3b3bc4; }
 
-/* line 64, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 59, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .complementary-neutral {
   fill: #65659a; }
 
-/* line 68, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 63, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .complementary-neutral-dark {
   fill: #222234; }
 
-/* line 72, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 67, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .complementary-neutral-light {
   fill: #cbcbdd; }
 
-/* line 76, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+/* line 71, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
 .complementary-light {
   fill: #7c7ccf; }
+
+/* line 110, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+.desaturated-primary-neutral {
+  background: #d2d22d; }
+
+/* line 115, /Users/tallys/Projects/color-theory/source/stylesheets/_color-swatches.scss */
+.desaturated-complementary-neutral {
+  background: #63639c; }
 
 /* line 15, /Users/tallys/Projects/color-theory/source/stylesheets/all.css.scss */
 .doc {
