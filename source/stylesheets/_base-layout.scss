@@ -26,8 +26,7 @@ p {
 header {
 	background: $complementary-neutral-light;
 	@include linear-gradient (180deg, $primary-neutral-dark, $complementary-neutral);
-	height: 100vh;
-	min-height: 900px;
+	min-height: 100vh;
 	@include display(flex);
 	@include justify-content(space-around);
 	@include align-items(stretch);
@@ -35,10 +34,10 @@ header {
 	@include flex-direction(column);
 
 	.container {
-		margin-top: 50px;
 		background-color: rgba(0,0,0 ,.2);
-		padding: 20px;
+		padding: 1em;
 		@media screen and (min-width: 900px) {
+			margin-top: 50px;
 			padding: 3em 5em;
 		}
 	}
@@ -54,7 +53,7 @@ header {
 		font-size: 3.2em;
 
 		@media screen and (max-width: 900px) {
-			font-size: 2.5em;
+			font-size: 2.1em;
 		}
 	}
 
@@ -91,17 +90,9 @@ header {
 	padding: 4px;
 }
 
-code {
-  border-radius: 2px;
-  font-size: 0.8em;
-  font-style: normal;
-  padding: 3px 0.7em;
-  margin-right: 9px;
-}
-
 section {
 	@extend .box-container;
-	margin-bottom:45px;
+	margin-bottom: 45px;
 	display: block;
 	padding: 0px;
 	padding-bottom: 20px;
@@ -115,7 +106,9 @@ section {
 		padding: 5px 20px;
 	}
 
-	@include span-columns(12);
+	@include span-columns(11);
+	@include shift(.5);
+	@include pad(.5);
 	@media screen and (min-width: 900px) {
 		@include span-columns(9);
 		@include shift(1.5);
@@ -137,6 +130,7 @@ section {
 			font-size: .65em;
 			padding: 5px;
 			float: right;
+			@include clearfix;
 		}
 	}
 
@@ -148,15 +142,20 @@ section {
 		}
 		@include clearfix;
 
+		p {
+			text-align: left;
+		}
 	}
 
 	.explanation {
 		padding: 30px 15px;
+		border-bottom: 7px solid $complementary-neutral-light;
 		text-align: left;
 		p {
 			color: $complementary-neutral-dark;
 		}
 		@media screen and (min-width: 900px) {
+			border-bottom: none;
 			@include span-columns(6 of 12);
 		}
 	}
