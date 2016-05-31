@@ -1,8 +1,3 @@
-.color-map {
-	padding: 0 1.5em;
-}
-
-
 //arrows
 .st1{
 	fill:$black;
@@ -75,4 +70,48 @@
 
 .complementary-light {
 	fill: $complementary-light;
+}
+
+
+/// Example of what desaturate does
+
+@function desaturate-neutral($color) {
+	@if (is-highest-key-value($color)) {
+		@if is-high-key-value(complement($color)) {
+			@return desaturate($color, 19%);
+		}
+		@else {
+			@return desaturate($color, 13%);
+		}
+	}
+	@else if (is-high-key-value($color)) {
+		@if is-high-key-value(complement($color)) {
+			@return desaturate($color, 31%);
+		}
+		@else {
+			@return desaturate($color, 23%);
+		}
+	}
+	@else {
+		@if is-highest-key-value(complement($color)) {
+			@return desaturate($color, 31%);
+		}
+		@if is-high-key-value(complement($color)) {
+			@return desaturate($color, 26%);
+		}
+		@else {
+			@return desaturate($color, 23%);
+		}
+	}
+}
+
+// desaturated color neutrals
+
+.desaturated-primary-neutral {
+	background: desaturate-neutral($primary-color);
+}
+
+
+.desaturated-complementary-neutral {
+	background: desaturate-neutral($complementary-color);
 }
