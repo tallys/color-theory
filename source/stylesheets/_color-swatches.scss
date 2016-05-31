@@ -1,0 +1,78 @@
+.color-map {
+	padding: 0 1.5em;
+}
+
+
+//arrows
+.st1{
+	fill:$black;
+}
+
+// Initial color swatches
+
+.first {
+	fill: $first-color;
+}
+
+.second {
+	fill: $second-color;
+}
+
+// Primary
+
+.primary-color {
+	fill: $primary-color;
+}
+
+.primary-neutral {
+	fill: $primary-neutral;
+}
+
+.primary-neutral-dark {
+	fill: $primary-neutral-dark;
+}
+
+.primary-neutral-light {
+	fill: $primary-neutral-light;
+}
+
+.primary-light {
+	fill: $primary-light;
+}
+
+// Pure white and black for mixing -  lighten() and darken()
+
+.white {
+	fill: white;
+	stroke: #aaa;
+}
+
+.black {
+	fill: black;
+}
+
+//complementary
+
+.complementary-color {
+	fill: $complementary-color;
+}
+
+.complementary-color {
+	fill: $complementary-color;
+}
+
+.complementary-neutral {
+	fill: $complementary-neutral;
+}
+
+.complementary-neutral-dark {
+	fill: $complementary-neutral-dark;
+}
+
+.complementary-neutral-light {
+	fill: $complementary-neutral-light;
+}
+
+.complementary-light {
+	fill: $complementary-light;
+}

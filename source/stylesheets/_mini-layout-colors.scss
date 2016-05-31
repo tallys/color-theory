@@ -326,3 +326,50 @@ section.final-colors {
 		}
 	}
 }
+
+
+section.final-example {
+	.mini-layout {
+		background: $white;
+		float: none;
+		display: block;
+		margin: 30px auto;
+		@include clearfix;
+		.mini-nav {
+			background: $complementary-neutral-dark;
+			&:after {
+				background: $primary-light;
+			}
+		}
+		.mini-header {
+			background: $complementary-neutral-light;
+			color: $complementary-neutral-dark;
+		 }
+
+		.mini-aside {
+			ul {
+				li {
+					background: $complementary-neutral-light;
+				}
+			}
+		}
+
+		.mini-main {
+				p {
+					color: $complementary-neutral-dark;
+				}
+				.cta {
+				background: $primary-color;
+				transition: all ease-in .25s;
+					&:hover {
+						background: $primary-dark;
+					}
+				}
+		}
+
+		.mini-footer {
+			background: $complementary-neutral-dark;
+			color: $white;
+		}
+	}
+}

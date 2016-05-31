@@ -38,9 +38,8 @@ header {
 		margin-top: 50px;
 		background-color: rgba(0,0,0 ,.2);
 		padding: 20px;
-		@media screen and (min-width: 600px) {
-
-			padding: 40px 70px;
+		@media screen and (min-width: 900px) {
+			padding: 3em 5em;
 		}
 	}
 
@@ -54,7 +53,7 @@ header {
 		animation: welcome 1s;
 		font-size: 3.2em;
 
-		@media screen and (max-width: 700px) {
+		@media screen and (max-width: 900px) {
 			font-size: 2.5em;
 		}
 	}
@@ -117,10 +116,10 @@ section {
 	}
 
 	@include span-columns(12);
-	@media screen and (min-width: 780px) {
-		@include span-columns(8);
-		@include shift(2);
-		@include pad(2);
+	@media screen and (min-width: 900px) {
+		@include span-columns(9);
+		@include shift(1.5);
+		@include pad(1.5);
 	}
 
 	h2 {
@@ -143,7 +142,7 @@ section {
 
 	.example {
 		padding: 30px 15px;
-		@media screen and (min-width: 780px) {
+		@media screen and (min-width: 900px) {
 			@include span-columns(6 of 12);
 			@include omega();
 		}
@@ -157,7 +156,7 @@ section {
 		p {
 			color: $complementary-neutral-dark;
 		}
-		@media screen and (min-width: 780px) {
+		@media screen and (min-width: 900px) {
 			@include span-columns(6 of 12);
 		}
 	}
@@ -176,7 +175,7 @@ section {
 
 .half {
 	padding: 30px;
-	@media screen and (min-width: 780px) {
+	@media screen and (min-width: 900px) {
 		@include span-columns(6 of 12);
 	}
 }
