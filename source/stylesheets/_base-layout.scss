@@ -241,22 +241,22 @@ section {
 			background-color: hsl(0, 100%, 50%);
 		}
 		&[data-color="orange"] {
-			background-color: hsl(25, 100%, 50%);
+			background-color: hsl(28, 100%, 50%);
 		}
 		&[data-color="yellow"]{
-			background-color: hsl(60, 100%, 50%);
+			background-color: hsl(50, 100%, 50%);
 		}
 		&[data-color="green"] {
-			background-color: hsl(120, 100%, 50%);
+			background-color: hsl(110, 100%, 50%);
 		}
 		&[data-color="cyan"] {
-			background-color: hsl(180, 100%, 50%);
+			background-color: hsl(190, 100%, 50%);
 		}
 		&[data-color="blue"] {
-			background-color: hsl(240, 100%, 50%);
+			background-color: hsl(220, 100%, 50%);
 		}
 		&[data-color="violet"] {
-			background-color: hsl(300, 100%, 50%);
+			background-color: hsl(320, 100%, 50%);
 		}
 		&[data-color="grayscale"] {
 			background-color: grayscale($primary-color);
