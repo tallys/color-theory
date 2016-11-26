@@ -1,0 +1,140 @@
+$dark-neutral: #222;
+
+@keyframes moving-shadow {
+    0% {}
+    50% { background-color: hsl(random(360), 10, 10);}
+    100% {}
+}
+
+@keyframes bounce {
+  0% {}
+  50% {}
+  100% {}
+}
+
+@keyframes dark-glow {
+    $glow-color: $complementary-neutral-dark;
+    0% {fill: adjust-hue($glow-color, 10);}
+    50% {fill: lighten($glow-color, 3);}
+    100% {fill: mix($glow-color, #222);}
+}
+
+@for $i from 0 through 348 {
+    @keyframes colorize-#{$i} {
+        0% {}
+        50% {fill: adjust-hue(hsl(random(10), random(50 * 2), random(50 * 2)), 100);}
+        100% {}
+    }
+    .st#{$i} {
+        animation: colorize-#{$i} (random(4) * 3s) linear (random(2) * 1s) infinite alternate;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.st13 {
+  @include animation(bounce 1s ease infinite alternate);
+}
+
+section.shards {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    overflow: hidden;
+    top:0;
+    z-index: -1;
+}
+
+.svg-title {
+    font-family: 'Pacifico', serif;
+    opacity: .6;
+}
+
+.description {
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+    .🐱 {
+        display: block;
+        margin: auto;
+        max-width: 400px;
+        margin-bottom: 30px;
+    }
+
+circle {
+        opacity: .85;
+        animation: dark-glow 5s linear infinite alternate;
+    &:hover {
+        animation: none;
+    }
+}
+
+@for $i from 0 through 16 {
+    @keyframes shard-#{$i} {
+        0% {transform: translateY(random(175) * 2px * -1) rotate(3deg) (scale(random(1) * .9));}
+        50% {fill: hsl(random(310), random(50 * 2), random(50 * 2));}
+        100% {transform: (translateY(0)) scale(1);}
+    }
+    .shard#{$i} {
+        fill: #AB001F;
+        position: absolute;
+        opacity: (random(1) * .67);
+        bottom: (random(90) * 1%);
+        left: (random(70) * 1%);
+        z-index: -1;
+        width: (random(120) * 14px);
+        animation: shard-#{$i} 4s ease infinite alternate;
+        &:hover {
+            animation: none;
+            cursor: pointer;
+        }
+    }
+}
+
+
+/* from middleman */
+
+.welcome {
+  -webkit-animation-name: welcome;
+  -webkit-animation-duration: .9s; }
+
+@-webkit-keyframes welcome {
+  from {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+   -webkit-transform: scale(0);
+   opacity: 0;
+  }
+  92.5% {
+    -webkit-transform: scale(1.04);
+    -webkit-animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@-webkit-keyframes hover {
+  from {
+    -webkit-transform: scale(1);
+
+  }
+  15% {
+   -webkit-transform: scale(.97);
+  }
+  72.5% {
+    -webkit-transform: scale(1.04);
+    -webkit-animation-timing-function: ease-out;
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}

@@ -5,7 +5,7 @@ $(document).ready(function () {
   $('.color-swatches .swatch').click(function () {
   	var color = $(this).data('color');
   	$('#themed').remove();
-    $('head').append('<link rel="stylesheet" href="stylesheets/theme/'+color+'.css" type="text/css" id="themed" />');
+    $('head').append('<link rel="stylesheet" href="stylesheets/'+color+'.css" type="text/css" id="themed" />');
 	});
 });
 
