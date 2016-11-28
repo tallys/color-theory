@@ -71,7 +71,7 @@
 #vg-middlebranch {
     .vg-middlebranch {
         fill:#8C9984;
-        fill: lighten(desaturate(adjust-hue($complementary-neutral, -50), 20), 17);
+        fill: lighten(desaturate(adjust-hue($complementary-neutral, -50), 20), 24);
         // fill: red;
         stroke:#434C3F;
 
@@ -91,9 +91,9 @@
 #vg-topbranch {
     .vg-topbranch {
         // fill:#8E9B87;
-        fill: lighten(desaturate(adjust-hue($complementary-neutral, -20), 20), 20);
+        fill: lighten(desaturate(adjust-hue($complementary-neutral, -20), 20), 27);
         stroke:#1C3A32;
-        stroke: lighten($complementary-neutral-dark, 9);
+        stroke: lighten($complementary-neutral-dark, 3);
     }
 }
 
