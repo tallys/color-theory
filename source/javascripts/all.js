@@ -9,7 +9,7 @@ $(document).ready(function () {
 	});
 
     $('.partymode').click(function () {
-    $('.scalable-van-gogh').toggleClass('party');
+    $('body').toggleClass('party');
     });
 });
 
