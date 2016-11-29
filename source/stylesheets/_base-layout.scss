@@ -5,10 +5,10 @@
 }
 
 body {
-	background: $complementary-neutral;
+	background: darken($complementary-gray, 7);
 	text-align: center;
 	font-family: 'Roboto Slab', sans-serif;
-	@include linear-gradient(200deg, $complementary-neutral, mix($complementary-neutral, $black, 17));
+	// @include linear-gradient( $complementary-neutral, darken($complementary-gray, 7));
 }
 
 h1 {
@@ -208,6 +208,11 @@ section {
   100% {
     @include transform(translateY(-4px));
   }
+}
+
+.color-swatch-menu {
+    position: fixed;
+    top: 0;
 }
 
 .color-swatches {

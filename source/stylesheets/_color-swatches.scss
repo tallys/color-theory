@@ -111,7 +111,24 @@
 	background: desaturate-neutral($primary-color);
 }
 
-
 .desaturated-complementary-neutral {
 	background: desaturate-neutral($complementary-color);
+}
+
+.partymode {
+    outline: none;
+    background: transparent;
+    border: none;
+
+    &:hover, &:active, &:focus {
+        &:after {
+            filter: saturate(2.9);
+            filter: drop-shadow(0px 0px 1px $primary-neutral);
+        }
+    }
+    &:after {
+        content: "\01F389 \01F37E \01F382 ";
+        font-size: 40px;
+        transition: all .3s ease;
+    }
 }

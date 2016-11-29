@@ -7,6 +7,10 @@ $(document).ready(function () {
   	$('#themed').remove();
     $('head').append('<link rel="stylesheet" href="stylesheets/'+color+'.css" type="text/css" id="themed" />');
 	});
+
+    $('.partymode').click(function () {
+    $('.scalable-van-gogh').toggleClass('party');
+    });
 });
 
 // Smooth Scroll

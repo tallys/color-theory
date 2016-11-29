@@ -215,7 +215,7 @@ title: Practical Color Theory for People Who Code
 		<h2>The big picture<span>mix( ) your colors</span></h2>
 
 		<h3>This demo is just one sample of a decision tree for mixing a set of colors.</h3><p> Because colors interact with each other, each time you introduce a color, you add complexity. Build your color schemes like you build the rest of your application - a reasonable system of relationships that is maintainable.</p>
-			<%= partial "partials/color-swatches" %>
+
 			<span>The resulting design might look something like...</span>
 			<%= partial "partials/mini_layout" %>
 </section>
@@ -226,5 +226,12 @@ title: Practical Color Theory for People Who Code
 		<p>I am excited to be collaborating with the very awesome <a href="http://www.miriamsuzanne.com/">Miriam Suzanne</a>, the creator of many fantastic internet things, to build a system that will make it easy to add color relationships to your projects. It's called <a href='https://www.npmjs.com/package/sass-lumen'> Lumen</a> - keep an eye on its progress!</p>
 </section>
 </div>
+
+
+<section class="vg-section">
+    <h1>Design is not art</h1>
+    <%= partial "partials/color-swatches" %>
+    <button class="partymode"></button>
+</section>
 
 <%= partial 'partials/_vanGogh.svg.erb'%>
