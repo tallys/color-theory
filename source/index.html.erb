@@ -212,12 +212,15 @@ title: Practical Color Theory for People Who Code
 		</div>
 	</section>
 <section class="final-example">
-		<h2>The big picture<span>mix( ) your colors</span></h2>
+	<h2>The big picture<span>mix( ) your colors</span></h2>
+    <h3>This demo is just one sample of a decision tree for mixing a set of colors.</h3>
+    <div class="color-map">
+        <%= partial "images/complementary-color-map.svg" %>
+    </div>
+    <p> Because colors interact with each other, each time you introduce a color, you add complexity. Build your color schemes like you build the rest of your application - a reasonable system of relationships that is maintainable.</p>
 
-		<h3>This demo is just one sample of a decision tree for mixing a set of colors.</h3><p> Because colors interact with each other, each time you introduce a color, you add complexity. Build your color schemes like you build the rest of your application - a reasonable system of relationships that is maintainable.</p>
-
-			<span>The resulting design might look something like...</span>
-			<%= partial "partials/mini_layout" %>
+	<span>The resulting design might look something like...</span>
+	<%= partial "partials/mini_layout" %>
 </section>
 
 <section>
@@ -229,8 +232,11 @@ title: Practical Color Theory for People Who Code
 
 
 <section class="vg-section">
-    <h1>Design is not art</h1>
-    <%= partial "partials/color-swatches" %>
+    <h2>SVG: Scalable Van Gogh </h2>
+        <h3>Blur the line between designer and developer</h3>
+        <%= partial "partials/color-swatches" %>
+        <p>We are more similar than we are allowed to believe. This is an SVG, a Scalable Van Gogh created to show that there are design principles even in art. If you learn the patterns and color relationships, you can create color schemes for the web with confidence.</p>
+    <h1> Turn on party mode </h1>
     <button class="partymode"></button>
 </section>
 

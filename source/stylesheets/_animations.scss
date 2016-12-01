@@ -4,15 +4,15 @@ body.party {
 
 @keyframes background-shift {
         0% {}
-        10% {background-color: adjust-hue(darken($complementary-gray, 7), random(360))}
-        20% {background-color: adjust-hue(darken($complementary-gray, 7), random(360))}
-        30% {background-color: adjust-hue(darken($complementary-gray, 7), random(360))}
-        40% {background-color: adjust-hue(darken($complementary-gray, 7), random(360))}
-        50% {background-color: adjust-hue(darken($complementary-gray, 7), random(360))}
-        60% {background-color: adjust-hue(darken($complementary-gray, 7), random(360))}
-        70% {background-color: adjust-hue(darken($complementary-gray, 7), random(360))}
-        80% {background-color: adjust-hue(darken($complementary-gray, 7), random(360))}
-        90% {background-color: adjust-hue(darken($complementary-gray, 7), random(360))}
+        10% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        20% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        30% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        40% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        50% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        60% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        70% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        80% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        90% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
         100% {}
 }
 
