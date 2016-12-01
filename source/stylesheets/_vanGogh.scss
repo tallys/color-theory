@@ -1,0 +1,111 @@
+.vg-section {
+    margin-bottom: 0;
+}
+
+.vg-background {
+    fill: hsl(179, 21%, 54%);
+    fill: darken($complementary-gray, 5);
+}
+
+#vg-leaves {
+    .leaf{
+        fill: desaturate(darken($analogous-color, 20) , 31);
+        stroke: desaturate(darken($analogous-color, 30) , 31);
+    }
+}
+
+#vg-backbranches {
+    .vg-backbranch {
+        fill:#AFAD90;
+        stroke:#293F1E;
+        fill: lighten(desaturate(adjust-hue($complementary-neutral, -50), 20), 17);
+
+        stroke: lighten(desaturate(adjust-hue($complementary-neutral-dark, 10), 20), 25);
+    }
+}
+
+#vg-backbranch {
+    .vg-backbranch {
+        // fill:#99AA9B;
+        fill: lighten(desaturate(adjust-hue($primary-neutral, 50), 20), 27);
+        // stroke:#1C3A32;
+        stroke: lighten(desaturate(adjust-hue($complementary-neutral-dark, 30), 20), 25);
+    }
+}
+
+#vg-shadowblossoms {
+    .vg-shadowblossom {
+        // fill:#C6B7A5;
+        fill: lighten(desaturate(adjust-hue($primary-neutral, 30), 20), 27);
+        // stroke:#9B9A89;
+        stroke: lighten(desaturate(adjust-hue($primary-neutral, -10), 30), 3);
+    }
+    .vg-shadowblossom:nth-of-type(3n) {
+        fill: lighten(desaturate(adjust-hue($primary-neutral, 5), 15), 27);
+        stroke: lighten(desaturate(adjust-hue($primary-neutral, 10), 20), 3);
+    }
+}
+
+#vg-buds {
+    .vg-buds {
+        fill: darken(mix-neutral($primary-light), 11);
+        fill: mix-neutral($primary-light);
+        // stroke:#9E806C;
+        stroke: lighten(desaturate(adjust-hue($primary-neutral, -10), 30), 3);
+    }
+}
+
+#vg-highlightblossoms {
+    .vg-highlightblossom {
+        fill: lighten($primary-neutral-light, 9);
+        stroke: $primary-neutral-light;
+    }
+
+    .vg-highlightblossom:nth-of-type(2n) {
+        fill: $white;
+        stroke: $primary-neutral-light;
+    }
+
+    .vg-highlightblossom:nth-of-type(6n) {
+        fill: adjust-hue($primary-neutral-light, 30);
+        stroke: darken(adjust-hue($primary-neutral-light, 40), 11);
+    }
+}
+
+#vg-middlebranch {
+    .vg-middlebranch {
+        fill: #8C9984;
+        fill: lighten(desaturate(adjust-hue($complementary-neutral, -50), 20), 24);
+        // fill: red;
+        stroke:#434C3F;
+
+        stroke: lighten(desaturate(adjust-hue($complementary-neutral-dark, -90), 20), 13);
+    }
+}
+
+#vg-forebranch {
+    .vg-forebranch {
+        // fill:#9DAE8A;
+        fill: lighten(desaturate(adjust-hue($complementary-neutral, -33), 20), 27);
+        // stroke:#333333;
+        stroke: $complementary-neutral-dark;
+    }
+}
+
+#vg-topbranch {
+    .vg-topbranch {
+        // fill:#8E9B87;
+        fill: lighten(desaturate(adjust-hue($complementary-neutral, -20), 20), 27);
+        stroke:#1C3A32;
+        stroke: lighten($complementary-neutral-dark, 3);
+    }
+}
+
+#vg-topleftbranch {
+    .vg-topleftbranch {
+        fill:#ABBCA4;
+        fill: adjust-hue($primary-neutral-light, 30);
+        // stroke:#1C3A32;
+        stroke: $complementary-neutral-dark;
+    }
+}

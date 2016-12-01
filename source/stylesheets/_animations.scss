@@ -1,0 +1,220 @@
+body.party {
+    $dark-neutral: #222;
+    animation: background-shift 15s infinite alternate;
+
+@keyframes background-shift {
+        0% {}
+        10% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        20% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        30% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        40% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        50% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        60% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        70% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        80% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        90% {background-color: adjust-hue(saturate($complementary-gray, 7), random(360))}
+        100% {}
+}
+
+.vg-background {
+    fill: transparent;
+}
+
+@keyframes forebranch-shift {
+        0% {}
+        10% {fill: adjust-hue(#9DAE8A, random(360));
+            stroke: adjust-hue(#434C3F, random(360));}
+        20% {fill: adjust-hue(#9DAE8A, random(360));
+            stroke: adjust-hue(#434C3F, random(360));}
+        30% {fill: adjust-hue(#9DAE8A, random(360));
+            stroke: adjust-hue(#434C3F, random(360));}
+        40% {fill: adjust-hue(#9DAE8A, random(360));
+            stroke: adjust-hue(#434C3F, random(360));}
+        50% {fill: adjust-hue(#9DAE8A, random(360));
+            stroke: adjust-hue(#434C3F, random(360));}
+        60% {fill: adjust-hue(#9DAE8A, random(360));
+            stroke: adjust-hue(#434C3F, random(360));}
+        70% {fill: adjust-hue(#9DAE8A, random(360));
+            stroke: adjust-hue(#434C3F, random(360));}
+        80% {fill: adjust-hue(#9DAE8A, random(360));
+            stroke: adjust-hue(#434C3F, random(360));}
+        90% {fill: adjust-hue(#9DAE8A, random(360));
+            stroke: adjust-hue(#434C3F, random(360));}
+        100% {}
+}
+
+@keyframes midbranch-shift {
+        0% {}
+        10% {fill: adjust-hue(#8C9984, random(360));
+             stroke: adjust-hue(#434C3F, random(360));}
+        20% {fill: adjust-hue(#8C9984, random(360));
+             stroke: adjust-hue(#434C3F, random(360));}
+        30% {fill: adjust-hue(#8C9984, random(360));
+             stroke: adjust-hue(#434C3F, random(360));}
+        40% {fill: adjust-hue(#8C9984, random(360));
+             stroke: adjust-hue(#434C3F, random(360));}
+        50% {fill: adjust-hue(#8C9984, random(360));
+             stroke: adjust-hue(#434C3F, random(360));}
+        60% {fill: adjust-hue(#8C9984, random(360));
+             stroke: adjust-hue(#434C3F, random(360));}
+        70% {fill: adjust-hue(#8C9984, random(360));
+             stroke: adjust-hue(#434C3F, random(360));}
+        80% {fill: adjust-hue(#8C9984, random(360));
+             stroke: adjust-hue(#434C3F, random(360));}
+        90% {fill: adjust-hue(#8C9984, random(360));
+             stroke: adjust-hue(#434C3F, random(360));}
+        100% {}
+}
+
+.vg-middlebranch {
+     animation: midbranch-shift 8s infinite alternate;
+}
+
+.vg-forebranch {
+    animation: forebranch-shift 10s infinite alternate;
+}
+
+#vg-backbranch.vg-backbranch {
+    animation: forebranch-shift 9s infinite alternate;
+}
+
+#vg-backbranches.vg-backbranch {
+    animation: forebranch-shift 9s infinite alternate;
+}
+
+@keyframes dark-glow {
+    $glow-color: $complementary-neutral-dark;
+    0% {fill: adjust-hue($glow-color, 10);}
+    50% {fill: lighten($glow-color, 3);}
+    100% {fill: mix($glow-color, #222);}
+}
+
+@for $i from 0 through 100 {
+    @keyframes colorize-#{$i} {
+        0% {}
+        50% {fill: desaturate(adjust-hue(hsl(random(25), random(10 * 2), random(50 * 2)), 100), random(20));
+             stroke: desaturate(adjust-hue(hsl(random(25), random(10 * 2), random(50 * 2)), 100), random(20));}
+        100% {}
+    }
+    .leaf:nth-of-type(#{$i}n) {
+        animation: colorize-#{$i} (random(4) * 3s) linear (random(2) * 1s) infinite alternate;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@for $i from 0 through 100 {
+    @keyframes colorize-#{$i} {
+        0% {}
+        50% {fill: darken(hsl(random(25), random(10 * 2), random(40 * 2)), 10);}
+        100% {}
+    }
+    .vg-buds:nth-of-type(#{$i}n) {
+        animation: colorize-#{$i} (random(4) * 3s) linear (random(2) * 1s) infinite alternate;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@for $i from 0 through 100 {
+    @keyframes colorize-#{$i} {
+        0% {}
+        10% {fill: hsl(random(360), 80, 90)}
+        20% {fill: hsl(random(360), 80, 90)}
+        30% {fill: hsl(random(360), 80, 90)}
+        40% {fill: hsl(random(360), 80, 90)}
+        50% {fill: hsl(random(360), 100, 100)}
+        60% {fill: hsl(random(360), 70, 80)}
+        70% {fill: hsl(random(360), 80, 90)}
+        80% {fill: hsl(random(360), 85, 95)}
+        90% {fill: hsl(random(360), 80, 90)}
+        100% {}
+    }
+    .vg-highlightblossom:nth-of-type(#{$i}n) {
+        animation: colorize-#{$i} (random(4) * 3s) linear (random(2) * 1s) infinite alternate;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .vg-topbranch, .vg-topleftbranch {
+        animation: colorize-#{$i} (random(4) * 3s) linear (random(2) * 1s) infinite alternate;
+    }
+}
+
+
+@for $i from 0 through 16 {
+    @keyframes shard-#{$i} {
+        0% {}
+        10% {fill: hsl(random(360), 20, 67);
+             stroke: hsl(random(360), 20, 37);}
+        20% {fill: hsl(random(360), 20, 67);
+             stroke: hsl(random(360), 20, 37);}
+        30% {fill: hsl(random(360), 20, 67);
+             stroke: hsl(random(360), 20, 37);}
+        40% {fill: hsl(random(360), 20, 67);
+             stroke: hsl(random(360), 20, 37);}
+        50% {fill: hsl(random(360), 20, 67);
+             stroke: hsl(random(360), 20, 37);}
+        60% {fill: hsl(random(360), 20, 67);
+             stroke: hsl(random(360), 20, 37);}
+        70% {fill: hsl(random(360), 20, 67);
+             stroke: hsl(random(360), 20, 37);}
+        80% {fill: hsl(random(360), 20, 67);
+             stroke: hsl(random(360), 20, 37);}
+        90% {fill: hsl(random(360), 20, 67);
+             stroke: hsl(random(360), 20, 37);}
+        100% {}
+    }
+    .vg-shadowblossom:nth-of-type(#{$i}n) {
+        animation: shard-#{$i} 4s ease infinite alternate;
+    }
+}
+
+
+/* from middleman */
+
+.welcome {
+  -webkit-animation-name: welcome;
+  -webkit-animation-duration: .9s; }
+
+@-webkit-keyframes welcome {
+  from {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+   -webkit-transform: scale(0);
+   opacity: 0;
+  }
+  92.5% {
+    -webkit-transform: scale(1.04);
+    -webkit-animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@-webkit-keyframes hover {
+  from {
+    -webkit-transform: scale(1);
+
+  }
+  15% {
+   -webkit-transform: scale(.97);
+  }
+  72.5% {
+    -webkit-transform: scale(1.04);
+    -webkit-animation-timing-function: ease-out;
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+
+}

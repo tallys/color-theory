@@ -5,10 +5,9 @@
 }
 
 body {
-	background: $complementary-neutral;
+	background-color: darken($complementary-gray, 5);
 	text-align: center;
 	font-family: 'Roboto Slab', sans-serif;
-	@include linear-gradient(200deg, $complementary-neutral, mix($complementary-neutral, $black, 17));
 }
 
 h1 {
@@ -35,7 +34,7 @@ header {
 
 	.container {
 		background-color: rgba(0,0,0 ,.2);
-		padding: 1em;
+		padding: 2.3em;
 		@media screen and (min-width: 900px) {
 			margin-top: 50px;
 			padding: 3em 5em;
@@ -210,6 +209,11 @@ section {
   }
 }
 
+.color-swatch-menu {
+    position: fixed;
+    top: 0;
+}
+
 .color-swatches {
 	display: block;
 	margin: auto;
@@ -238,25 +242,25 @@ section {
 		}
 
 		&[data-color="red"] {
-			background-color: hsl(355, 100%, 50%);
+			background-color: hsl(0, 100%, 50%);
 		}
 		&[data-color="orange"] {
-			background-color: hsl(25, 100%, 50%);
+			background-color: hsl(28, 100%, 50%);
 		}
 		&[data-color="yellow"]{
-			background-color: hsl(60, 100%, 50%);
+			background-color: hsl(50, 100%, 50%);
 		}
 		&[data-color="green"] {
-			background-color: hsl(120, 100%, 50%);
+			background-color: hsl(110, 100%, 50%);
 		}
 		&[data-color="cyan"] {
-			background-color: hsl(180, 100%, 50%);
+			background-color: hsl(190, 100%, 50%);
 		}
 		&[data-color="blue"] {
-			background-color: hsl(240, 100%, 50%);
+			background-color: hsl(220, 100%, 50%);
 		}
 		&[data-color="violet"] {
-			background-color: hsl(300, 100%, 50%);
+			background-color: hsl(320, 100%, 50%);
 		}
 		&[data-color="grayscale"] {
 			background-color: grayscale($primary-color);
