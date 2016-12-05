@@ -1,61 +1,61 @@
 .hero {
-	background: lighten($white, 1);
-	padding-top: 30px;
-	padding-bottom: 30px;
-	text-align: left;
-	margin-bottom: 30px;
-	border-bottom: 30px solid $complementary-neutral-dark;
+    background: lighten($white, 1);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: left;
+    margin-bottom: 30px;
+    border-bottom: 30px solid $complementary-neutral-dark;
 }
 
 .box-container {
-	padding: 9px;
-	background: lighten($white, 1);
-	box-shadow: 0px 1px 2px 0 rgba(0,0,0, .3);
+    padding: 9px;
+    background: lighten($white, 1);
+    box-shadow: 0px 1px 2px 0 rgba(0,0,0, .3);
 }
 
 .text-list-item-box {
-	list-style: none;
-	max-width: 300px;
-	padding-left: 0px;
+    list-style: none;
+    max-width: 300px;
+    padding-left: 0px;
 
-	li {
-		margin-bottom: 13px;
-		a{
-			display: block;
-			padding: 9px;
-			transition: all ease-in .25s;
-			text-align: left;
-			margin: 3px;
-			background: darken($complementary-neutral-light, 4);
-			text-decoration: none;
-			color: pick-contrast-of($complementary-neutral-light);
-			box-shadow: 0px 1px 2px 0 #ddd;
+    li {
+        margin-bottom: 13px;
+        a{
+            display: block;
+            padding: 9px;
+            transition: all ease-in .25s;
+            text-align: left;
+            margin: 3px;
+            background: darken($complementary-neutral-light, 4);
+            text-decoration: none;
+            color: pick-contrast-of($complementary-neutral-light);
+            box-shadow: 0px 1px 2px 0 #ddd;
 
-			&:hover, &:active, &:focus {
-				background: darken($complementary-neutral-light, 4);
-				padding-left: 13px;
-				box-shadow: 0px 1px 2px 0 #aaa;
-			}
-		}
-	}
+            &:hover, &:active, &:focus {
+                background: darken($complementary-neutral-light, 4);
+                padding-left: 13px;
+                box-shadow: 0px 1px 2px 0 #aaa;
+            }
+        }
+    }
 }
 
 .cta-button {
-	display: block;
-	max-width: 220px;
-	margin: auto;
-	margin-top: 60px;
-	background: $primary-color;
-	border-radius: 3px;
-	padding: 9px;
-	color: pick-contrast-of($primary-color);
-	margin-bottom: 5px;
-	text-decoration: none;
-	box-shadow: 0px 1px 2px rgba(0,0,0, .2);
-	text-align: center;
-	transition: all ease-in .25s;
-				&:hover, &:active, &:focus {
-				background: darken($primary-color, 5);
-				box-shadow: 0px 1px 2px 0 rgba(0,0,0, .4);
-			}
+    display: block;
+    max-width: 220px;
+    margin: auto;
+    margin-top: 60px;
+    background: $primary-color;
+    border-radius: 3px;
+    padding: 9px;
+    color: pick-contrast-of($primary-color);
+    margin-bottom: 5px;
+    text-decoration: none;
+    box-shadow: 0px 1px 2px rgba(0,0,0, .2);
+    text-align: center;
+    transition: all ease-in .25s;
+    &:hover, &:active, &:focus {
+        background: darken($primary-color, 5);
+        box-shadow: 0px 1px 2px 0 rgba(0,0,0, .4);
+    }
 }

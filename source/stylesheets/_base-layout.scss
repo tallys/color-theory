@@ -1,212 +1,212 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,300");
 
 * {
-	box-model: border-box;
+    box-model: border-box;
 }
 
 body {
-	background-color: darken($complementary-gray, 5);
-	text-align: center;
-	font-family: 'Roboto Slab', sans-serif;
+    background-color: darken($complementary-gray, 5);
+    text-align: center;
+    font-family: 'Roboto Slab', sans-serif;
 }
 
 h1 {
-	color: $complementary-neutral-dark;
-	font-size: 2em;
-	letter-spacing: -1px;
-	margin: 0;
+    color: $complementary-neutral-dark;
+    font-size: 2em;
+    letter-spacing: -1px;
+    margin: 0;
 }
 
 p {
-	font-weight: 300;
-	line-height: 1.6;
+    font-weight: 300;
+    line-height: 1.6;
 }
 
 header {
-	background: $complementary-neutral-light;
-	@include linear-gradient (180deg, $primary-neutral-dark, $complementary-neutral);
-	min-height: 100vh;
-	@include display(flex);
-	@include justify-content(space-around);
-	@include align-items(stretch);
-	@include flex-wrap(no-wrap);
-	@include flex-direction(column);
+    background: $complementary-neutral-light;
+    @include linear-gradient (180deg, $primary-neutral-dark, $complementary-neutral);
+    @include display(flex);
+    @include justify-content(space-around);
+    @include align-items(stretch);
+    @include flex-wrap(no-wrap);
+    @include flex-direction(column);
+    min-height: 100vh;
 
-	.container {
-		background-color: rgba(0,0,0 ,.2);
-		padding: 2.3em;
-		@media screen and (min-width: 900px) {
-			margin-top: 50px;
-			padding: 3em 5em;
-		}
-	}
+    .container {
+        background-color: rgba(0,0,0 ,.2);
+        padding: 2.3em;
+        @media screen and (min-width: 900px) {
+            margin-top: 50px;
+            padding: 3em 5em;
+        }
+    }
 
-	h1 {
-		@include flex(1 1 100%);
-		color: pick-contrast-of($complementary-neutral-dark);
-		text-shadow: 0 1px 0 $primary-neutral-dark;
-		font-weight: 400;
-		margin-bottom: 50px;
-		position: relative;
-		animation: welcome 1s;
-		font-size: 3.2em;
+    h1 {
+        @include flex(1 1 100%);
+        color: pick-contrast-of($complementary-neutral-dark);
+        text-shadow: 0 1px 0 $primary-neutral-dark;
+        font-weight: 400;
+        margin-bottom: 50px;
+        position: relative;
+        animation: welcome 1s;
+        font-size: 3.2em;
 
-		@media screen and (max-width: 900px) {
-			font-size: 2.1em;
-		}
-	}
+        @media screen and (max-width: 900px) {
+            font-size: 2.1em;
+        }
+    }
 
-	h2 {
-		color: pick-contrast-of($complementary-neutral-dark);
-		font-weight: 300;
-	}
+    h2 {
+        color: pick-contrast-of($complementary-neutral-dark);
+        font-weight: 300;
+    }
 
-	h3 {
-		color: pick-contrast-of($complementary-neutral-dark);
-		text-shadow: none;
-		font-weight: 100;
-		margin-top: 0;
-		@include animation(welcome 1s);
-		a {
-			text-decoration: none;
-			color: pick-contrast-of($complementary-neutral-dark);
+    h3 {
+        color: pick-contrast-of($complementary-neutral-dark);
+        text-shadow: none;
+        font-weight: 100;
+        margin-top: 0;
+        @include animation(welcome 1s);
+        a {
+            text-decoration: none;
+            color: pick-contrast-of($complementary-neutral-dark);
 
-			&:hover, &:active, &:focus {
-				animation: hover .8s;
-			}
-		}
-	}
+            &:hover, &:active, &:focus {
+                animation: hover .8s;
+            }
+        }
+    }
 }
 
 .profile-picture {
-	border-radius: 100%;
-	float: left;
-	shape-outside: circle();
-	width: 111px;
-	margin-top:10px;
-	border: 2px solid $complementary-neutral-light;
-	margin: 7px;
-	padding: 4px;
+    border-radius: 100%;
+    float: left;
+    shape-outside: circle();
+    width: 111px;
+    margin-top:10px;
+    border: 2px solid $complementary-neutral-light;
+    margin: 7px;
+    padding: 4px;
 }
 
 section {
-	@extend .box-container;
-	margin-bottom: 45px;
-	display: block;
-	padding: 0px;
-	padding-bottom: 20px;
+    @extend .box-container;
+    margin-bottom: 45px;
+    display: block;
+    padding: 0px;
+    padding-bottom: 20px;
 
-	>p {
-		padding: 20px;
-	}
+    >p {
+        padding: 20px;
+    }
 
-	pre {
-		text-align: left;
-		padding: 5px 20px;
-	}
+    pre {
+        text-align: left;
+        padding: 5px 20px;
+    }
 
-	@include span-columns(11);
-	@include shift(.5);
-	@include pad(.5);
-	@media screen and (min-width: 900px) {
-		@include span-columns(9);
-		@include shift(1.5);
-		@include pad(1.5);
-	}
+    @include span-columns(11);
+    @include shift(.5);
+    @include pad(.5);
+    @media screen and (min-width: 900px) {
+        @include span-columns(9);
+        @include shift(1.5);
+        @include pad(1.5);
+    }
 
-	h2 {
-		margin-top: 0px;
-		background: $complementary-neutral-light;
-		color: pick-contrast-of($complementary-neutral-light);
-		@include linear-gradient($complementary-neutral-light, lighten($complementary-neutral-light, 7));
-		padding: 7px 20px;
-		font-weight: 400;
-		position: relative;
-		text-align: left;
+    h2 {
+        margin-top: 0px;
+        background: $complementary-neutral-light;
+        color: pick-contrast-of($complementary-neutral-light);
+        @include linear-gradient($complementary-neutral-light, lighten($complementary-neutral-light, 7));
+        padding: 7px 20px;
+        font-weight: 400;
+        position: relative;
+        text-align: left;
 
-		span {
-			border-radius: 3px;
-			font-size: .65em;
-			padding: 5px;
-			float: right;
-			@include clearfix;
-		}
-	}
+        span {
+            border-radius: 3px;
+            font-size: .65em;
+            padding: 5px;
+            float: right;
+            @include clearfix;
+        }
+    }
 
-	.example {
-		padding: 30px 15px;
-		@media screen and (min-width: 900px) {
-			@include span-columns(6 of 12);
-			@include omega();
-		}
-		@include clearfix;
+    .example {
+        padding: 30px 15px;
+        @media screen and (min-width: 900px) {
+            @include span-columns(6 of 12);
+            @include omega();
+        }
+        @include clearfix;
 
-		p {
-			text-align: left;
-		}
-	}
+        p {
+            text-align: left;
+        }
+    }
 
-	.explanation {
-		padding: 30px 15px;
-		border-bottom: 7px solid $complementary-neutral-light;
-		text-align: left;
-		p {
-			color: $complementary-neutral-dark;
-		}
-		@media screen and (min-width: 900px) {
-			border-bottom: none;
-			@include span-columns(6 of 12);
-		}
-	}
+    .explanation {
+        padding: 30px 15px;
+        border-bottom: 7px solid $complementary-neutral-light;
+        text-align: left;
+        p {
+            color: $complementary-neutral-dark;
+        }
+        @media screen and (min-width: 900px) {
+            border-bottom: none;
+            @include span-columns(6 of 12);
+        }
+    }
 }
 
 .test {
-	height: 100px;
-	width: 100px;
-	border-radius: 7% 2%;
-	display: inline-block;
+    height: 100px;
+    width: 100px;
+    border-radius: 7% 2%;
+    display: inline-block;
 }
 
 .container {
-	@include outer-container;
+    @include outer-container;
 }
 
 .half {
-	padding: 30px;
-	@media screen and (min-width: 900px) {
-		@include span-columns(6 of 12);
-	}
+    padding: 30px;
+    @media screen and (min-width: 900px) {
+        @include span-columns(6 of 12);
+    }
 }
 
 
 @include keyframes(welcome) {
   0% {
-   @include transform(scale(0));
-    opacity: 0;
-  }
-  50% {
-   @include transform(scale(0));
-   opacity: 0;
-  }
-  83% {
-     @include transform(scale(1.03));
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  100% {
+     @include transform(scale(0));
+     opacity: 0;
+ }
+ 50% {
+     @include transform(scale(0));
+     opacity: 0;
+ }
+ 83% {
+   @include transform(scale(1.03));
+   -webkit-animation-timing-function: ease-out;
+   animation-timing-function: ease-out;
+   opacity: 1;
+}
+100% {
     @include transform(scale(1));
-  }
+}
 }
 
 @include keyframes(bounce) {
   0% {
     @include transform(translateY(0px));
-  }
+}
 
-  100% {
+100% {
     @include transform(translateY(-4px));
-  }
+}
 }
 
 .color-swatch-menu {
@@ -215,57 +215,57 @@ section {
 }
 
 .color-swatches {
-	display: block;
-	margin: auto;
-	.swatch {
-		display: inline-block;
-		flex:0 1 20px;
-		margin: 10px;
-		line-height: 1.5;
-		font-size: 25px;
-		color: pick-contrast-of($primary-color);
-		text-shadow: none;
-		background: $primary-color;
-		box-shadow: 0px 0px 0px 3px $white;
-		height: 20px;
-		width: 20px;
-		border-radius: 100%;
-		@include animation(welcome 1s .5s);
-		cursor: pointer;
-		outline: none;
-		border: none;
-		transition: all .4s ease;
+    display: block;
+    margin: auto;
+    .swatch {
+        display: inline-block;
+        flex:0 1 20px;
+        margin: 10px;
+        line-height: 1.5;
+        font-size: 25px;
+        color: pick-contrast-of($primary-color);
+        text-shadow: none;
+        background: $primary-color;
+        box-shadow: 0px 0px 0px 3px $white;
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        @include animation(welcome 1s .5s);
+        cursor: pointer;
+        outline: none;
+        border: none;
+        transition: all .4s ease;
 
-		&:active, &:focus, &:hover {
-			outline:none;
-			box-shadow: 0px 0px 0px 5px $white;
-		}
+        &:active, &:focus, &:hover {
+            outline:none;
+            box-shadow: 0px 0px 0px 5px $white;
+        }
 
-		&[data-color="red"] {
-			background-color: hsl(0, 100%, 50%);
-		}
-		&[data-color="orange"] {
-			background-color: hsl(28, 100%, 50%);
-		}
-		&[data-color="yellow"]{
-			background-color: hsl(50, 100%, 50%);
-		}
-		&[data-color="green"] {
-			background-color: hsl(110, 100%, 50%);
-		}
-		&[data-color="cyan"] {
-			background-color: hsl(190, 100%, 50%);
-		}
-		&[data-color="blue"] {
-			background-color: hsl(220, 100%, 50%);
-		}
-		&[data-color="violet"] {
-			background-color: hsl(320, 100%, 50%);
-		}
-		&[data-color="grayscale"] {
-			background-color: grayscale($primary-color);
-			@include animation(bounce .4s ease infinite alternate);
-			box-shadow: 0px 0px 0px 6px $complementary-color;
-		}
-	}
+        &[data-color="red"] {
+            background-color: hsl(0, 100%, 50%);
+        }
+        &[data-color="orange"] {
+            background-color: hsl(28, 100%, 50%);
+        }
+        &[data-color="yellow"]{
+            background-color: hsl(50, 100%, 50%);
+        }
+        &[data-color="green"] {
+            background-color: hsl(110, 100%, 50%);
+        }
+        &[data-color="cyan"] {
+            background-color: hsl(190, 100%, 50%);
+        }
+        &[data-color="blue"] {
+            background-color: hsl(220, 100%, 50%);
+        }
+        &[data-color="violet"] {
+            background-color: hsl(320, 100%, 50%);
+        }
+        &[data-color="grayscale"] {
+            background-color: grayscale($primary-color);
+            @include animation(bounce .4s ease infinite alternate);
+            box-shadow: 0px 0px 0px 6px $complementary-color;
+        }
+    }
 }

@@ -1,91 +1,91 @@
 // mixing colors
 
 .first {
-	background: $first-color;
+    background: $first-color;
 }
 
 .second {
-	background: $second-color;
+    background: $second-color;
 }
 
 // main complementary palette
 
 .primary{
-	background: $primary-color;
+    background: $primary-color;
 }
 
 .complementary {
-	background: $complementary-color;
+    background: $complementary-color;
 }
 
 // Complementary - neutrals
 
 .complementary-neutral-light {
-	background: $complementary-neutral-light;
+    background: $complementary-neutral-light;
 }
 
 .complementary-neutral {
-	background: $complementary-neutral;
+    background: $complementary-neutral;
 }
 
 .complementary-neutral-dark {
-	background: $complementary-neutral-dark;
+    background: $complementary-neutral-dark;
 }
 
 
 // Primary - neutrals
 
 .primary-neutral-light {
-	background: $primary-neutral-light;
+    background: $primary-neutral-light;
 }
 
 .primary-neutral {
-	background: $primary-neutral;
+    background: $primary-neutral;
 }
 
 .primary-neutral-dark {
-	background: $primary-neutral-dark;
+    background: $primary-neutral-dark;
 }
 
 // Primary Tint and Shade
 
 .primary-light {
-	background: $primary-light;
+    background: $primary-light;
 }
 
 .primary-dark {
-	background: $primary-dark;
+    background: $primary-dark;
 }
 
 // Analogous colors
 
 .complementary-analogous {
-	background: $complementary-analogous;
+    background: $complementary-analogous;
 }
 
 .analogous {
-	background: $analogous-color;
+    background: $analogous-color;
 }
 
 // Grayscale - true neutrals
 
 .primary-gray {
-	background: $primary-gray;
+    background: $primary-gray;
 }
 
 .complementary-gray {
-	background: $complementary-gray;
+    background: $complementary-gray;
 }
 
 .neutral-gray {
-	background: $neutral-gray;
+    background: $neutral-gray;
 }
 
 .white {
-	background: $white;
-	border: 1px solid $neutral-gray;
+    background: $white;
+    border: 1px solid $neutral-gray;
 }
 
 .black {
-	background: $black;
+    background: $black;
 }

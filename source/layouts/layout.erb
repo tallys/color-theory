@@ -1,52 +1,52 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 
-	<!-- Always force latest IE rendering engine or request Chrome Frame -->
-	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Use title if it's in the page YAML frontmatter -->
-	<title><%= current_page.data.title || "The Middleman" %></title>
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Practical Color Theory" %></title>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<%= stylesheet_link_tag "red" %>
-	<%= javascript_include_tag  "all" %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <%= stylesheet_link_tag "red" %>
+    <%= javascript_include_tag  "all" %>
 </head>
 <header>
-	<div class="container">
-		<h1>Practical Color Theory<br> for People Who Code</h1>
+    <div class="container">
+        <h1>Practical Color Theory<br> for People Who Code</h1>
         <h2>Pick your call to action color!</h2>
         <%= partial "partials/color-swatches" %>
-		<a href="#start" class="cta-button">Let's get started!</a>
-	</div>
-	<h3>Natalya Shelburne
-		<br>
-		<a href="https://twitter.com/natalyathree">@natalyathree</a>
-	</h3>
+        <a href="#start" class="cta-button">Let's get started!</a>
+    </div>
+    <h3>Natalya Shelburne
+        <br>
+        <a href="https://twitter.com/natalyathree">@natalyathree</a>
+    </h3>
 </header>
-	<body class="<%= page_classes %>">
-		<div class="hero">
-			<div class="container">
-				<div class="half">
-					<h1>What is this & why should I listen to you?</h1>
+<body class="<%= page_classes %>">
+    <div class="hero">
+        <div class="container">
+            <div class="half">
+                <h1>What is this & why should I listen to you?</h1>
 
-					<p>
-						Hi! I'm Natalya! <img src="images/tally-pic.jpg" class="profile-picture" title="natalya-profile" description="vector art self portrait">I'm a classically trained fine artist who spent 6 years teaching people how to paint, draw, and grow their creativity. I am now a front end developer, and I love writing code as much as I love painting. <br><br>I have a degree in Studio Art, a bachelor's in Developmental Psychology, and a master's degree in Creativity and Talent Development. But, most importantly, I have mixed gallons and gallons of paint. <br><br>I abstracted my domain knowledge as a fine artist into variables and functions in order to reveal color selection as being logical, predictable, and driven by principles anyone can learn. Sass color functions give you the same creative power as owning a set of paints, brushes, and canvas. <br><br>This is a demo of my functions for a complementary color scheme - pick any color on the color wheel and the functions will make sure that the scheme will still work! 🎨<br><br></p>
-					</div>
-					<div class="half">
-						<h1>Prerequisites</h1>
-					</p>
-					<h4>Completely new to this? Check out these resources first:</h4>
-					<ul class="text-list-item-box">
-						<li><a href="http://www.w3.org/TR/css3-color/#hsl-color">CSS Color Module Level 3: HSL</a></li>
-						<li><a href="http://hslpicker.com/">Most Excellent HSL color picker</a></li>
-						<li><a href="http://jackiebalzer.com/color">Interactive Sass Color Functions</a></li>
-						<li><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#hsla-instance_method">Read the Sass-lang Docs</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<%= yield %>
-	</body>
+                <p>Hi! I'm Natalya! <img src="images/tally-pic.jpg" class="profile-picture" title="natalya-profile" description="vector art self portrait">I'm a classically trained fine artist who spent 6 years teaching people how to paint, draw, and grow their creativity. I am now a front end developer, and I love writing code as much as I love painting. <br><br>I have a degree in Studio Art, a bachelor's in Developmental Psychology, and a master's degree in Creativity and Talent Development. But, most importantly, I have mixed gallons and gallons of paint. <br><br>I abstracted my domain knowledge as a fine artist into variables and functions in order to reveal color selection as being logical, predictable, and driven by principles anyone can learn. Sass color functions give you the same creative power as owning a set of paints, brushes, and canvas. <br><br>This is a demo of my functions for a complementary color scheme - pick any color on the color wheel and the functions will make sure that the scheme will still work! 🎨<br><br>
+                </p>
+                </div>
+                <div class="half">
+                    <h1>Prerequisites</h1>
+                </p>
+                <h4>Completely new to this? Check out these resources first:</h4>
+                <ul class="text-list-item-box">
+                    <li><a href="http://www.w3.org/TR/css3-color/#hsl-color">CSS Color Module Level 3: HSL</a></li>
+                    <li><a href="http://hslpicker.com/">Most Excellent HSL color picker</a></li>
+                    <li><a href="http://jackiebalzer.com/color">Interactive Sass Color Functions</a></li>
+                    <li><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#hsla-instance_method">Read the Sass-lang Docs</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <%= yield %>
+    </body>
 </html>

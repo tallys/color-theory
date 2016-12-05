@@ -3,239 +3,239 @@ title: Practical Color Theory for People Who Code
 ---
 <a href="#" name="start"></a>
 <section>
-	<h2>Let's build a Complementary Color Scheme!</h2>
-	<img src="images/color-circle.png" alt="color-wheel" title="color wheel" description="the color wheel with corresponding hsl degrees">
-	<p>This is the color wheel, consider this the documentation for using color. <br> Notice that the degrees on the color wheel correspond to colors.</p>
-	<script src="https://gist.github.com/tallys/c3d601699a0f020e61ab15515839b4ba.js"></script>
+    <h2>Let's build a Complementary Color Scheme!</h2>
+    <img src="images/color-circle.png" alt="color-wheel" title="color wheel" description="the color wheel with corresponding hsl degrees">
+    <p>This is the color wheel, consider this the documentation for using color. <br> Notice that the degrees on the color wheel correspond to colors.</p>
+    <script src="https://gist.github.com/tallys/c3d601699a0f020e61ab15515839b4ba.js"></script>
 </section>
 
 <section class="first-only">
-	<h2>Pick a color <span> hsl($hue, $saturation, $lightness)</span></h2>
-	<div class="explanation">
-		<div class="test first"></div>
-		<p>Pick any color by selecting its hue (0-360) on the color wheel at full saturation (100%) and at half lightness (50%) - this way you start with the 'most colorful color' you can get.</p>
-		<p>This is what your website will look like if you set every element to this one color. Notice how you can't tell one item from another. Color is information.</p>
-	</div>
-	<div class="example">
+    <h2>Pick a color <span> hsl($hue, $saturation, $lightness)</span></h2>
+    <div class="explanation">
+        <div class="test first"></div>
+        <p>Pick any color by selecting its hue (0-360) on the color wheel at full saturation (100%) and at half lightness (50%) - this way you start with the 'most colorful color' you can get.</p>
+        <p>This is what your website will look like if you set every element to this one color. Notice how you can't tell one item from another. Color is information.</p>
+    </div>
+    <div class="example">
 
-		<%= partial "partials/mini_layout" %>
+        <%= partial "partials/mini_layout" %>
 
-	</div>
-	<div class="kitty-switch">
-		<input type="checkbox" id="toggle">
-		<div class="kitty"></div>
-		<label for="toggle" class="well"></label>
-		<div class="visible">
-			<p>Why pick a fully saturated color, but only half lightness?</p>
-			<p>Ever mix up a bunch of colors only to end up with a gray blob? In the real world, you can't mix a color to be more saturated - you only "lose" color information as you mix. So, the practice is to start with the most saturated colors at their most chromatic so you can still have a full range of mixing opportunities.</p>
-		</div>
-		<script src="https://gist.github.com/tallys/df6c4b811f412b3f8da280185f640211.js"></script>
-	</div>
+    </div>
+    <div class="kitty-switch">
+        <input type="checkbox" id="toggle">
+        <div class="kitty"></div>
+        <label for="toggle" class="well"></label>
+        <div class="visible">
+            <p>Why pick a fully saturated color, but only half lightness?</p>
+            <p>Ever mix up a bunch of colors only to end up with a gray blob? In the real world, you can't mix a color to be more saturated - you only "lose" color information as you mix. So, the practice is to start with the most saturated colors at their most chromatic so you can still have a full range of mixing opportunities.</p>
+        </div>
+        <script src="https://gist.github.com/tallys/df6c4b811f412b3f8da280185f640211.js"></script>
+    </div>
 </section>
 
 
 <section class="second-added">
-	<h2>Generate Complementary Color<span>complement( );</h2>
-	<div class="explanation">
-		<div class="test second"></div>
-		<p>Generate your second color without having to guess what will work. Thanks to science and wavelengths, we know that this works. The opposition of these two colors stimulate your photoreceptor cells in a good way!</p>
-		<p>Finally! A different color - now hue separates elements from each other and a layout can be seen.</p>
-	</div>
-	<div class="example">
-		<%= partial "partials/mini_layout" %>
-	</div>
-	<div class="kitty-switch">
-		<input type="checkbox" id="toggle">
-		<div class="kitty"></div>
-		<label for="toggle" class="well"></label>
-		<div class="visible">
-			<p>The complement to any color is always 180 degrees across on the other side of the color wheel. If you've ever wondered why it's the color wheel instead of a color line, this is part of that answer. Remember that the color wheel is our visual documentation for color relationships. <br> Fun fact, if you mix complementary colors, they'll cancel each other out and you'll end up with a neutral gray.</p>
-		</div>
-		<script src="https://gist.github.com/tallys/615c11161754166e5d4216c46327d89a.js"></script>
-	</div>
+    <h2>Generate Complementary Color<span>complement( );</h2>
+    <div class="explanation">
+        <div class="test second"></div>
+        <p>Generate your second color without having to guess what will work. Thanks to science and wavelengths, we know that this works. The opposition of these two colors stimulate your photoreceptor cells in a good way!</p>
+        <p>Finally! A different color - now hue separates elements from each other and a layout can be seen.</p>
+    </div>
+    <div class="example">
+        <%= partial "partials/mini_layout" %>
+    </div>
+    <div class="kitty-switch">
+        <input type="checkbox" id="toggle">
+        <div class="kitty"></div>
+        <label for="toggle" class="well"></label>
+        <div class="visible">
+            <p>The complement to any color is always 180 degrees across on the other side of the color wheel. If you've ever wondered why it's the color wheel instead of a color line, this is part of that answer. Remember that the color wheel is our visual documentation for color relationships. <br> Fun fact, if you mix complementary colors, they'll cancel each other out and you'll end up with a neutral gray.</p>
+        </div>
+        <script src="https://gist.github.com/tallys/615c11161754166e5d4216c46327d89a.js"></script>
+    </div>
 </section>
 
 <section class="primary-complementary">
-	<h2>Color Relationship Established by Mixing<span>harmonious-mix( );</h2>
-	<div class="explanation">
-		<div class="test primary"></div>
-		<div class="test complementary"></div>
-		<p>Establish a color relationship by mixing them together. This makes the colors look like they're under similar lighting conditions.</p>
-		<p>Here, you see less saturated hues, with a clear relationship between each other.</p>
-		</div>
-		<div class="example">
-			<%= partial "partials/mini_layout" %>
-		</div>
-		<div class="kitty-switch">
-			<input type="checkbox" id="toggle">
-			<div class="kitty"></div>
-			<label for="toggle" class="well"></label>
-			<div class="visible">
-				<p>Our eyes may be legacy systems, but they are really good at spotting patterns, especially things that look like they don't belong in a set.</p>
-				<p>This mixing method is another way we can simulate lighting and color found in nature. It's a bit more complicated, but my favorite way of explaining it is this: Everything outside has some "yellow" mixed in from the sunshine during the day. Same thing happens when everyone and everything looks bad in photos taken under the glow of green flourescent lights - there is green added to all of the colors you're looking at, including adding a green glow to your skin if you're standing under the flourescent light yourself. Whether it looks good or bad, this color (light) mixing creates a visual harmony. We don't really notice it when it's there, but we really notice its absence.</p>
-				<p>When you're painting, you want to simulate similar lighting conditions for a scene, and that effect is accomplished mixing a bit of one color into the other. Mixing different ratios of the same colors will usually generate a matching color palette.</p>
-				<p>How do I decide what to do? Thanks to art school and science, I know that cool colors have lower luminosity than warm colors, and will dominate in mixes, with yellow being the lightest color. For example, a touch of blue will really affect yellow, whereas you can add a lot of yellow to blue before it is affected. So, here is this decision making in function form - I am weighing different colors differently when mixing.</p>
-	</div>
-		<script src="https://gist.github.com/tallys/78a1d8750fac28b9d73de2a030ae9496.js"></script>
-		<script src="https://gist.github.com/tallys/40ce2c774f2736cdcef226567ecc0f1a.js"></script>
-		<script src="https://gist.github.com/tallys/3142a065cfc192c398080d06e4a63105.js"></script>
-</div>
+    <h2>Color Relationship Established by Mixing<span>harmonious-mix( );</h2>
+    <div class="explanation">
+        <div class="test primary"></div>
+        <div class="test complementary"></div>
+        <p>Establish a color relationship by mixing them together. This makes the colors look like they're under similar lighting conditions.</p>
+        <p>Here, you see less saturated hues, with a clear relationship between each other.</p>
+    </div>
+    <div class="example">
+        <%= partial "partials/mini_layout" %>
+    </div>
+    <div class="kitty-switch">
+        <input type="checkbox" id="toggle">
+        <div class="kitty"></div>
+        <label for="toggle" class="well"></label>
+        <div class="visible">
+            <p>Our eyes may be legacy systems, but they are really good at spotting patterns, especially things that look like they don't belong in a set.</p>
+            <p>This mixing method is another way we can simulate lighting and color found in nature. It's a bit more complicated, but my favorite way of explaining it is this: Everything outside has some "yellow" mixed in from the sunshine during the day. Same thing happens when everyone and everything looks bad in photos taken under the glow of green flourescent lights - there is green added to all of the colors you're looking at, including adding a green glow to your skin if you're standing under the flourescent light yourself. Whether it looks good or bad, this color (light) mixing creates a visual harmony. We don't really notice it when it's there, but we really notice its absence.</p>
+            <p>When you're painting, you want to simulate similar lighting conditions for a scene, and that effect is accomplished mixing a bit of one color into the other. Mixing different ratios of the same colors will usually generate a matching color palette.</p>
+            <p>How do I decide what to do? Thanks to art school and science, I know that cool colors have lower luminosity than warm colors, and will dominate in mixes, with yellow being the lightest color. For example, a touch of blue will really affect yellow, whereas you can add a lot of yellow to blue before it is affected. So, here is this decision making in function form - I am weighing different colors differently when mixing.</p>
+        </div>
+        <script src="https://gist.github.com/tallys/78a1d8750fac28b9d73de2a030ae9496.js"></script>
+        <script src="https://gist.github.com/tallys/40ce2c774f2736cdcef226567ecc0f1a.js"></script>
+        <script src="https://gist.github.com/tallys/3142a065cfc192c398080d06e4a63105.js"></script>
+    </div>
 </section>
 
 <section class="neutrals-added">
-	<h2>Create Neutrals<span>mix-neutral( ); lighten( ); darken( );</span></h2>
-	<div class="explanation">
-		<div class="test complementary-neutral-light"></div>
-		<div class="test complementary-neutral"></div>
-		<div class="test complementary-neutral-dark"></div>
-		<p>Let your chosen color pop (in other words, don't exhaust your eyes by making them process non-stop intense chromatic colors!) by surrounding it with neutrals. Desaturate the painter way: by mixing complementary colors! Then, vary that neutral's lightness to create a highlight and a shadow.</p>
-		<p>Making the complementary color neutrals will help the 'call to action' color you selected stand out - notice how much the button in the top right "pops" all of a sudden. Make things "pop" by making other things around them not pop.</p>
-	</div>
-	<div class="example example1">
-		<%= partial "partials/mini_layout" %>
-	</div>
-	<div class="explanation">
-		<div class="test primary-neutral-light"></div>
-		<div class="test primary-neutral"></div>
-		<div class="test primary-neutral-dark"></div>
-		<p>We can do the same for our primary color too. More neutrals to work with.</p>
-		<p>Doesn't it seem like we went too far with this whole making things neutral? Now, nothing "pops"! But, on the plus side, none of this seems to be irritating any eyeballs, either. Remember that our eyes don't like to handle seeing everything our computers are capable of rendering.</p>
-	</div>
-	<div class="example example2">
-		<%= partial "partials/mini_layout" %>
-	</div>
-	<div class="kitty-switch">
-		<input type="checkbox" id="toggle">
-		<div class="kitty"></div>
-		<label for="toggle" class="well"></label>
-		<div class="visible">
-			<p>The colors are way too intense at their full saturation for our eyes to handle. If all the colors are bright, none of the colors are bright.</p>
-			<p>I picked my starting color for a reason -  I want that to be the heart of my design! That means the complementary color should support the chosen color, and we do that by mixing neutrals. Our eyes don't really handle saturated colors very well next to other saturated colors. Our eyes get confused at the edges - is it this color or the other one? Ahh both! We end up seeing optical illusions. Just give your eyes a break between super strong saturated colors with neutrals so they don't stress out about that much visual information. At the very minimum a rule of thumb is that your viewport should have 33% neutral space (white, desaturated, or black colors) so your poor eyes can have a break and process the information right. Otherwise you get eye strain!</p>
-		</div>
-		<script src="https://gist.github.com/tallys/daf7a377062e555c93ab438b540df97e.js"></script>
-	</div>
+    <h2>Create Neutrals<span>mix-neutral( ); lighten( ); darken( );</span></h2>
+    <div class="explanation">
+        <div class="test complementary-neutral-light"></div>
+        <div class="test complementary-neutral"></div>
+        <div class="test complementary-neutral-dark"></div>
+        <p>Let your chosen color pop (in other words, don't exhaust your eyes by making them process non-stop intense chromatic colors!) by surrounding it with neutrals. Desaturate the painter way: by mixing complementary colors! Then, vary that neutral's lightness to create a highlight and a shadow.</p>
+        <p>Making the complementary color neutrals will help the 'call to action' color you selected stand out - notice how much the button in the top right "pops" all of a sudden. Make things "pop" by making other things around them not pop.</p>
+    </div>
+    <div class="example example1">
+        <%= partial "partials/mini_layout" %>
+    </div>
+    <div class="explanation">
+        <div class="test primary-neutral-light"></div>
+        <div class="test primary-neutral"></div>
+        <div class="test primary-neutral-dark"></div>
+        <p>We can do the same for our primary color too. More neutrals to work with.</p>
+        <p>Doesn't it seem like we went too far with this whole making things neutral? Now, nothing "pops"! But, on the plus side, none of this seems to be irritating any eyeballs, either. Remember that our eyes don't like to handle seeing everything our computers are capable of rendering.</p>
+    </div>
+    <div class="example example2">
+        <%= partial "partials/mini_layout" %>
+    </div>
+    <div class="kitty-switch">
+        <input type="checkbox" id="toggle">
+        <div class="kitty"></div>
+        <label for="toggle" class="well"></label>
+        <div class="visible">
+            <p>The colors are way too intense at their full saturation for our eyes to handle. If all the colors are bright, none of the colors are bright.</p>
+            <p>I picked my starting color for a reason -  I want that to be the heart of my design! That means the complementary color should support the chosen color, and we do that by mixing neutrals. Our eyes don't really handle saturated colors very well next to other saturated colors. Our eyes get confused at the edges - is it this color or the other one? Ahh both! We end up seeing optical illusions. Just give your eyes a break between super strong saturated colors with neutrals so they don't stress out about that much visual information. At the very minimum a rule of thumb is that your viewport should have 33% neutral space (white, desaturated, or black colors) so your poor eyes can have a break and process the information right. Otherwise you get eye strain!</p>
+        </div>
+        <script src="https://gist.github.com/tallys/daf7a377062e555c93ab438b540df97e.js"></script>
+    </div>
 </section>
 
 <section class="primary-neutrals-added">
-	<h2>Why not just desaturate?<span>mix-neutral( ); lighten( ); darken( );</span></h2>
-		<p>You totally can! Desaturate does a great job. But, I think not only is it important to understand what "desaturate" means. How would you desaturate a real color in the real world? Remember, you want "ugly" colors for your neutrals! You want to create bland and forgettable colors that recede into the background. These ugly duckling colors are how you get those other call to actions and buttons "pop"!</p>
+    <h2>Why not just desaturate?<span>mix-neutral( ); lighten( ); darken( );</span></h2>
+    <p>You totally can! Desaturate does a great job. But, I think not only is it important to understand what "desaturate" means. How would you desaturate a real color in the real world? Remember, you want "ugly" colors for your neutrals! You want to create bland and forgettable colors that recede into the background. These ugly duckling colors are how you get those other call to actions and buttons "pop"!</p>
 
-		<h3>Primary and complementary Colors</h3>
-			<div class="test primary"></div>
-			<div class="test complementary"></div>
-		<h3>Mixed neutrals</h3>
-			<div class="test primary-neutral"></div>
-			<div class="test complementary-neutral"></div>
+    <h3>Primary and complementary Colors</h3>
+    <div class="test primary"></div>
+    <div class="test complementary"></div>
+    <h3>Mixed neutrals</h3>
+    <div class="test primary-neutral"></div>
+    <div class="test complementary-neutral"></div>
 
 
-		<h3>Desaturated neutrals</h3>
-			<div class="test desaturated-primary-neutral"></div>
-			<div class="test desaturated-complementary-neutral"></div>
+    <h3>Desaturated neutrals</h3>
+    <div class="test desaturated-primary-neutral"></div>
+    <div class="test desaturated-complementary-neutral"></div>
 
-		<div class="kitty-switch">
-			<input type="checkbox" id="toggle">
-			<div class="kitty"></div>
-			<label for="toggle" class="well"></label>
-			<div class="visible">
-				<p>Even though these may look "ugly", neutral colors are the heart of any painting, and that is the case on the web, too. Notice that the same decisions are applied here as in mix-neutral(). </p>
-				<script src="https://gist.github.com/tallys/2baa1c5602e945e0025da7d5a334ea29.js"></script>
-			</div>
-		</div>
-	</section>
+    <div class="kitty-switch">
+        <input type="checkbox" id="toggle">
+        <div class="kitty"></div>
+        <label for="toggle" class="well"></label>
+        <div class="visible">
+            <p>Even though these may look "ugly", neutral colors are the heart of any painting, and that is the case on the web, too. Notice that the same decisions are applied here as in mix-neutral(). </p>
+            <script src="https://gist.github.com/tallys/2baa1c5602e945e0025da7d5a334ea29.js"></script>
+        </div>
+    </div>
+</section>
 
 <section class="black-and-white-added">
-	<h2>Mix a "White" and "Black"<span>grayscale( ); lighten( ); darken( );</h2>
-	<div class="explanation">
-		<div class="test white"></div>
-		<div class="test black"></div>
-		<p>Finally, some contrast! Make sure you don't use pure black or white - this is just like mixing neutrals, just mix them really bright and really dark.</p>
-		<p>Contrast is key. Don't just focus on the H in HSL - the lightness, and therefore contrast, is super important. You should be able to tell elements apart easily, even if the hue information is removed.</p>
-	</div>
-	<div class="example">
-		<%= partial "partials/mini_layout" %>
-	</div>
-	<div class="kitty-switch">
-		<input type="checkbox" id="toggle">
-		<div class="kitty"></div>
-		<label for="toggle" class="well"></label>
-		<div class="visible">
-			<p>Not everyone sees color the same. Accessibility is important, and it's good for everyone. Increasing contrast is one of the ways you can immediately improve your design on all levels. Your layout should still work when you take out ALL of the color information (desaturate it all, take out all of the hue information, and leave only lightness and darkness to differentiate between areas). Just about every famous master painting still looks amazing if you desaturate the whole thing. </p>
-			<p>Yes, people will notice. But, be careful, too much contrast will be too intense and irritate your eyes. Mix up a matching white and a matching gray from your ever expanding palette and you will ensure that it will always match the rest of your design.</p>
-		</div>
-	</div>
+    <h2>Mix a "White" and "Black"<span>grayscale( ); lighten( ); darken( );</h2>
+    <div class="explanation">
+        <div class="test white"></div>
+        <div class="test black"></div>
+        <p>Finally, some contrast! Make sure you don't use pure black or white - this is just like mixing neutrals, just mix them really bright and really dark.</p>
+        <p>Contrast is key. Don't just focus on the H in HSL - the lightness, and therefore contrast, is super important. You should be able to tell elements apart easily, even if the hue information is removed.</p>
+    </div>
+    <div class="example">
+        <%= partial "partials/mini_layout" %>
+    </div>
+    <div class="kitty-switch">
+        <input type="checkbox" id="toggle">
+        <div class="kitty"></div>
+        <label for="toggle" class="well"></label>
+        <div class="visible">
+            <p>Not everyone sees color the same. Accessibility is important, and it's good for everyone. Increasing contrast is one of the ways you can immediately improve your design on all levels. Your layout should still work when you take out ALL of the color information (desaturate it all, take out all of the hue information, and leave only lightness and darkness to differentiate between areas). Just about every famous master painting still looks amazing if you desaturate the whole thing. </p>
+            <p>Yes, people will notice. But, be careful, too much contrast will be too intense and irritate your eyes. Mix up a matching white and a matching gray from your ever expanding palette and you will ensure that it will always match the rest of your design.</p>
+        </div>
+    </div>
 </section>
 
 
 <section class="final-colors">
-	<h2>Make it pop! Tints and Shades<span>mix( ); lighten( ); darken( );</h2>
-	<div class="explanation">
-		<div class="test primary-light"></div>
-		<div class="test primary"></div>
-		<div class="test primary-dark"></div>
-		<p>This is the color you wanted in the first place, so make sure you're using it. But, remember that it's about context - make sure you're using the right amount of contrast! The header on our little layout has a lighter version of our primary color.</p>
-		<p>Overall, this is a pretty simple setup - but it's an example of what you can build from just one color.</p>
-		<p>Make the call to action button stand out - leave it saturated and surround it with neutrals, and pay attention to contrast when you do.</p>
-	</div>
-	</div>
-	<div class="example">
-		<%= partial "partials/mini_layout" %>
-	</div>
-
-	<div class="kitty-switch">
-		<input type="checkbox" id="toggle">
-		<div class="kitty"></div>
-		<label for="toggle" class="well"></label>
-		<div class="visible">
-			<p>That's right, the pattern you may be noticing is that you can use what you've already got to mix up more colors and keep building those color relationships. These colors can be achieved just by adjusting lightness and darkness. Up to you!</p>
-			<p>A lighter and darker version of your primary color is useful for things like hover states.</p>
-		</div>
-	</div>
-</section>
-
-
-<section>
-	<h2>Contrast (between lightness and darkness) is key <span>🔑</span></h2>
-	<div class="color-swatches shadow-container">
-		<h3>Turn off the colors, and see what's left!</h3>
-			<button class= "swatch" data-color="grayscale"></button>
-	</div>
-
-	<p>There is so much more to color than just "hue"! Value - the visible lightness or darkness of a color is incredibly important to consider when creating a color palette. Color is light.
-		<div class="kitty-switch">
-			<input type="checkbox" id="toggle">
-			<div class="kitty"></div>
-			<label for="toggle" class="well"></label>
-			<div class="visible">
-				<p>When you mix colors, you should create relationships. Remember, color theory is a design pattern - logical and predictable! Learn the patterns, and play with Sass functions - they're a great tool!<br> I used this function to pair font colors with their backgrounds. It's not perfect, but you get the idea.</p>
-			</div>
-			<script src="https://gist.github.com/tallys/ec113270af32fee7f2877e9538d3b4f4.js"></script>
-		</div>
-	</section>
-<section class="final-example">
-	<h2>The big picture<span>mix( ) your colors</span></h2>
-    <h3>This demo is just one sample of a decision tree for mixing a set of colors.</h3>
-    <div class="color-map">
-        <%= partial "images/complementary-color-map.svg" %>
+    <h2>Make it pop! Tints and Shades<span>mix( ); lighten( ); darken( );</h2>
+    <div class="explanation">
+        <div class="test primary-light"></div>
+        <div class="test primary"></div>
+        <div class="test primary-dark"></div>
+        <p>This is the color you wanted in the first place, so make sure you're using it. But, remember that it's about context - make sure you're using the right amount of contrast! The header on our little layout has a lighter version of our primary color.</p>
+        <p>Overall, this is a pretty simple setup - but it's an example of what you can build from just one color.</p>
+        <p>Make the call to action button stand out - leave it saturated and surround it with neutrals, and pay attention to contrast when you do.</p>
     </div>
-    <p> Because colors interact with each other, each time you introduce a color, you add complexity. Build your color schemes like you build the rest of your application - a reasonable system of relationships that is maintainable.</p>
+</div>
+<div class="example">
+    <%= partial "partials/mini_layout" %>
+</div>
 
-	<span>The resulting design might look something like...</span>
-	<%= partial "partials/mini_layout" %>
+<div class="kitty-switch">
+    <input type="checkbox" id="toggle">
+    <div class="kitty"></div>
+    <label for="toggle" class="well"></label>
+    <div class="visible">
+        <p>That's right, the pattern you may be noticing is that you can use what you've already got to mix up more colors and keep building those color relationships. These colors can be achieved just by adjusting lightness and darkness. Up to you!</p>
+        <p>A lighter and darker version of your primary color is useful for things like hover states.</p>
+    </div>
+</div>
 </section>
+
 
 <section>
-	<h2>Future plans<span></span></h2>
-		<p>While there are many parallels, working on the web is quite different from working in an art studio. There are so many unique concerns that fine artists don't have to worry about, like user device, accessibility, user experience, etc. This demo is a simplified learning tool that is meant to represent how I would make and explain my color decisions in a way that engages the prior knowledge of people who code.</p>
-		<p>I am excited to be collaborating with the very awesome <a href="http://www.miriamsuzanne.com/">Miriam Suzanne</a>, the creator of many fantastic internet things, to build a system that will make it easy to add color relationships to your projects. It's called <a href='https://www.npmjs.com/package/sass-lumen'> Lumen</a> - keep an eye on its progress!</p>
-</section>
+    <h2>Contrast (between lightness and darkness) is key <span>🔑</span></h2>
+    <div class="color-swatches shadow-container">
+        <h3>Turn off the colors, and see what's left!</h3>
+        <button class= "swatch" data-color="grayscale"></button>
+    </div>
+
+    <p>There is so much more to color than just "hue"! Value - the visible lightness or darkness of a color is incredibly important to consider when creating a color palette. Color is light.
+        <div class="kitty-switch">
+            <input type="checkbox" id="toggle">
+            <div class="kitty"></div>
+            <label for="toggle" class="well"></label>
+            <div class="visible">
+                <p>When you mix colors, you should create relationships. Remember, color theory is a design pattern - logical and predictable! Learn the patterns, and play with Sass functions - they're a great tool!<br> I used this function to pair font colors with their backgrounds. It's not perfect, but you get the idea.</p>
+            </div>
+            <script src="https://gist.github.com/tallys/ec113270af32fee7f2877e9538d3b4f4.js"></script>
+        </div>
+    </section>
+    <section class="final-example">
+        <h2>The big picture<span>mix( ) your colors</span></h2>
+        <h3>This demo is just one sample of a decision tree for mixing a set of colors.</h3>
+        <div class="color-map">
+            <%= partial "images/complementary-color-map.svg" %>
+        </div>
+        <p> Because colors interact with each other, each time you introduce a color, you add complexity. Build your color schemes like you build the rest of your application - a reasonable system of relationships that is maintainable.</p>
+
+        <span>The resulting design might look something like...</span>
+        <%= partial "partials/mini_layout" %>
+    </section>
+
+    <section>
+        <h2>Future plans<span></span></h2>
+        <p>While there are many parallels, working on the web is quite different from working in an art studio. There are so many unique concerns that fine artists don't have to worry about, like user device, accessibility, user experience, etc. This demo is a simplified learning tool that is meant to represent how I would make and explain my color decisions in a way that engages the prior knowledge of people who code.</p>
+        <p>I am excited to be collaborating with the very awesome <a href="http://www.miriamsuzanne.com/">Miriam Suzanne</a>, the creator of many fantastic internet things, to build a system that will make it easy to add color relationships to your projects. It's called <a href='https://www.npmjs.com/package/sass-lumen'> Lumen</a> - keep an eye on its progress!</p>
+    </section>
 </div>
 
 
 <section class="vg-section">
     <h2>SVG: Scalable Van Gogh </h2>
-        <h3>Blur the line between designer and developer</h3>
-        <%= partial "partials/color-swatches" %>
-        <p>We are more similar than we are allowed to believe. This is an SVG, a Scalable Van Gogh created to show that there are design principles even in art. If you learn the patterns and color relationships, you can create color schemes for the web with confidence.</p>
+    <h3>Blur the line between designer and developer</h3>
+    <%= partial "partials/color-swatches" %>
+    <p>We are more similar than we are allowed to believe. This is an SVG, a Scalable Van Gogh created to show that there are design principles even in art. If you learn the patterns and color relationships, you can create color schemes for the web with confidence.</p>
     <h1> Turn on party mode </h1>
     <button class="partymode"></button>
 </section>
