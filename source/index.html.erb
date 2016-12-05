@@ -5,7 +5,7 @@ title: Practical Color Theory for People Who Code
 <section>
     <h2>Let's build a Complementary Color Scheme!</h2>
     <img src="images/color-circle.png" alt="color-wheel" title="color wheel" description="the color wheel with corresponding hsl degrees">
-    <p>This is the color wheel, consider this the documentation for using color. <br> Notice that the degrees on the color wheel correspond to colors.</p>
+    <p>This is the color wheel that corresponds to HSL(), consider this your documentation for using color on the web. <br> Notice that the degrees on the color wheel correspond to colors.</p>
     <script src="https://gist.github.com/tallys/c3d601699a0f020e61ab15515839b4ba.js"></script>
 </section>
 
@@ -13,7 +13,7 @@ title: Practical Color Theory for People Who Code
     <h2>Pick a color <span> hsl($hue, $saturation, $lightness)</span></h2>
     <div class="explanation">
         <div class="test first"></div>
-        <p>Pick any color by selecting its hue (0-360) on the color wheel at full saturation (100%) and at half lightness (50%) - this way you start with the 'most colorful color' you can get.</p>
+        <p>Pick any color by selecting its hue (0-360) on the color wheel at full saturation (100%) and at half lightness (50%) - this way you start with the 'most colorful color' you can get. In fact, if you just select "red" in CSS, it's the same as declaring hsl(0deg, 100%, 50%).</p>
         <p>This is what your website will look like if you set every element to this one color. Notice how you can't tell one item from another. Color is information.</p>
     </div>
     <div class="example">
@@ -176,20 +176,20 @@ title: Practical Color Theory for People Who Code
         <p>Overall, this is a pretty simple setup - but it's an example of what you can build from just one color.</p>
         <p>Make the call to action button stand out - leave it saturated and surround it with neutrals, and pay attention to contrast when you do.</p>
     </div>
-</div>
-<div class="example">
-    <%= partial "partials/mini_layout" %>
-</div>
 
-<div class="kitty-switch">
-    <input type="checkbox" id="toggle">
-    <div class="kitty"></div>
-    <label for="toggle" class="well"></label>
-    <div class="visible">
-        <p>That's right, the pattern you may be noticing is that you can use what you've already got to mix up more colors and keep building those color relationships. These colors can be achieved just by adjusting lightness and darkness. Up to you!</p>
-        <p>A lighter and darker version of your primary color is useful for things like hover states.</p>
+    <div class="example">
+        <%= partial "partials/mini_layout" %>
     </div>
-</div>
+
+    <div class="kitty-switch">
+        <input type="checkbox" id="toggle">
+        <div class="kitty"></div>
+        <label for="toggle" class="well"></label>
+        <div class="visible">
+            <p>That's right, the pattern you may be noticing is that you can use what you've already got to mix up more colors and keep building those color relationships. These colors can be achieved just by adjusting lightness and darkness. Up to you!</p>
+            <p>A lighter and darker version of your primary color is useful for things like hover states.</p>
+        </div>
+    </div>
 </section>
 
 

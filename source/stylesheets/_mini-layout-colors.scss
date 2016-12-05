@@ -1,375 +1,375 @@
 section.first-only {
-	.mini-layout { background: $first-color;
-		.mini-nav {
-			background: $first-color;
-			&:after {
-				background: $first-color;
-			}
-		}
-		.mini-header {
-			background: $first-color;
-			color: $first-color;
+    .mini-layout { background: $first-color;
+        .mini-nav {
+            background: $first-color;
+            &:after {
+                background: $first-color;
+            }
+        }
+        .mini-header {
+            background: $first-color;
+            color: $first-color;
 
-			h1 {
-				color: $first-color;
-			}
-		 }
+            h1 {
+                color: $first-color;
+            }
+         }
 
-		.mini-aside {
-			ul {
-				li {
-					background: $first-color;
-				}
-			}
-		}
+        .mini-aside {
+            ul {
+                li {
+                    background: $first-color;
+                }
+            }
+        }
 
-		.mini-main {
-				p {
-					color: $first-color;
-				}
-				.cta {
-				background: $first-color;
-				}
-		}
+        .mini-main {
+                p {
+                    color: $first-color;
+                }
+                .cta {
+                background: $first-color;
+                }
+        }
 
-		.mini-footer {
-			background: $first-color;
-			color: $first-color;
-		}
-	}
+        .mini-footer {
+            background: $first-color;
+            color: $first-color;
+        }
+    }
 }
 
 section.second-added {
-	.mini-layout { background: $first-color;
-		.mini-nav {
-			background: $second-color;
-			&:after {
-				background: $first-color;
-			}
-		}
-		.mini-header {
-			background: $second-color;
-			color: $first-color;
+    .mini-layout { background: $first-color;
+        .mini-nav {
+            background: $second-color;
+            &:after {
+                background: $first-color;
+            }
+        }
+        .mini-header {
+            background: $second-color;
+            color: $first-color;
 
-			h1 {
-				color: $first-color;
-			}
-		 }
+            h1 {
+                color: $first-color;
+            }
+         }
 
-		.mini-aside {
-			ul {
-				li {
-					background: $second-color;
-				}
-			}
-		}
+        .mini-aside {
+            ul {
+                li {
+                    background: $second-color;
+                }
+            }
+        }
 
-		.mini-main {
-				p {
-					color: $second-color;
-				}
-				.cta {
-				background: $first-color;
-				}
-		}
+        .mini-main {
+                p {
+                    color: $second-color;
+                }
+                .cta {
+                background: $first-color;
+                }
+        }
 
-		.mini-footer {
-			background: $second-color;
-			color: $first-color;
-		}
-	}
+        .mini-footer {
+            background: $second-color;
+            color: $first-color;
+        }
+    }
 }
 
 section.primary-complementary {
-	.mini-layout { background: $primary-color;
-		.mini-nav {
-			background: $complementary-color;
-			&:after {
-				background: $primary-color;
-			}
-		}
-		.mini-header {
-			background: $complementary-color;
-			color: $primary-color;
+    .mini-layout { background: $primary-color;
+        .mini-nav {
+            background: $complementary-color;
+            &:after {
+                background: $primary-color;
+            }
+        }
+        .mini-header {
+            background: $complementary-color;
+            color: $primary-color;
 
-			h1 {
-				color: $primary-color;
-			}
-		 }
+            h1 {
+                color: $primary-color;
+            }
+         }
 
-		.mini-aside {
-			ul {
-				li {
-					background: $complementary-color;
-				}
-			}
-		}
+        .mini-aside {
+            ul {
+                li {
+                    background: $complementary-color;
+                }
+            }
+        }
 
-		.mini-main {
-				p {
-					color: $complementary-color;
-				}
-				.cta {
-				background: $primary-color;
-				}
-		}
+        .mini-main {
+                p {
+                    color: $complementary-color;
+                }
+                .cta {
+                background: $primary-color;
+                }
+        }
 
-		.mini-footer {
-			background: $complementary-color;
-			color: $primary-color;
-		}
-	}
+        .mini-footer {
+            background: $complementary-color;
+            color: $primary-color;
+        }
+    }
 }
 
 section.complementary-neutrals-added {
-	.mini-layout { background: $primary-color;
-		.mini-nav {
-			background:  $complementary-neutral-dark;
-			&:after {
-				background: $primary-color;
-			}
-		}
-		.mini-header {
-			background: $complementary-neutral-light;
-			color: $complementary-neutral-dark;
+    .mini-layout { background: $primary-color;
+        .mini-nav {
+            background:  $complementary-neutral-dark;
+            &:after {
+                background: $primary-color;
+            }
+        }
+        .mini-header {
+            background: $complementary-neutral-light;
+            color: $complementary-neutral-dark;
 
-			h1 {
-				color: $complementary-neutral-dark;
-			}
-		 }
+            h1 {
+                color: $complementary-neutral-dark;
+            }
+         }
 
-		.mini-aside {
-			ul {
-				li {
-					background: $complementary-neutral-light;
-				}
-			}
-		}
+        .mini-aside {
+            ul {
+                li {
+                    background: $complementary-neutral-light;
+                }
+            }
+        }
 
-		.mini-main {
-				p {
-					color: $complementary-neutral-dark;
-				}
-				.cta {
-				background: $primary-color;
-				}
-		}
+        .mini-main {
+                p {
+                    color: $complementary-neutral-dark;
+                }
+                .cta {
+                background: $primary-color;
+                }
+        }
 
-		.mini-footer {
-			background: $complementary-neutral-dark;
-			color: $primary-color;
-		}
-	}
+        .mini-footer {
+            background: $complementary-neutral-dark;
+            color: $primary-color;
+        }
+    }
 }
 
 section.neutrals-added .example1{
-	.mini-layout { background: $primary-color;
-		.mini-nav {
-			background:  $complementary-neutral-dark;
-			&:after {
-				background: $primary-color;
-			}
-		}
-		.mini-header {
-			background: $complementary-neutral-light;
-			color: $complementary-neutral-dark;
+    .mini-layout { background: $primary-color;
+        .mini-nav {
+            background:  $complementary-neutral-dark;
+            &:after {
+                background: $primary-color;
+            }
+        }
+        .mini-header {
+            background: $complementary-neutral-light;
+            color: $complementary-neutral-dark;
 
-			h1 {
-				color: $complementary-neutral-dark;
-			}
-		 }
+            h1 {
+                color: $complementary-neutral-dark;
+            }
+         }
 
-		.mini-aside {
-			ul {
-				li {
-					background: $complementary-neutral-light;
-				}
-			}
-		}
+        .mini-aside {
+            ul {
+                li {
+                    background: $complementary-neutral-light;
+                }
+            }
+        }
 
-		.mini-main {
-				p {
-					color: $complementary-neutral-dark;
-				}
-				.cta {
-				background: $primary-color;
-				}
-		}
+        .mini-main {
+                p {
+                    color: $complementary-neutral-dark;
+                }
+                .cta {
+                background: $primary-color;
+                }
+        }
 
-		.mini-footer {
-			background: $complementary-neutral-dark;
-			color: $primary-color;
-		}
-	}
+        .mini-footer {
+            background: $complementary-neutral-dark;
+            color: $primary-color;
+        }
+    }
 }
 
 section.neutrals-added .example2 {
-	.mini-layout { background: $primary-neutral-light;
-		.mini-nav {
-			background:  $complementary-neutral-dark;
-			&:after {
-				background: $primary-neutral;
-			}
-		}
-		.mini-header {
-			background: $complementary-neutral-light;
-			color: $complementary-neutral-dark;
+    .mini-layout { background: $primary-neutral-light;
+        .mini-nav {
+            background:  $complementary-neutral-dark;
+            &:after {
+                background: $primary-neutral;
+            }
+        }
+        .mini-header {
+            background: $complementary-neutral-light;
+            color: $complementary-neutral-dark;
 
-			h1 {
-				color: $complementary-neutral-dark;
-			}
-		 }
+            h1 {
+                color: $complementary-neutral-dark;
+            }
+         }
 
-		.mini-aside {
-			ul {
-				li {
-					background: $complementary-neutral-light;
-				}
-			}
-		}
+        .mini-aside {
+            ul {
+                li {
+                    background: $complementary-neutral-light;
+                }
+            }
+        }
 
-		.mini-main {
-				p {
-					color: $complementary-neutral-dark;
-				}
-				.cta {
-				background: $primary-neutral;
-				}
-		}
+        .mini-main {
+                p {
+                    color: $complementary-neutral-dark;
+                }
+                .cta {
+                background: $primary-neutral;
+                }
+        }
 
-		.mini-footer {
-			background: $complementary-neutral-dark;
-			color: $primary-neutral-light;
-		}
-	}
+        .mini-footer {
+            background: $complementary-neutral-dark;
+            color: $primary-neutral-light;
+        }
+    }
 }
 
 section.black-and-white-added {
-	.mini-layout { background: $white;
-		.mini-nav {
-			background:  $complementary-neutral-dark;
-			&:after {
-				background: $primary-neutral;
-			}
-		}
-		.mini-header {
-			background: $complementary-neutral-light;
-			color: $complementary-neutral-dark;
+    .mini-layout { background: $white;
+        .mini-nav {
+            background:  $complementary-neutral-dark;
+            &:after {
+                background: $primary-neutral;
+            }
+        }
+        .mini-header {
+            background: $complementary-neutral-light;
+            color: $complementary-neutral-dark;
 
-			h1 {
-				color: $complementary-neutral-dark;
-			}
-		 }
+            h1 {
+                color: $complementary-neutral-dark;
+            }
+         }
 
-		.mini-aside {
-			ul {
-				li {
-					background: $complementary-neutral-light;
-				}
-			}
-		}
+        .mini-aside {
+            ul {
+                li {
+                    background: $complementary-neutral-light;
+                }
+            }
+        }
 
-		.mini-main {
-				p {
-					color: $complementary-neutral-dark;
-				}
-				.cta {
-				background: $primary-neutral;
-				}
-		}
+        .mini-main {
+                p {
+                    color: $complementary-neutral-dark;
+                }
+                .cta {
+                background: $primary-neutral;
+                }
+        }
 
-		.mini-footer {
-			background: $complementary-neutral-dark;
-			color: $primary-neutral-light;
-		}
-	}
+        .mini-footer {
+            background: $complementary-neutral-dark;
+            color: $primary-neutral-light;
+        }
+    }
 }
 
 
 section.final-colors {
-	.mini-layout { background: $white;
-		.mini-nav {
-			background: $complementary-neutral-dark;
-			&:after {
-				background: $primary-light;
-			}
-		}
-		.mini-header {
-			background: $complementary-neutral-light;
-			color: $complementary-neutral-dark;
-		 }
+    .mini-layout { background: $white;
+        .mini-nav {
+            background: $complementary-neutral-dark;
+            &:after {
+                background: $primary-light;
+            }
+        }
+        .mini-header {
+            background: $complementary-neutral-light;
+            color: $complementary-neutral-dark;
+         }
 
-		.mini-aside {
-			ul {
-				li {
-					background: $complementary-neutral-light;
-				}
-			}
-		}
+        .mini-aside {
+            ul {
+                li {
+                    background: $complementary-neutral-light;
+                }
+            }
+        }
 
-		.mini-main {
-				p {
-					color: $complementary-neutral-dark;
-				}
-				.cta {
-				background: $primary-color;
-				transition: all ease-in .25s;
-					&:hover {
-						background: $primary-dark;
-					}
-				}
-		}
+        .mini-main {
+                p {
+                    color: $complementary-neutral-dark;
+                }
+                .cta {
+                background: $primary-color;
+                transition: all ease-in .25s;
+                    &:hover {
+                        background: $primary-dark;
+                    }
+                }
+        }
 
-		.mini-footer {
-			background: $complementary-neutral-dark;
-			color: $white;
-		}
-	}
+        .mini-footer {
+            background: $complementary-neutral-dark;
+            color: $white;
+        }
+    }
 }
 
 
 section.final-example {
-	.mini-layout {
-		background: $white;
-		float: none;
-		display: block;
-		margin: 30px auto;
-		@include clearfix;
-		.mini-nav {
-			background: $complementary-neutral-dark;
-			&:after {
-				background: $primary-light;
-			}
-		}
-		.mini-header {
-			background: $complementary-neutral-light;
-			color: $complementary-neutral-dark;
-		 }
+    .mini-layout {
+        background: $white;
+        float: none;
+        display: block;
+        margin: 30px auto;
+        @include clearfix;
+        .mini-nav {
+            background: $complementary-neutral-dark;
+            &:after {
+                background: $primary-light;
+            }
+        }
+        .mini-header {
+            background: $complementary-neutral-light;
+            color: $complementary-neutral-dark;
+         }
 
-		.mini-aside {
-			ul {
-				li {
-					background: $complementary-neutral-light;
-				}
-			}
-		}
+        .mini-aside {
+            ul {
+                li {
+                    background: $complementary-neutral-light;
+                }
+            }
+        }
 
-		.mini-main {
-				p {
-					color: $complementary-neutral-dark;
-				}
-				.cta {
-				background: $primary-color;
-				transition: all ease-in .25s;
-					&:hover {
-						background: $primary-dark;
-					}
-				}
-		}
+        .mini-main {
+                p {
+                    color: $complementary-neutral-dark;
+                }
+                .cta {
+                background: $primary-color;
+                transition: all ease-in .25s;
+                    &:hover {
+                        background: $primary-dark;
+                    }
+                }
+        }
 
-		.mini-footer {
-			background: $complementary-neutral-dark;
-			color: $white;
-		}
-	}
+        .mini-footer {
+            background: $complementary-neutral-dark;
+            color: $white;
+        }
+    }
 }

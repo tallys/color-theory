@@ -10,90 +10,90 @@ $second-color: complement($first-color);
 //Check if you have a cool color on your hands. Cool colors will overpower warm colors when mixing.
 
 @function is-cool-color($color) {
-	@return hue($color) < 310 and hue($color) > 140;
+    @return hue($color) < 310 and hue($color) > 140;
 }
 
 @function is-high-key-value($color) {
-	@return hue($color) > 20 and hue($color) < 190;
+    @return hue($color) > 20 and hue($color) < 190;
 }
 
 @function is-highest-key-value($color) {
-	@return hue($color) > 30 and hue($color) <90;
+    @return hue($color) > 30 and hue($color) <90;
 }
 
 //Establish a relationship (similar lighting conditions) between colors.
 
 @function harmonious-mix($mix, $base) {
-	@if (is-cool-color($mix)){
-		@if is-high-key-value($base) {
-			@return mix($mix, $base, 11%);
-		}
-		@else {
-			@return mix($mix, $base, 16%);
-		}
-	}
-	@else {
-		@if is-high-key-value($base) {
-			@return mix($mix, $base, 13%);
-		}
-		@else {
-			@return mix($mix, $base, 23%);
-		}
-	}
+    @if (is-cool-color($mix)){
+        @if is-high-key-value($base) {
+            @return mix($mix, $base, 11%);
+        }
+        @else {
+            @return mix($mix, $base, 16%);
+        }
+    }
+    @else {
+        @if is-high-key-value($base) {
+            @return mix($mix, $base, 13%);
+        }
+        @else {
+            @return mix($mix, $base, 23%);
+        }
+    }
 }
 
 @function mix-neutral($color) {
-	@if (is-highest-key-value($color)) {
-		@if is-high-key-value(complement($color)) {
-			@return mix(complement($color), $color, 19%);
-		}
-		@else {
-			@return mix(complement($color), $color, 13%);
-		}
-	}
-	@else if (is-high-key-value($color)) {
-		@if is-high-key-value(complement($color)) {
-			@return mix(complement($color), $color, 31%);
-		}
-		@else {
-			@return mix(complement($color), $color, 23%);
-		}
-	}
-	@else {
-		@if is-highest-key-value(complement($color)) {
-			@return mix(complement($color), $color, 31%);
-		}
-		@if is-high-key-value(complement($color)) {
-			@return mix(complement($color), $color, 26%);
-		}
-		@else {
-			@return mix(complement($color), $color, 23%);
-		}
-	}
+    @if (is-highest-key-value($color)) {
+        @if is-high-key-value(complement($color)) {
+            @return mix(complement($color), $color, 19%);
+        }
+        @else {
+            @return mix(complement($color), $color, 13%);
+        }
+    }
+    @else if (is-high-key-value($color)) {
+        @if is-high-key-value(complement($color)) {
+            @return mix(complement($color), $color, 31%);
+        }
+        @else {
+            @return mix(complement($color), $color, 23%);
+        }
+    }
+    @else {
+        @if is-highest-key-value(complement($color)) {
+            @return mix(complement($color), $color, 31%);
+        }
+        @if is-high-key-value(complement($color)) {
+            @return mix(complement($color), $color, 26%);
+        }
+        @else {
+            @return mix(complement($color), $color, 23%);
+        }
+    }
 }
 
 @function pick-contrast-of($color) {
-	@if is-high-key-value($color){
-		@if lightness($color) < 30% {
-			@return lighten(complement($color), 86);
-		}
-		@else if lightness($color) > 70% {
-			@return darken(complement($color), 68);
-		}
-		@else {
-			@return darken(complement($color), 53);
-		}
+    @if is-high-key-value($color){
+        @if lightness($color) < 30% {
+            @return lighten(complement($color), 86);
+        }
+        @else if lightness($color) > 70% {
+            @return darken(complement($color), 68);
+        }
+        @else {
+            @return darken(complement($color), 53);
+        }
 } @else {
-	@if lightness($color) < 30% {
-			@return lighten(complement($color), 86);
-		}
-		@else if lightness($color) > 70% {
-			@return darken(complement($color), 68);
-		}
-		@else {
-			@return lighten(complement($color), 53);
-		}
-	}
+    @if lightness($color) < 30% {
+            @return lighten(complement($color), 86);
+        }
+        @else if lightness($color) > 70% {
+            @return darken(complement($color), 68);
+        }
+        @else {
+            @return lighten(complement($color), 53);
+        }
+    }
 }
 
 $primary-color: harmonious-mix($second-color, $first-color);
